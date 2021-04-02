@@ -44,6 +44,6 @@ components
 ├─ _header.scss
 └─ _footer.scss
 
-components
+pages
 └─ _main.scss
 ```
