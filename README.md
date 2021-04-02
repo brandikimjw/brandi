@@ -26,6 +26,7 @@ npm run dev
 base 스타일은 scss/base/_base.scss
 
 ### 구조
+``` bash
 main.scss
 ├─ abstracts.scss
 │  ├─ _functions.scss > sass 전역함수
@@ -45,3 +46,4 @@ components
 
 components
 └─ _main.scss
+```
