@@ -53,19 +53,17 @@ $max-width: 1180px !default;
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/*
+map 데이터 사용법
+- map-get($map, $key) : Map에서 특정 key의 value를 반환합니다.
+- ex)
+  @media screen and (min-width:map-get($breakpoints, 'small')) {
+
+  }
+*/
 $breakpoints: (
   'small': 320px,
   'medium': 768px,
   'large': 1024px,
 ) !default;
 
-
-
-
-
-
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;

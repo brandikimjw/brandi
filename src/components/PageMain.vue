@@ -1,6 +1,7 @@
 <template>
   <div>
     main contents
+    <a href="#">link contents</a> <!--  -->
     <img src="@/assets/images/logo.png" alt="vue" />
   </div>
 </template>

@@ -4,22 +4,13 @@
 
 /// Event wrapper
 /// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
+@mixin on-event {
+  &:hover,
+  &:active,
+  &:focus {
+    // lib sass (node sass)에서 content block 사용은 가능하나 @content($type)와 같이 인수를 전달하는 방식은 dart sass에서만 가능 합니다.
+    @content;
   }
 }
 

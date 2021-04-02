@@ -17,12 +17,31 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## scss
+초기화 스타일로 nomalize css 적용 되어 있음
+- nomalize css란? https://webdir.tistory.com/455
+
+base 스타일은 scss/base/_base.scss
+
+### 구조
+main.scss
+├─ abstracts.scss
+│  ├─ _functions.scss > sass 전역함수
+│  ├─ _mixins.scss > sass 전역믹스인
+│  └─ _variables.scss > sass 전역변수
+├─ vendors > 라이브러리
+│  ├─ _normalize.scss > 브라우저 스타일 초기화 css
+│  └─ swiper.scss > swiperjs 라이브러리 스타일
+└─ base
+   ├─ _base.scss > 기본 스타일
+   ├─ _fonts.scss > font-face 정의를 위한 scss > noto san
+   └─ _typography.scss > 타이포그라피를 위한 scss
+
+components
+├─ _header.scss
+└─ _footer.scss
+
+components
+└─ _main.scss
