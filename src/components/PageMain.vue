@@ -3,31 +3,33 @@
     <!-- main-banner swiper -->
     <article class="main-banner">
       <section class="swiper-container">
-        <div class="swiper-wrapper">
+        <ul class="swiper-wrapper">
           <li class="swiper-slide">
-            <img src="#" alt="배너슬라이드1">
+            <a href="#"><img src="#" alt="배너슬라이드1" class="style"></a>
           </li>
           <li class="swiper-slide">
-            <img src="#" alt="배너슬라이드2">
+            <a href="#"><img src="#" alt="배너슬라이드2" class="style"></a>
           </li>
           <li class="swiper-slide">
-            <img src="#" alt="배너슬라이드3">
+            <a href="#"><img src="#" alt="배너슬라이드3" class="style"></a>
           </li>
-        </div>
+        </ul>
       </section>
-      <button type="button" aria-label="이전 슬라이드 이동" class="swiper-button-prev"></button>
-      <button type="button" aria-label="다음 슬라이드 이동" class="swiper-button-next"></button>
+      <div class="btn-wrap">
+        <button type="button" aria-label="이전 슬라이드 이동" class="swiper-button-prev"></button>
+        <button type="button" aria-label="다음 슬라이드 이동" class="swiper-button-next"></button>
+      </div>
     </article>
 
     <!-- TODAY 베스트 -->
-    <article class="main-products-title">
+    <article class="main-products-">
       <div class="title-wrap">
-        <h2 class="title">TODAY 베스트</h2>
+        <h2>TODAY 베스트</h2>
         <ul class="nav">
-          <li class="active">전체</li>
-          <li>쇼핑몰마켓</li>
-          <li>브랜드</li>
-          <li>뷰티</li>
+          <li class="active"><a href="#">전체</a></li>
+          <li><a href="#">쇼핑몰마켓</a></li>
+          <li><a href="#">브랜드</a></li>
+          <li><a href="#">뷰티</a></li>
         </ul>
       </div>
 
@@ -179,11 +181,11 @@
     <!-- 신상 모아보기 -->
     <article class="main-products-new">
       <div class="title-wrap">
-        <h2 class="title">신상 모아보기</h2>
+        <h2>신상 모아보기</h2>
         <ul class="nav">
-          <li class="active">쇼핑몰 마켓</li>
-          <li>브랜드</li>
-          <li>뷰티</li>
+          <li class="active"><a href="#">쇼핑몰 마켓</a></li>
+          <li><a href="#">브랜드</a></li>
+          <li><a href="#">뷰티</a></li>
         </ul>
       </div>
       <!-- list이미지 -->
@@ -230,6 +232,62 @@
               </div>
             </a>
           </li>
+          <!-- lsit4 -->
+          <li class="thumb">
+            <a href="#">
+              <figure class="figure">
+                  <img src="#" alt="글로우 플리츠 스커트">
+              </figure>
+              <div class="info">
+                  <p class="sellor">프롬헤드투토</p>
+                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <span class="discount">11%</span>
+                  <em class="price">32,650</em>
+              </div>
+            </a>
+          </li>
+          <!-- lsit5 -->
+          <li class="thumb">
+            <a href="#">
+              <figure class="figure">
+                  <img src="#" alt="글로우 플리츠 스커트">
+              </figure>
+              <div class="info">
+                  <p class="sellor">프롬헤드투토</p>
+                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <span class="discount">11%</span>
+                  <em class="price">32,650</em>
+              </div>
+            </a>
+          </li>
+          <!-- lsit6 -->
+          <li class="thumb">
+            <a href="#">
+              <figure class="figure">
+                  <img src="#" alt="글로우 플리츠 스커트">
+              </figure>
+              <div class="info">
+                  <p class="sellor">프롬헤드투토</p>
+                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <span class="discount">11%</span>
+                  <em class="price">32,650</em>
+              </div>
+            </a>
+          </li>
+          <!-- lsit7 -->
+          <li class="thumb">
+            <a href="#">
+              <figure class="figure">
+                  <img src="#" alt="글로우 플리츠 스커트">
+              </figure>
+              <div class="info">
+                  <p class="sellor">프롬헤드투토</p>
+                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <span class="discount">11%</span>
+                  <em class="price">32,650</em>
+              </div>
+            </a>
+          </li>
         </ul>
       </section>
     </article>
@@ -260,12 +318,12 @@
     <!-- mobile version -->
     <article class="main-products-recommand">
       <section class="title-wrap">
-        <h2 class="title">당신을 위한 추천</h2>
+        <h2>당신을 위한 추천</h2>
       </section>
 
       <!-- web version -->
       <section class="title-wrap">
-        <h2 class="title">유하영님을 위한 추천</h2>
+        <h2>유하영님을 위한 추천</h2>
       </section>
 
       <div class="btn-wrap">
@@ -327,7 +385,7 @@
     <!-- 놓칠 수 없는 브랜디 특가 -->
     <article class="main-products-special">
       <div class="title-wrap">
-        <h2 class="title">놓칠 수 없는 브랜디 특가</h2>
+        <h2>놓칠 수 없는 브랜디 특가</h2>
       </div>
       <div class="btn-wrap">
         <div class="btn-page">1/5</div>
@@ -567,7 +625,7 @@
     <!-- 지금 뜨고있는 기획전 -->
     <article class="main-products-pop">
       <div class="title-wrap">
-        <h2 class="title">지금 뜨고있는 기획전</h2>
+        <h2>지금 뜨고있는 기획전</h2>
       </div>
       <div class="btn-wrap">
         <div class="btn-page">1/5</div>
