@@ -37,7 +37,7 @@
       <section class="main-products-list">
         <ul class="main-list">
           <!-- list1 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -54,7 +54,7 @@
             </a>
           </li>
           <!-- list2 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="알파카 부들 도톰니트">
@@ -71,7 +71,7 @@
             </a>
           </li>
           <!-- lsit3 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -88,7 +88,7 @@
             </a>
           </li>
           <!-- list4 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="헨드메이드 숏 코트">
@@ -105,7 +105,7 @@
             </a>
           </li>
           <!-- lsit5 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="[이너로 좋아요] 도톰 코튼…">
@@ -121,7 +121,7 @@
             </a>
           </li>
           <!-- list6 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="코튼 일자 롱 스커트">
@@ -138,7 +138,7 @@
             </a>
           </li>
           <!-- list7 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="캔디블 도톰 루즈핏 가디건">
@@ -154,7 +154,7 @@
             </a>
           </li>
           <!-- list8 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="도톰 부들 울 루즈핏 니트">
@@ -192,7 +192,7 @@
       <section class="main-products-list">
         <ul class="main-list">
           <!-- list1 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -206,7 +206,7 @@
             </a>
           </li>
           <!-- list2 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="알파카 부들 도톰니트">
@@ -219,7 +219,7 @@
             </a>
           </li>
           <!-- lsit3 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -233,7 +233,7 @@
             </a>
           </li>
           <!-- lsit4 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -247,7 +247,7 @@
             </a>
           </li>
           <!-- lsit5 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -261,7 +261,7 @@
             </a>
           </li>
           <!-- lsit6 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -275,7 +275,7 @@
             </a>
           </li>
           <!-- lsit7 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -337,7 +337,7 @@
       <section class="main-products-list">
         <ul class="main-list">
           <!-- list1 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -351,7 +351,7 @@
             </a>
           </li>
           <!-- list2 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="알파카 부들 도톰니트">
@@ -365,7 +365,7 @@
             </a>
           </li>
           <!-- lsit3 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="글로우 플리츠 스커트">
@@ -463,7 +463,7 @@
       <section class="main-products-list">
         <ul class="main-list">
           <!-- list1 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -482,7 +482,7 @@
             </a>
           </li>
           <!-- list2 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -501,7 +501,7 @@
             </a>
           </li>
           <!-- list3 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -520,7 +520,7 @@
             </a>
           </li>
           <!-- list4 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -539,7 +539,7 @@
             </a>
           </li>
           <!-- list5 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -558,7 +558,7 @@
             </a>
           </li>
           <!-- list6 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -577,7 +577,7 @@
             </a>
           </li>
           <!-- list7 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -596,7 +596,7 @@
             </a>
           </li>
           <!-- list8 -->
-          <li class="thumb">
+          <li class="product-list">
             <a href="#">
               <figure class="figure">
                   <img src="#" alt="미쏘 글로우 플리츠">
@@ -648,7 +648,7 @@
                 </a>
               </li>
               <!-- list1 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
@@ -667,7 +667,7 @@
                 </a>
               </li>
               <!-- list2 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
@@ -686,7 +686,7 @@
                 </a>
               </li>
               <!-- list3 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
@@ -717,7 +717,7 @@
                 </a>
               </li>
               <!-- list1 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
@@ -736,7 +736,7 @@
                 </a>
               </li>
               <!-- list2 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
@@ -755,7 +755,7 @@
                 </a>
               </li>
               <!-- list3 -->
-              <li class="thumb">
+              <li class="product-list">
                 <a href="#">
                   <figure class="figure">
                       <img src="#" alt="미쏘 글로우 플리츠">
