@@ -10,7 +10,7 @@ nvm install 14.16.0
 nvm use 14.16.0
 
 # install global node package
-npm install @vue/cli@4.4.1
+npm install -g @vue/cli@4.4.1
 
 # install dependencies
 npm install
