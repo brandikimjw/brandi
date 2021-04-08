@@ -7,7 +7,7 @@
   > -->
 
   <div class="main-wrapper">
-    <!-- main-banner swiper -->
+    <!-- 스와이퍼 -->
     <article class="main-banner">
       <h2 class="ir">메인베너</h2>
       <section class="swiper-container">
@@ -38,7 +38,7 @@
     <article class="main-products">
       <h2 class="ir">투데이 베스트</h2>
       <div class="container">
-        <div class="title-wrap">
+        <div class="title-today">
           <h2>TODAY 베스트</h2>
           <ul class="nav">
             <li class="active"><a href="#">전체</a></li>
@@ -48,7 +48,7 @@
           </ul>
         </div>
 
-        <section class="main-products-list">
+        <section class="main-products">
           <ul class="main-list">
             <li class="product-list">
               <a class="pl-figure" href="#">
@@ -380,7 +380,7 @@
     </aside>
 
     <!-- 당신을 위한 추천 -->
-    <article class="main-products-recommand">
+    <article class="main-products-new">
       <h2 class="ir"></h2>
       <section class="title-wrap">
         <h2>당신을 위한 추천</h2>
@@ -612,10 +612,10 @@
     </aside>
 
     <!-- 하루 배송 상품은 내일도착 -->
-    <article class="main-products-oneday">
+    <article class="main-products">
       <h2 class="ir">하루 배송 상품은 내일도착</h2>
       <div class="container">
-        <div class="title-wrap">
+        <div class="title-oneday">
           <div class="icon-badge-oneday">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -665,7 +665,7 @@
           </div>
           <h2 class="title">상품은 내일 도착</h2>
         </div>
-        <section class="main-products-list">
+        <section class="main-products">
           <ul class="main-list">
             <li class="product-list">
               <a class="pl-figure" href="#">
@@ -826,6 +826,7 @@
             </li>
           </ul>
         </section>
+
         <div class="btn-common-main">
           <a class="more" href="#"
             ><span class="discount">하루배송 상품</span>더보기 ></a
@@ -1030,7 +1031,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import "~@/assets/scss/pages/main";
+@import "~@/assets/scss/pages/main1";
 .ir {
   height: 0;
   line-height: 0;
