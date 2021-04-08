@@ -59,11 +59,7 @@
                   />
                 </div>
               </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">1</span>
-                </div>
-              </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
                   <p class="sellor"><a href="#">미쏘</a></p>
@@ -78,18 +74,14 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
                     src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">2</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
                   <p class="sellor"><a href="#">미쏘</a></p>
@@ -104,18 +96,14 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="https://image.brandi.me/cproduct/2021/03/11/SB000000000021940594_1615465868_image1_S.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">3</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
                   <p class="sellor"><a href="#">미쏘</a></p>
@@ -130,22 +118,20 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="@/assets/images/pants01.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">4</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
-                  <p class="sellor">미쏘</p>
-                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <p class="sellor"><a href="#">미쏘</a></p>
+                  <strong class="product"
+                    ><a href="#">글로우 플리츠 스커트</a></strong
+                  >
                   <span class="discount">17%</span>
                   <em class="price">25,560</em>
                 </div>
@@ -154,22 +140,20 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="@/assets/images/pants01.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">5</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
-                  <p class="sellor">미쏘</p>
-                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <p class="sellor"><a href="#">미쏘</a></p>
+                  <strong class="product"
+                    ><a href="#">글로우 플리츠 스커트</a></strong
+                  >
                   <span class="discount">17%</span>
                   <em class="price">25,560</em>
                 </div>
@@ -178,22 +162,20 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="@/assets/images/pants01.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">6</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
-                  <p class="sellor">미쏘</p>
-                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <p class="sellor"><a href="#">미쏘</a></p>
+                  <strong class="product"
+                    ><a href="#">글로우 플리츠 스커트</a></strong
+                  >
                   <span class="discount">17%</span>
                   <em class="price">25,560</em>
                 </div>
@@ -202,22 +184,20 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="@/assets/images/pants01.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">7</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
-                  <p class="sellor">미쏘</p>
-                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <p class="sellor"><a href="#">미쏘</a></p>
+                  <strong class="product"
+                    ><a href="#">글로우 플리츠 스커트</a></strong
+                  >
                   <span class="discount">17%</span>
                   <em class="price">25,560</em>
                 </div>
@@ -226,22 +206,20 @@
 
             <li class="product-list">
               <a class="pl-figure" href="#">
-                <figure class="figure">
+                <div class="figure">
                   <img
-                    src="@/assets/images/pants01.jpeg"
+                    src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                     alt="미쏘 글로우 플리츠"
                   />
-                </figure>
-              </a>
-              <a class="pl-badge" href="#">
-                <div class="badge">
-                  <span class="badge">8</span>
                 </div>
               </a>
+              <span class="badge">1</span>
               <a class="pl-info" href="#">
                 <div class="info">
-                  <p class="sellor">미쏘</p>
-                  <strong class="product">글로우 플리츠 스커트</strong>
+                  <p class="sellor"><a href="#">미쏘</a></p>
+                  <strong class="product"
+                    ><a href="#">글로우 플리츠 스커트</a></strong
+                  >
                   <span class="discount">17%</span>
                   <em class="price">25,560</em>
                 </div>
@@ -251,8 +229,8 @@
         </section>
 
         <div class="btn-common-main">
-          <a class="more" href="#"
-            ><span class="discount">베스트</span>더보기 ></a
+          <a class="more" href="#">
+            <span class="discount">베스트</span>더보기 ></a
           >
         </div>
       </div>
@@ -282,11 +260,6 @@
                 />
               </figure>
             </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">1</span>
-              </div>
-            </a>
             <a class="pl-info" href="#">
               <div class="info">
                 <p class="sellor">미쏘</p>
@@ -306,11 +279,6 @@
                 />
               </figure>
             </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">2</span>
-              </div>
-            </a>
             <a class="pl-info" href="#">
               <div class="info">
                 <p class="sellor">미쏘</p>
@@ -329,11 +297,6 @@
                   alt="미쏘 글로우 플리츠"
                 />
               </figure>
-            </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">3</span>
-              </div>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
@@ -387,11 +350,7 @@
       </section>
 
       <div class="btn-wrap">
-        <div class="btn-page">
-          <span class="btn-num-prev">1</span>/<span class="btn-num-next"
-            >3</span
-          >
-        </div>
+        <div class="btn-page"></div>
         <div class="btn-box">
           <button
             type="button"
@@ -417,10 +376,24 @@
                 />
               </figure>
             </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">1</span>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor">미쏘</p>
+                <strong class="product">글로우 플리츠 스커트</strong>
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
               </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <figure class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </figure>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
@@ -441,11 +414,6 @@
                 />
               </figure>
             </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">2</span>
-              </div>
-            </a>
             <a class="pl-info" href="#">
               <div class="info">
                 <p class="sellor">미쏘</p>
@@ -464,35 +432,6 @@
                   alt="미쏘 글로우 플리츠"
                 />
               </figure>
-            </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">3</span>
-              </div>
-            </a>
-            <a class="pl-info" href="#">
-              <div class="info">
-                <p class="sellor">미쏘</p>
-                <strong class="product">글로우 플리츠 스커트</strong>
-                <span class="discount">17%</span>
-                <em class="price">25,560</em>
-              </div>
-            </a>
-          </li>
-
-          <li class="product-list">
-            <a class="pl-figure" href="#">
-              <figure class="figure">
-                <img
-                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
-                  alt="미쏘 글로우 플리츠"
-                />
-              </figure>
-            </a>
-            <a class="pl-badge" href="#">
-              <div class="badge">
-                <span class="badge">4</span>
-              </div>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
@@ -860,8 +799,8 @@
             ></button>
           </div>
         </div>
+
         <div class="event-wrap">
-          <!-- left -->
           <div class="event-item">
             <div class="item-banner">
               <figure class="banimg">
@@ -934,8 +873,6 @@
               </li>
             </ul>
           </div>
-
-          <!-- right -->
           <div class="event-item">
             <div class="item-banner">
               <figure class="banimg">
@@ -1008,12 +945,11 @@
               </li>
             </ul>
           </div>
-        </div>
-
-        <div class="btn-common-main">
-          <a class="more" href="#"
-            ><span class="discount">더 많은 기획전 </span>보러가기 ></a
-          >
+          <div class="btn-common-main">
+            <a class="more" href="#"
+              ><span class="discount">더 많은 기획전 </span>보러가기 ></a
+            >
+          </div>
         </div>
       </div>
     </article>
