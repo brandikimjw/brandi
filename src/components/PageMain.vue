@@ -249,21 +249,24 @@
           </ul>
         </div>
       </div>
+
       <section class="main-products-list">
-        <ul class="main-list clearfix::after">
+        <ul class="main-list">
           <li class="product-list">
             <a class="pl-figure" href="#">
-              <figure class="figure">
+              <div class="figure">
                 <img
-                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                   alt="미쏘 글로우 플리츠"
                 />
-              </figure>
+              </div>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
-                <p class="sellor">미쏘</p>
-                <strong class="product">글로우 플리츠 스커트</strong>
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
                 <span class="discount">17%</span>
                 <em class="price">25,560</em>
               </div>
@@ -272,17 +275,19 @@
 
           <li class="product-list">
             <a class="pl-figure" href="#">
-              <figure class="figure">
+              <div class="figure">
                 <img
-                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                   alt="미쏘 글로우 플리츠"
                 />
-              </figure>
+              </div>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
-                <p class="sellor">미쏘</p>
-                <strong class="product">글로우 플리츠 스커트</strong>
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
                 <span class="discount">17%</span>
                 <em class="price">25,560</em>
               </div>
@@ -291,17 +296,124 @@
 
           <li class="product-list">
             <a class="pl-figure" href="#">
-              <figure class="figure">
+              <div class="figure">
                 <img
-                  src="http://image.brandi.me/cproduct/2021/04/07/SB000000000024475468_1617757793_image1_S.jpeg"
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
                   alt="미쏘 글로우 플리츠"
                 />
-              </figure>
+              </div>
             </a>
             <a class="pl-info" href="#">
               <div class="info">
-                <p class="sellor">미쏘</p>
-                <strong class="product">글로우 플리츠 스커트</strong>
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <div class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </div>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <div class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </div>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <div class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </div>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <div class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </div>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <div class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/03/08/SB000000000021976204_1615199206_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </div>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor"><a href="#">미쏘</a></p>
+                <strong class="product"
+                  ><a href="#">글로우 플리츠 스커트</a></strong
+                >
                 <span class="discount">17%</span>
                 <em class="price">25,560</em>
               </div>
@@ -309,6 +421,7 @@
           </li>
         </ul>
       </section>
+
       <div class="btn-common-main">
         <div class="main-container container">
           <a class="more" href="#"

@@ -176,20 +176,39 @@
         padding: 0 0 0 16px;
         white-space: nowrap;
         .main-list {
+            box-sizing: border-box;
             .product-list {
                 display: inline-block;
+                width: 49%;
                 padding: 0 4px 20px;
-                margin-right: 8px;
                 position: relative;
 
-                .figure {
-                    width: 165px;
+                &:nth-of-type(even) {
+                    margin-right: 0;
+                }
 
+                .figure {
                     img {
                         background-color: #ccc;
                         width: 100%;
-                        display: block;
+                        vertical-align: top;
+                        //display: block;
                         border: 0 none;
+                    }
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 0;
+                    left: 2px;
+                    .badge {
+                        display: inline-block;
+                        background-color: #111;
+                        color: #fff;
+                        width: 26px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
                     }
                 }
 
@@ -203,7 +222,6 @@
                         .sellor {
                             font-size: 12px;
                             color: $light-grey;
-                            margin-bottom: 2px;
                         }
                         .product {
                             font-size: 13px;
@@ -340,6 +358,31 @@
   // 지금 뜨고있는 기획전 ( 왼쪽 오른쪽 같이 )
   .main-products-pop {
     .container {
+        .title-wrap {
+            h2 {
+                @include main-h2();
+                text-align: center;
+                margin-top: 60px;
+            }
+            .main-list-special {
+                @include main-nav();
+                height: 18px;
+                text-align: center;
+
+                .special-item {
+                    margin-right: 16px;
+                    display: inline-block;
+                    width: 61.111%;
+                    // &:active {
+                    // }
+
+                    &:last-child {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
         .event-wrap {
             float: left;
 
