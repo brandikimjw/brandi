@@ -1,7 +1,7 @@
-@charset "UTF-8";
-
+.main-wrapper {
+// 스와이퍼
 // 메인베너
-.main-banner {
+  .main-banner {
     .swiper-container {
         .swiper-wrapper {
             margin-bottom: 50px;
@@ -21,12 +21,14 @@
             }
         }
     }
-}
+  }
 
-//today 베스트
-.main-products {
+// 투데이베스트 & 상품은 내일도착 ( h2 하루배송 svg추가   / nav 삭제 )
+  .main-products {
     .container {
-        .title-wrap {
+        // 타이틀 부분
+        // 투데이 베스트 타이틀
+        .title-today {
             h2 {
                 @include main-h2();
                 text-align: center;
@@ -54,6 +56,20 @@
                 }
             }
         }
+        // 내일도착
+        .title-oneday {
+            margin-top: 60px;
+            text-align: center;
+            .icon-badge-oneday {
+                display: inline-block;
+            }
+            .title {
+                @include main-h2();
+                display: inline-block;
+            }
+        }
+
+        // 메인 :투데이베스트 & 상품은 내일도착 동일
         .main-products {
             height: inherit;
             .main-list {
@@ -63,40 +79,35 @@
                     width: 49%;
                     padding: 0 4px 20px;
                     position: relative;
-
                     &:nth-of-type(even) {
                         margin-right: 0;
                     }
-
-                    .figure {
+                    .pl-figure {
                         img {
                             background-color: #ccc;
                             width: 100%;
                             vertical-align: top;
-                            //display: block;
                             border: 0 none;
                         }
                     }
-
                     .badge {
-                        position: absolute;
-                        top: 0;
-                        left: 2px;
-                        .badge {
-                            display: inline-block;
-                            background-color: #111;
-                            color: #fff;
-                            width: 26px;
-                            height: 25px;
-                            text-align: center;
-                            line-height: 25px;
-                        }
+                      display: inline-block;
+                      position: absolute;
+                      left: 5px;
+                      top: 0;
+                      width: 26px;
+                      height: 30px;
+                      font-size: 12px;
+                      line-height: 26px;
+                      text-align: center;
+                      color: #fff;
+                      background: url(/src/assets/images/ic-bg-flag.png) no-repeat 0 0;
+                      background-size: 100% 100%;
+                      background-color: #111;
                     }
-
                     :nth-last-child() {
                         margin: 0;
                     }
-
                     .pl-info {
                         .info {
                             margin-top: 10px;
@@ -124,25 +135,11 @@
                 }
             }
         }
-        .btn-common-main {
-            text-align: center;
-            display: block;
-            .more {
-                text-align: center;
-                @include btn-common();
-                // width: 100%;
-                .discount {
-                    font-weight: bold;
-                    display: inline;
-                }
-            }
-            margin-bottom: 60px;
-        }
     }
-}
+  }
 
-// 신상 모아보기
-.main-products-new {
+// 신상모아보기 & 당신을 위한 추천 ( 당신을 위한 추천에 nav 삭제 )
+  .main-products-new {
     .title-wrap {
         h2 {
             @include main-h2();
@@ -179,19 +176,23 @@
         padding: 0 0 0 16px;
         white-space: nowrap;
         .main-list {
+            box-sizing: border-box;
             .product-list {
                 display: inline-block;
+                width: 49%;
                 padding: 0 4px 20px;
-                margin-right: 8px;
                 position: relative;
 
-                .figure {
-                    width: 165px;
+                &:nth-of-type(even) {
+                    margin-right: 0;
+                }
 
+                .figure {
                     img {
                         background-color: #ccc;
                         width: 100%;
-                        display: block;
+                        vertical-align: top;
+                        //display: block;
                         border: 0 none;
                     }
                 }
@@ -221,7 +222,6 @@
                         .sellor {
                             font-size: 12px;
                             color: $light-grey;
-                            margin-bottom: 2px;
                         }
                         .product {
                             font-size: 13px;
@@ -243,23 +243,10 @@
             }
         }
     }
-    .btn-common-main {
-        text-align: center;
-        .more {
-            text-align: center;
-            @include btn-common();
-            width: 100%;
-            .discount {
-                font-weight: bold;
-                display: inline;
-            }
-        }
-        margin-bottom: 60px;
-    }
-}
+  }
 
-//서브배너
-.main-sub-banner {
+// 서브배너
+  .main-sub-banner {
     margin-bottom: 60px;
     .swiper-container {
         .swiper-wrapper {
@@ -272,105 +259,10 @@
             }
         }
     }
-}
-
-//당신을 위한 추천
-.main-products-recommand {
-    .title-wrap {
-        h2 {
-            @include main-h2();
-            text-align: center;
-        }
-    }
-    .btn-wrap {
-        display: none;
-    }
-    .main-products-list {
-        overflow-x: auto;
-        overflow-y: hidden;
-        display: block;
-        padding: 0 0 0 16px;
-        white-space: nowrap;
-        .main-list {
-            .product-list {
-                display: inline-block;
-                padding: 0 4px 20px;
-                margin-right: 8px;
-                position: relative;
-
-                .figure {
-                    width: 165px;
-
-                    img {
-                        background-color: #ccc;
-                        width: 100%;
-                        display: block;
-                        border: 0 none;
-                    }
-                }
-
-                .badge {
-                    position: absolute;
-                    top: 0;
-                    left: 2px;
-                    .badge {
-                        display: inline-block;
-                        background-color: #111;
-                        color: #fff;
-                        width: 26px;
-                        height: 25px;
-                        text-align: center;
-                        line-height: 25px;
-                    }
-                }
-
-                :nth-last-child() {
-                    margin: 0;
-                }
-
-                .pl-info {
-                    .info {
-                        margin-top: 10px;
-                        .sellor {
-                            font-size: 12px;
-                            color: $light-grey;
-                        }
-                        .product {
-                            font-size: 13px;
-                            display: block;
-                            margin-bottom: 7px;
-                        }
-                        .discount {
-                            font-size: 19px;
-                            font-weight: bold;
-                            color: $brand-color;
-                        }
-                        .price {
-                            font-size: 19px;
-                            font-weight: bold;
-                            list-style: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .btn-common-main {
-        text-align: center;
-        .more {
-            @include btn-common();
-            width: 100%;
-            .discount {
-                font-weight: bold;
-                display: inline;
-            }
-        }
-        margin-bottom: 60px;
-    }
-}
+  }
 
 //놓칠 수 없는 브랜디 특가
-.main-products-special {
+  .main-products-special {
     white-space: nowrap;
     .title-wrap {
         h2 {
@@ -396,9 +288,6 @@
                 }
             }
         }
-    }
-    .btn-wrap {
-        display: none;
     }
     .main-list-special {
         //height: 330px;
@@ -464,122 +353,36 @@
             }
         }
     }
-}
+  }
 
-//하루배송 상품은 내일 도착
-.main-products-oneday {
+  // 지금 뜨고있는 기획전 ( 왼쪽 오른쪽 같이 )
+  .main-products-pop {
     .container {
         .title-wrap {
-            margin-top: 60px;
-            text-align: center;
-            .icon-badge-oneday {
-                display: inline-block;
-            }
-            .title {
-                @include main-h2();
-                display: inline-block;
-            }
-        }
-        .main-products {
-            height: inherit;
-            .main-list {
-                box-sizing: border-box;
-                .product-list {
-                    display: inline-block;
-                    width: 49%;
-                    padding: 0 4px 20px;
-                    position: relative;
-
-                    &:nth-of-type(even) {
-                        margin-right: 0;
-                    }
-
-                    .figure {
-                        img {
-                            background-color: #ccc;
-                            width: 100%;
-                            vertical-align: top;
-                            //display: block;
-                            border: 0 none;
-                        }
-                    }
-
-                    .badge {
-                        position: absolute;
-                        top: 0;
-                        left: 2px;
-                        .badge {
-                            display: inline-block;
-                            background-color: #111;
-                            color: #fff;
-                            width: 26px;
-                            height: 25px;
-                            text-align: center;
-                            line-height: 25px;
-                        }
-                    }
-
-                    :nth-last-child() {
-                        margin: 0;
-                    }
-
-                    .pl-info {
-                        .info {
-                            margin-top: 10px;
-                            .sellor {
-                                font-size: 12px;
-                                color: $light-grey;
-                            }
-                            .product {
-                                font-size: 13px;
-                                display: block;
-                                margin-bottom: 7px;
-                            }
-                            .discount {
-                                font-size: 19px;
-                                font-weight: bold;
-                                color: $brand-color;
-                            }
-                            .price {
-                                font-size: 19px;
-                                font-weight: bold;
-                                list-style: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .btn-common-main {
-            text-align: center;
-            display: block;
-            .more {
-                text-align: center;
-                @include btn-common();
-                width: 100%;
-                .discount {
-                    font-weight: bold;
-                    display: inline;
-                }
-            }
-            margin-bottom: 60px;
-        }
-    }
-}
-
-//지금 뜨고있는 기획전
-.main-products-pop {
-    .container {
-        .title-wrap {
-            text-align: center;
             h2 {
+                @include main-h2();
+                text-align: center;
+                margin-top: 60px;
+            }
+            .main-list-special {
+                @include main-nav();
+                height: 18px;
+                text-align: center;
+
+                .special-item {
+                    margin-right: 16px;
+                    display: inline-block;
+                    width: 61.111%;
+                    // &:active {
+                    // }
+
+                    &:last-child {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
             }
         }
-
-        .btn-wrap {
-            display: none;
-        }
-
         .event-wrap {
             float: left;
 
@@ -668,20 +471,28 @@
                 border-bottom: 1px solid #ebeef2;
             }
         }
-
-        .btn-common-main {
-            text-align: center;
-            display: block;
-            .more {
-                text-align: center;
-                @include btn-common();
-                width: 100%;
-                .discount {
-                    font-weight: bold;
-                    display: inline;
-                }
-            }
-            margin-bottom: 60px;
-        }
     }
+
+  }
+
+// 공통 하단 버튼
+  .btn-common-main {
+      text-align: center;
+      margin-top: 28px;
+      .more {
+          text-align: center;
+          @include btn-common();
+          // width: 100%;
+          .discount {
+              font-weight: bold;
+              display: inline;
+          }
+      }
+      margin-bottom: 60px;
+  }
+
+// 웹 버튼
+  .btn-wrap {
+    display: none;
+  }
 }
