@@ -1,30 +1,30 @@
 <template>
   <div id="wrap">
     <div id="header">
-      <Header />
+      <!-- <Header /> -->
     </div>
     <div id="container">
       <router-view />
     </div>
     <div id="footer">
-      <Footer />
+      <!-- <Footer /> -->
     </div>
   </div>
 </template>
 
 <script>
-import Header from './components/ComponentHeader'
-import Footer from './components/ComponentFooter'
+import Header from "./components/ComponentHeader";
+import Footer from "./components/ComponentFooter";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
-    Footer
+    Footer,
   },
-}
+};
 </script>
 
 <style lang="scss">
-@import '~@/assets/scss/main';
+@import "~@/assets/scss/main";
 </style>

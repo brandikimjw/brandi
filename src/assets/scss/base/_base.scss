@@ -24,11 +24,11 @@ html {
 /**
  * Basic styles for links
  */
-a {
+ a {
   @include on-event {
-    color: $text-color;
-    text-decoration: underline;
+      color: $brand-color;
+      text-decoration: underline;
   }
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 }
