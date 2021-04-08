@@ -63,6 +63,9 @@
               <a class="pl-info" href="#">
                 <div class="info">
                   <p class="sellor"><a href="#">미쏘</a></p>
+                  <div class="delivery">
+                    
+                  </div>
                   <strong class="product"
                     ><a href="#">글로우 플리츠 스커트</a></strong
                   >
