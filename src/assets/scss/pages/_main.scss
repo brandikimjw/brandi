@@ -1,1 +1,670 @@
 @charset "UTF-8";
+
+// 메인베너
+.main-banner {
+    .swiper-container {
+        .swiper-wrapper {
+            margin-bottom: 50px;
+            .swiper-slide {
+                width: 100%;
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+        }
+        .btn-wrap {
+            display: none;
+            .swiper-button-prev {
+            }
+            .swiper-button-next {
+            }
+        }
+    }
+}
+
+//today 베스트
+.main-products {
+    .container {
+        .title-wrap {
+            h2 {
+                @include main-h2();
+                text-align: center;
+            }
+            ul {
+                @include main-nav();
+                height: 18px;
+                text-align: center;
+
+                li {
+                    margin-right: 16px;
+                    display: inline-block;
+                    &.active {
+                        a {
+                            border-bottom: 2px solid #ff204b;
+                            font-weight: 700;
+                            color: #ff204b;
+                        }
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .main-products-list {
+            height: inherit;
+            .main-list {
+                box-sizing: border-box;
+                .product-list {
+                    display: inline-block;
+                    width: 49%;
+                    padding: 0 4px 20px;
+                    position: relative;
+
+                    &:nth-of-type(even) {
+                        margin-right: 0;
+                    }
+
+                    .figure {
+                        img {
+                            background-color: #ccc;
+                            width: 100%;
+                            vertical-align: top;
+                            //display: block;
+                            border: 0 none;
+                        }
+                    }
+
+                    .badge {
+                        position: absolute;
+                        top: 0;
+                        left: 2px;
+                        .badge {
+                            display: inline-block;
+                            background-color: #111;
+                            color: #fff;
+                            width: 26px;
+                            height: 25px;
+                            text-align: center;
+                            line-height: 25px;
+                        }
+                    }
+
+                    :nth-last-child() {
+                        margin: 0;
+                    }
+
+                    .pl-info {
+                        .info {
+                            margin-top: 10px;
+                            .sellor {
+                                font-size: 12px;
+                                color: $light-grey;
+                            }
+                            .product {
+                                font-size: 13px;
+                                display: block;
+                                margin-bottom: 7px;
+                            }
+                            .discount {
+                                font-size: 19px;
+                                font-weight: bold;
+                                color: $brand-color;
+                            }
+                            .price {
+                                font-size: 19px;
+                                font-weight: bold;
+                                list-style: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-common-main {
+            text-align: center;
+            display: block;
+            .more {
+                text-align: center;
+                @include btn-common();
+                // width: 100%;
+                .discount {
+                    font-weight: bold;
+                    display: inline;
+                }
+            }
+            margin-bottom: 60px;
+        }
+    }
+}
+// 신상 모아보기
+.main-products-new {
+    .title-wrap {
+        h2 {
+            @include main-h2();
+            text-align: center;
+        }
+        ul {
+            @include main-nav();
+            height: 18px;
+            text-align: center;
+
+            li {
+                margin-right: 16px;
+                display: inline-block;
+
+                &.active {
+                    a {
+                        border-bottom: 2px solid #ff204b;
+                        font-weight: 700;
+                        color: #ff204b;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .main-products-list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: block;
+        padding: 0 0 0 16px;
+        white-space: nowrap;
+        .main-list {
+            .product-list {
+                display: inline-block;
+                padding: 0 4px 20px;
+                margin-right: 8px;
+                position: relative;
+
+                .figure {
+                    width: 165px;
+
+                    img {
+                        background-color: #ccc;
+                        width: 100%;
+                        display: block;
+                        border: 0 none;
+                    }
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 0;
+                    left: 2px;
+                    .badge {
+                        display: inline-block;
+                        background-color: #111;
+                        color: #fff;
+                        width: 26px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                }
+
+                :nth-last-child() {
+                    margin: 0;
+                }
+
+                .pl-info {
+                    .info {
+                        margin-top: 10px;
+                        .sellor {
+                            font-size: 12px;
+                            color: $light-grey;
+                            margin-bottom: 2px;
+                        }
+                        .product {
+                            font-size: 13px;
+                            display: block;
+                            margin-bottom: 7px;
+                        }
+                        .discount {
+                            font-size: 19px;
+                            font-weight: bold;
+                            color: $brand-color;
+                        }
+                        .price {
+                            font-size: 19px;
+                            font-weight: bold;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-common-main {
+        text-align: center;
+        .more {
+            text-align: center;
+            @include btn-common();
+            width: 100%;
+            .discount {
+                font-weight: bold;
+                display: inline;
+            }
+        }
+        margin-bottom: 60px;
+    }
+}
+
+//서브배너
+.main-sub-banner {
+    margin-bottom: 60px;
+    .swiper-container {
+        .swiper-wrapper {
+            .swiper-slide {
+                display: inline-block;
+                img {
+                    max-width: 87.777%;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+//당신을 위한 추천
+.main-products-recommand {
+    .title-wrap {
+        h2 {
+            @include main-h2();
+            text-align: center;
+        }
+    }
+    .btn-wrap {
+        display: none;
+    }
+    .main-products-list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: block;
+        padding: 0 0 0 16px;
+        white-space: nowrap;
+        .main-list {
+            .product-list {
+                display: inline-block;
+                padding: 0 4px 20px;
+                margin-right: 8px;
+                position: relative;
+
+                .figure {
+                    width: 165px;
+
+                    img {
+                        background-color: #ccc;
+                        width: 100%;
+                        display: block;
+                        border: 0 none;
+                    }
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 0;
+                    left: 2px;
+                    .badge {
+                        display: inline-block;
+                        background-color: #111;
+                        color: #fff;
+                        width: 26px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                }
+
+                :nth-last-child() {
+                    margin: 0;
+                }
+
+                .pl-info {
+                    .info {
+                        margin-top: 10px;
+                        .sellor {
+                            font-size: 12px;
+                            color: $light-grey;
+                        }
+                        .product {
+                            font-size: 13px;
+                            display: block;
+                            margin-bottom: 7px;
+                        }
+                        .discount {
+                            font-size: 19px;
+                            font-weight: bold;
+                            color: $brand-color;
+                        }
+                        .price {
+                            font-size: 19px;
+                            font-weight: bold;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-common-main {
+        text-align: center;
+        .more {
+            @include btn-common();
+            width: 100%;
+            .discount {
+                font-weight: bold;
+                display: inline;
+            }
+        }
+        margin-bottom: 60px;
+    }
+}
+
+//놓칠 수 없는 브랜디 특가
+.main-products-special {
+    white-space: nowrap;
+    .title-wrap {
+        h2 {
+            @include main-h2();
+            text-align: center;
+            margin-top: 60px;
+        }
+        .main-list-special {
+            @include main-nav();
+            height: 18px;
+            text-align: center;
+
+            .special-item {
+                margin-right: 16px;
+                display: inline-block;
+                width: 61.111%;
+                // &:active {
+                // }
+
+                &:last-child {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .btn-wrap {
+        display: none;
+    }
+    .main-list-special {
+        //height: 330px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-left: 16px;
+        .special-item {
+            display: none;
+            .product {
+            }
+            .discount {
+            }
+        }
+    }
+    .thumb-special {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        width: 220px;
+        .special-img {
+            .figure {
+                img {
+                    width: 100%;
+                    background-size: cover;
+                }
+            }
+            .badge-special {
+                .badge {
+                    position: absolute;
+                    display: inline-block;
+                    top: 0;
+                    left: 0;
+                    padding: 8px 15px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 1;
+                    color: #fff;
+                    background-color: #ff365e;
+                }
+            }
+            .info-special {
+                text-align: center;
+                .time {
+                    @include special-time();
+                    display: block;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #808893;
+                }
+                .product {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin: 10px 0 2px 0;
+                    font-size: 13px;
+                    display: block;
+                    font-weight: normal;
+                }
+                .price {
+                    font-size: 19px;
+                    font-weight: 700;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//하루배송 상품은 내일 도착
+.main-products-oneday {
+    .container {
+        .title-wrap {
+            margin-top: 60px;
+            text-align: center;
+            .icon-badge-oneday {
+                display: inline-block;
+            }
+            .title {
+                @include main-h2();
+                display: inline-block;
+            }
+        }
+        .main-products-list {
+            height: inherit;
+            .main-list {
+                box-sizing: border-box;
+                .product-list {
+                    display: inline-block;
+                    width: 49%;
+                    padding: 0 4px 20px;
+                    position: relative;
+
+                    &:nth-of-type(even) {
+                        margin-right: 0;
+                    }
+
+                    .figure {
+                        img {
+                            background-color: #ccc;
+                            width: 100%;
+                            vertical-align: top;
+                            border: 0 none;
+                        }
+                    }
+
+                    :nth-last-child() {
+                        margin: 0;
+                    }
+
+                    .pl-info {
+                        .info {
+                            margin-top: 10px;
+                            .sellor {
+                                font-size: 12px;
+                                color: $light-grey;
+                            }
+                            .product {
+                                font-size: 13px;
+                                display: block;
+                                margin-bottom: 7px;
+                            }
+                            .discount {
+                                font-size: 15px;
+                                font-weight: bold;
+                                color: $brand-color;
+                            }
+                            .price {
+                                font-size: 15px;
+                                font-weight: bold;
+                                list-style: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-common-main {
+            text-align: center;
+            display: block;
+            .more {
+                text-align: center;
+                @include btn-common();
+                width: 100%;
+                .discount {
+                    font-weight: bold;
+                    display: inline;
+                }
+            }
+            margin-bottom: 60px;
+        }
+    }
+}
+
+//지금 뜨고있는 기획전
+.main-products-pop {
+    .container {
+        .title-wrap {
+            text-align: center;
+            h2 {
+            }
+        }
+
+        .btn-wrap {
+            display: none;
+        }
+
+        .event-wrap {
+            float: left;
+
+            //left
+            .event-item {
+                display: inline-block;
+                width: 100%;
+                .item-banner {
+                    position: relative;
+                    margin-top: 18px;
+
+                    .banimg {
+                        display: block;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .bage {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 10px;
+
+                        &::before {
+                            content: '바로가기 > ';
+                            background-color: rgba(0, 0, 0, 0.4);
+                            padding: 6.5px 14px 6.5px 16px;
+                            color: #fff;
+                            font-size: 11px;
+                            line-height: 1;
+                        }
+                    }
+                }
+                .main-list {
+                    margin-top: 8px;
+                    .product-list {
+                        display: inline-block;
+                        width: 33%;
+                        padding: 0 4px 20px;
+                        position: relative;
+                        float: left;
+
+                        .figure {
+                            img {
+                                background-color: #ccc;
+                                width: 100%;
+                                vertical-align: top;
+                                border: 0 none;
+                            }
+                        }
+
+                        :nth-last-child() {
+                            margin: 0;
+                        }
+
+                        .pl-info {
+                            .info {
+                                margin-top: 10px;
+                                .sellor {
+                                    font-size: 12px;
+                                    color: $light-grey;
+                                }
+                                .product {
+                                    font-size: 13px;
+                                    display: block;
+                                    margin-bottom: 7px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                                .discount {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    color: $brand-color;
+                                }
+                                .price {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    list-style: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                margin-bottom: 12px;
+                border-bottom: 1px solid #ebeef2;
+            }
+        }
+
+        .btn-common-main {
+            text-align: center;
+            display: block;
+            .more {
+                text-align: center;
+                @include btn-common();
+                width: 100%;
+                .discount {
+                    font-weight: bold;
+                    display: inline;
+                }
+            }
+            margin-bottom: 60px;
+        }
+    }
+}
