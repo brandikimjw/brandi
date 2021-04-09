@@ -665,8 +665,8 @@
       </div>
       <ul class="main-list-special">
         <li class="special-item">
-          <strong class="product">BRANDI TIME PRICE</strong>
-          <span class="discount"
+          <strong class="product ir">BRANDI TIME PRICE</strong>
+          <span class="discount ir"
             >지금 가입하면 5만원 쿠폰팩 지급!추가할인 받고 구매하자!</span
           >
         </li>

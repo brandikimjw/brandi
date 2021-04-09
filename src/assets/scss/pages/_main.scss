@@ -102,7 +102,7 @@
                       line-height: 26px;
                       text-align: center;
                       color: #fff;
-                      background: url(/src/assets/images/ic-bg-flag.png) no-repeat 0 0;
+                      background: url('/src/assets/images/ic-btn-call-m@3x.png') no-repeat 0 0;
                       background-size: 100% 100%;
                       background-color: #111;
                     }
@@ -545,7 +545,7 @@
                 .main-container {
                     h2 {width: 50%; display: inline-block; float: left; font-size: 30px; text-align: left;}
                     .nav {
-                        width: 50%; display: inline-block; text-align:right; padding-right: 3%;
+                        width: 50%; display: inline-block; text-align:right;
                         li { font-size: 17px;}
                     }
                 }
@@ -556,7 +556,6 @@
                 white-space: normal;
                 clear: both;
                 .main-list {
-                    padding-right: 3%;
                     .product-list {
                         width: 24%;
                     }
@@ -577,13 +576,70 @@
             .btn-wrap {
 
             }
+            .main-list-special {
+                overflow: visible;
+                display: block;
+                white-space: normal;
+                clear: both;
+                position: relative;
+                .special-item {
+                    display: inline-block;
+                    width: 300px; height: 347px;
+                    background: url(https://user-images.githubusercontent.com/81278777/114157479-a3433b80-995e-11eb-97c3-369f702f5ded.png)no-repeat center/cover;
+                }
+                .thumb-special {
+                    vertical-align: top;
+                    &:nth-last-child(){
+                        display: none;
+                    }
+                }
+            }
         }
 
         //하루배송 상품은 내일 도착
+        .main-products {
+            .container {
+                .title-oneday{
+                    text-align: left;
+                    .icon-badge-oneday {
+                       svg {
+                           width: 158px;
+                           height: 32px;
+                       }
+                    }
+                    .title {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
 
         //지금 뜨고있는 기획전
         .main-products-pop {
+           .container {
+               .title-wrap {
+                   h2 {
+                    text-align: left;
+                    font-size: 30px;
+                   }
+               }
+               .event-wrap {
+                   .event-item {
+                       display: inline-block;
+                       width: 50%;
+                       float: left;
 
+                       &:nth-child(even){
+                           padding-left: 16px;
+                       }
+                       &:nth-child(odd){
+                           padding-right: 16px;
+                       }
+
+                       border-bottom: none;
+                    }
+               }
+           }
         }
     }
 }
