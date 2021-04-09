@@ -35,7 +35,7 @@
     </article>
 
     <!-- TODAY 베스트 -->
-    <article class="main-products">
+    <article class="main-products container">
       <h2 class="ir">투데이 베스트</h2>
       <div class="container">
         <div class="title-today">
@@ -238,7 +238,7 @@
     </article>
 
     <!-- 신상 모아보기 -->
-    <article class="main-products-new">
+    <article class="main-products-new container">
       <h2 class="ir">신상모아보기</h2>
       <div class="title-wrap">
         <div class="main-container container">
@@ -457,10 +457,12 @@
     </aside>
 
     <!-- 당신을 위한 추천 -->
-    <article class="main-products-new">
+    <article class="main-products-new container">
       <h2 class="ir"></h2>
       <section class="title-wrap">
-        <h2>당신을 위한 추천</h2>
+        <div class="main-container container">
+          <h2>당신을 위한 추천</h2>
+        </div>
       </section>
 
       <div class="btn-wrap">
@@ -556,12 +558,88 @@
               </div>
             </a>
           </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <figure class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </figure>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor">미쏘</p>
+                <strong class="product">글로우 플리츠 스커트</strong>
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <figure class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </figure>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor">미쏘</p>
+                <strong class="product">글로우 플리츠 스커트</strong>
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <figure class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </figure>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor">미쏘</p>
+                <strong class="product">글로우 플리츠 스커트</strong>
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
+
+          <li class="product-list">
+            <a class="pl-figure" href="#">
+              <figure class="figure">
+                <img
+                  src="https://image.brandi.me/cproduct/2021/04/07/SB000000000024475480_1617757815_image1_S.jpeg"
+                  alt="미쏘 글로우 플리츠"
+                />
+              </figure>
+            </a>
+            <a class="pl-info" href="#">
+              <div class="info">
+                <p class="sellor">미쏘</p>
+                <strong class="product">글로우 플리츠 스커트</strong>
+                <span class="discount">17%</span>
+                <em class="price">25,560</em>
+              </div>
+            </a>
+          </li>
         </ul>
       </section>
     </article>
 
     <!-- 놓칠 수 없는 브랜디 특가 -->
-    <aside class="main-products-special">
+    <aside class="main-products-special container">
       <h2 class="ir">놓칠 수 없는 브랜디 특가</h2>
       <div class="title-wrap">
         <h2>놓칠 수 없는 브랜디 특가</h2>
@@ -598,6 +676,29 @@
             <figure class="figure">
               <img
                 src="https://image.brandi.me/cproduct/2021/03/03/SB000000000021685733_1614782720_image1_S.jpeg"
+                alt="덤블 뽀글이 리버시블 베이직..."
+              />
+            </figure>
+          </a>
+          <a class="special-img" href="#">
+            <div class="badge-special">
+              <span class="badge">41%</span>
+            </div>
+          </a>
+          <a class="special-img" href="#">
+            <div class="info-special">
+              <p class="time">남은시간 123:05:55</p>
+              <strong class="product">덤블 뽀글이 리버시블 베이직...</strong>
+              <em class="price">75,880</em>
+            </div>
+          </a>
+        </li>
+
+        <li class="thumb-special">
+          <a class="special-img" href="#">
+            <figure class="figure">
+              <img
+                src="@/assets/images/tshirts.jpeg"
                 alt="덤블 뽀글이 리버시블 베이직..."
               />
             </figure>

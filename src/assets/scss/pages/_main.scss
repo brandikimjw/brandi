@@ -43,6 +43,7 @@
                     display: inline-block;
                     &.active {
                         a {
+                            display: block;
                             border-bottom: 2px solid #ff204b;
                             font-weight: 700;
                             color: #ff204b;
@@ -156,6 +157,7 @@
 
                 &.active {
                     a {
+                        display: block;
                         border-bottom: 2px solid #ff204b;
                         font-weight: 700;
                         color: #ff204b;
@@ -173,7 +175,6 @@
         overflow-x: auto;
         overflow-y: hidden;
         display: block;
-        padding: 0 0 0 16px;
         white-space: nowrap;
         .main-list {
             box-sizing: border-box;
@@ -293,7 +294,6 @@
         //height: 330px;
         overflow-x: auto;
         overflow-y: hidden;
-        margin-left: 16px;
         .special-item {
             display: none;
             .product {
@@ -498,6 +498,7 @@
     display: none;
   }
 }
+
 // $breakpoints: (
 //     'small': 320px,
 //     'medium': 768px,
@@ -507,23 +508,82 @@
 
 @media screen and (min-width:map-get($breakpoints, 'medium')) {
     .main-wrapper {
+        .container {
+            .title-today {
+                h2 { width: 50%;
+                    display: inline-block;
+                    float: left;
+                }
+                ul {
+                    width: 50%; display: inline-block;
+                }
+            }
+            .main-products {
+                clear: both;
+            }
+        }
         .main-products {
             .container {
+                .title-today {
+                    h2{font-size: 30px; text-align: left;}
+                    ul {font-size: 17px; text-align: right;}
+                }
                 .main-products {
                     .main-list {
-                        .product-list {
-                            width: 24%;
-                        }
+                       .product-list {
+                           width: 24%;
+                       }
                     }
                 }
             }
         }
+
+        //신상모아보기
+        .main-products-new {
+            width: 100%;
+            .title-wrap {
+                .main-container {
+                    h2 {width: 50%; display: inline-block; float: left; font-size: 30px; text-align: left;}
+                    .nav {
+                        width: 50%; display: inline-block; text-align:right; padding-right: 3%;
+                        li { font-size: 17px;}
+                    }
+                }
+            }
+            .main-products-list {
+                overflow: visible;
+                display: block;
+                white-space: normal;
+                clear: both;
+                .main-list {
+                    padding-right: 3%;
+                    .product-list {
+                        width: 24%;
+                    }
+                }
+            }
+        }
+
+        //놓칠 수 없는 브랜디 특가
+        .main-products-special {
+            .title-wrap {
+                width: 50%;
+                display: inline-block;
+                h2 {
+                    font-size: 30px;
+                    text-align: left;
+                }
+            }
+            .btn-wrap {
+
+            }
+        }
+
+        //하루배송 상품은 내일 도착
+
+        //지금 뜨고있는 기획전
+        .main-products-pop {
+
+        }
     }
-    // .main-products {
-    //     .main-list {
-    //         .product-list {
-    //             width: 22%;
-    //         }
-    //     }
-    // }
 }
