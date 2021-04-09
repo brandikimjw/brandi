@@ -63,9 +63,7 @@
               <a class="pl-info" href="#">
                 <div class="info">
                   <p class="sellor"><a href="#">미쏘</a></p>
-                  <div class="delivery">
-                    
-                  </div>
+                  <div class="delivery"></div>
                   <strong class="product"
                     ><a href="#">글로우 플리츠 스커트</a></strong
                   >
@@ -233,7 +231,7 @@
 
         <div class="btn-common-main">
           <a class="more" href="#">
-            <span class="discount">베스트</span>더보기 ></a
+            <span class="discount">베스트</span>더보기 &gt;</a
           >
         </div>
       </div>
@@ -428,7 +426,7 @@
       <div class="btn-common-main">
         <div class="main-container container">
           <a class="more" href="#"
-            ><span class="discount">브랜드 신상 </span>더보기 ></a
+            ><span class="discount">브랜드 신상 </span>더보기 &gt;</a
           >
         </div>
       </div>
@@ -884,7 +882,7 @@
 
         <div class="btn-common-main">
           <a class="more" href="#"
-            ><span class="discount">하루배송 상품</span>더보기 ></a
+            ><span class="discount">하루배송 상품</span>더보기 &gt;</a
           >
         </div>
       </div>
@@ -1063,7 +1061,7 @@
           </div>
           <div class="btn-common-main">
             <a class="more" href="#"
-              ><span class="discount">더 많은 기획전 </span>보러가기 ></a
+              ><span class="discount">더 많은 기획전 </span>보러가기 &gt;</a
             >
           </div>
         </div>

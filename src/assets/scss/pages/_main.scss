@@ -105,7 +105,7 @@
                       background-size: 100% 100%;
                       background-color: #111;
                     }
-                    :nth-last-child() {
+                    &:nth-last-child() {
                         margin: 0;
                     }
                     .pl-info {
@@ -497,5 +497,33 @@
   .btn-wrap {
     display: none;
   }
-//  수정
+}
+// $breakpoints: (
+//     'small': 320px,
+//     'medium': 768px,
+//     'large': 1024px,
+// ) !default;
+//@media screen and (min-width:map-get($breakpoints, 'small')) {}
+
+@media screen and (min-width:map-get($breakpoints, 'medium')) {
+    .main-wrapper {
+        .main-products {
+            .container {
+                .main-products {
+                    .main-list {
+                        .product-list {
+                            width: 24%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // .main-products {
+    //     .main-list {
+    //         .product-list {
+    //             width: 22%;
+    //         }
+    //     }
+    // }
 }
