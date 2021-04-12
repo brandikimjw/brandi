@@ -1,0 +1,196 @@
+<template>
+  <section class="product-normal">
+    <div class="thumb">
+      <a href="#">
+        <div class="thumb-img ir">이미지</div>
+        <div class="badge-black">1</div>
+      </a>
+    </div>
+    <div class="wrap-info">
+      <div class="product-info">
+        <div class="sellor">프롬헤드투토</div>
+        <div class="oneday-svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="54"
+            height="12"
+            viewBox="0 0 54 12"
+          >
+            <defs>
+              <circle id="pq7edxskja" cx="6" cy="6" r="6" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <g>
+                <g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g fill="#0080E0">
+                            <path
+                              d="M34.198 7.257c1.444 0 2.522 1.061 2.407 2.372-.115 1.31-1.378 2.37-2.823 2.37-1.443 0-2.52-1.06-2.406-2.37.114-1.31 1.378-2.372 2.822-2.372zm-16.017.723l-.118 1.355h-3.858l-.166 1.894h-1.501l.166-1.894H8.841L8.96 7.98h9.222zm15.9.621c-.69 0-1.313.47-1.361 1.028-.05.556.492 1.028 1.18 1.028.69 0 1.312-.472 1.361-1.028.05-.558-.491-1.028-1.18-1.028zM8.143 2.72l-.204 2.34h1.46l-.12 1.366h-1.46l-.288 3.29H6.02l.612-6.996h1.51zm13.053.767l-.19 2.179h1.54l.192-2.18h1.418l-.545 6.219h-4.377l.544-6.218h1.418zm5.425-.77l-.206 2.363h.841l.207-2.364h1.439l-.611 6.99h-1.44l.29-3.321H26.3l-.29 3.32h-1.42l.613-6.989h1.418zM3.7 2.86l-.137 1.573h1.942L5.388 5.77h-.73c.21.412.305.854.263 1.337-.03.35-.12.668-.27.966-.15.308-.337.565-.561.781-.236.227-.498.401-.797.524-.3.135-.613.196-.922.196-.33 0-.631-.061-.907-.196-.278-.123-.51-.297-.695-.524-.197-.216-.34-.473-.436-.78-.097-.299-.13-.618-.1-.967.043-.483.204-.925.497-1.337H0l.117-1.336h1.944l.137-1.573H3.7zM22.438 6.91h-1.541l-.136 1.55h1.542l.135-1.55zM2.698 5.842c-.155 0-.29.032-.41.093-.128.062-.25.153-.34.267-.114.113-.196.237-.25.37-.074.145-.107.299-.122.463-.014.164-.008.318.041.462.028.144.09.278.184.38.07.124.176.207.294.268.108.061.239.092.393.092.134 0 .27-.03.4-.092.127-.061.238-.144.352-.268.09-.102.163-.236.238-.38.054-.144.099-.298.113-.462.015-.164-.003-.318-.032-.462-.05-.134-.1-.258-.173-.37-.093-.115-.188-.206-.306-.268-.117-.061-.25-.093-.383-.093zm14.216-4.47l-.298 3.38h-4.08l-.084.96h4.08l-.105 1.192H10.9l.294-3.366h4.08l.087-.954h-4.08l.106-1.212h5.528zm18.341 2.38l-.118 1.344H39l-.116 1.336h-9.227l.117-1.336h3.863l.118-1.343h1.5zM34.833 0l3.197 3.126-1.126.924-2.235-2.183-2.615 2.183-.966-.924L34.833 0z"
+                              transform="translate(-288 -4131) translate(16 3100) translate(0 42) translate(168 801) translate(2 186) translate(102 2) translate(14.571)"
+                            />
+                          </g>
+                          <g
+                            transform="translate(-288 -4131) translate(16 3100) translate(0 42) translate(168 801) translate(2 186) translate(102 2)"
+                          >
+                            <mask id="um61a51a0b" fill="#fff">
+                              <use xlink:href="#pq7edxskja" />
+                            </mask>
+                            <use fill="#0080E0" xlink:href="#pq7edxskja" />
+                            <path
+                              fill="#28E5E5"
+                              d="M10.607 1.651H7.58L6.594 3.12l-.985 1.467H2.831L1.666 6.054v1.957h.995c0-.878.719-1.59 1.602-1.59.883 0 1.601.712 1.601 1.59H7.59c0-.878.718-1.59 1.602-1.59.883 0 1.601.712 1.601 1.59h1.19c.223-.645.351-1.334.351-2.054 0-1.668-.659-3.18-1.726-4.306"
+                              mask="url(#um61a51a0b)"
+                            />
+                            <path
+                              fill="#FFF"
+                              d="M5.125 8.01c0-.472-.386-.856-.862-.856s-.862.384-.862.856c0 .473.386.857.862.857s.862-.384.862-.857M10.053 8.01c0-.472-.387-.856-.862-.856-.476 0-.863.384-.863.856 0 .473.387.857.863.857.475 0 .862-.384.862-.857M5.607 4.586L6.922 2.629 4.386 2.629 2.832 4.586z"
+                              mask="url(#um61a51a0b)"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <em class="product-title">글로우 플리츠 롱스커트</em>
+      <div class="info-price">
+        <strong class="dc">17%</strong>
+        <em class="dc-price">10,000</em>
+        <p class="price ir">14,000</p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  // name: "Item",
+  // props: {
+  //   imgSrc: {
+  //     type: String,
+  //     default: "~@/assets/images/tshirts.jpeg",
+  //   },
+  //   productName: {
+  //     type: String,
+  //     default: "제품값이 입력되지 않았습니다.",
+  //   },
+  //   isBadge: {
+  //     type: Boolean,
+  //     default: true,
+  //   },
+  // },
+  data() {
+    return {};
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss" scoped>
+.ir {
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -10000px;
+}
+// 컴포넌트 노말
+.product-normal {
+  display: block;
+  padding: 0 4px 0 4px;
+  margin-bottom: 3%;
+  .thumb {
+    overflow: hidden;
+    position: relative;
+    padding-top: 110%;
+    border-radius: 0;
+    a {
+      display: block;
+    }
+
+    .thumb-img {
+      background: url(~@/assets/images/tshirts.jpeg) no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 110%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+    .badge-black {
+      background: url(~@/assets/images/ic-bg-flag.png) no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+      font-weight: 500;
+      text-align: center;
+      color: #fff;
+      background-size: 100% 100%;
+      z-index: 10;
+      z-index: 10;
+    }
+  }
+
+  .wrap-info {
+    .product-info {
+      box-sizing: border-box;
+      .sellor {
+        width: 48%;
+        display: inline-block;
+        overflow: hidden;
+        color: #808893;
+        font-size: 12px;
+        font-style: normal;
+        text-align: left;
+      }
+      .oneday-svg {
+        display: inline-block;
+        width: 49%;
+        height: 30px;
+        text-align: right;
+      }
+    }
+    .product-title {
+      display: block;
+      clear: both;
+      font-size: 13px;
+      font-style: normal;
+      color: #202429;
+    }
+    .info-price {
+      .dc {
+        color: #ff204b;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .dc-price {
+        font-size: 15px;
+        font-weight: bold;
+        font-style: normal;
+        color: #202429;
+      }
+      .price {
+        font-size: 15px;
+        font-weight: bold;
+        font-style: normal;
+        color: #202429;
+      }
+    }
+  }
+}
+</style>
