@@ -15,7 +15,7 @@
       <ButtonCommon />
     </article>
     <article class="main-new container">
-      <NavTitle />
+      <ButtonTitle />
       <div class="new-list">
         <ProductNormal />
         <ProductNormal />
@@ -25,7 +25,9 @@
       <ButtonCommon />
     </article>
     <aside class="main-sub-banner"></aside>
-    <article class="main-recommend container"></article>
+    <article class="main-recommend container">
+      <ButtonTitle />
+    </article>
     <article class="main-special container">
       <div class="special-list">
         <SpecialItem />
@@ -33,7 +35,20 @@
         <SpecialItem />
       </div>
     </article>
-    <article class="main-oneday container"></article>
+    <article class="main-oneday container">
+      <OnedayTitle />
+      <div class="today-list">
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+      </div>
+      <ButtonCommon />
+    </article>
     <article class="main-benefit container"></article>
   </div>
 </template>
@@ -44,6 +59,8 @@ import NavTitle from "./NavTitle";
 import ProductNormal from "./ProductNormal";
 import ButtonCommon from "./ButtonCommon";
 import SpecialItem from "./SpecialItem";
+import ButtonTitle from "./ButtonTitle";
+import OnedayTitle from "./OnedayTitle";
 
 export default {
   name: "PageMain",
@@ -53,6 +70,8 @@ export default {
     ButtonCommon,
     NavTitle,
     SpecialItem,
+    ButtonTitle,
+    OnedayTitle,
   },
   data() {
     return {};

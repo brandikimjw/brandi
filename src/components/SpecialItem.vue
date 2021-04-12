@@ -39,6 +39,7 @@ export default {
 }
 // 컴포넌트 노말
 .product-special {
+  width: 66%;
   display: block;
   padding: 0 4px 0 4px;
   margin-bottom: 3%;
