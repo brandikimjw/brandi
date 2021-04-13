@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 .main-banner {
   .banner-img {
+    width: 100%;
   }
 }
 </style>
