@@ -2,7 +2,7 @@
   <section class="product-normal">
     <div class="thumb">
       <a href="#">
-        <div class="thumb-img text-hide">이미지</div>
+        <div class="thumb-img hide-text">이미지</div>
         <div class="badge-index">1</div>
       </a>
     </div>

@@ -1,11 +1,15 @@
 <template>
-<!-- 지금 뜨고있는 기획전 -->
-<section>
-  <div class="main-banner">
-    <div class="banner-img"></div>
-    .banner-
-  </div>
-</section>
+  <!-- 지금 뜨고있는 기획전 -->
+  <section>
+    <div class="main-banner">
+      <div class="banner-img"></div>
+      <div class="banner-contents">
+        <ProductNormal />
+        <ProductNormal />
+        <ProductNormal />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -18,5 +22,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
 </style>
