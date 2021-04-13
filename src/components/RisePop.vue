@@ -1,7 +1,9 @@
 <template>
 <!-- 지금 뜨고있는 기획전 -->
 <section>
-  <div class="main-banner"></div>
+  <div class="main-banner">
+    <div class="banner-img"></div>
+  </div>
 </section>
 </template>
 

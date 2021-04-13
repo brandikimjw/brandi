@@ -3,7 +3,7 @@
     <div class="thumb">
       <a href="#">
         <div class="thumb-img hide-text">상품이미지</div>
-        <div class="badge-discount">12%</div>
+        <div class="badge-idx">12%</div>
       </a>
     </div>
     <div class="wrap-info">
@@ -56,7 +56,7 @@ export default {
       background-repeat: no-repeat;
       background-position: 50%;
     }
-    .badge-discount {
+    .badge-idx {
       position: absolute;
       display: inline-block;
       top: 0;
