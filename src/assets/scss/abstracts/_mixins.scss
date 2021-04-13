@@ -22,32 +22,3 @@
     @content;
   }
 }
-
-@mixin main-h2() {
-  color: #202429;
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
-@mixin main-nav() {
-  color: #808893;
-  font-size: 14px;
-  margin-bottom: 18px;
-}
-
-@mixin btn-common() {
-  display: inline-block;
-  min-width: 240px;
-  padding: 10.5px;
-  border: solid 1px #d3d7df;
-  border-radius: 28px;
-  font-size: 13px;
-  color: #5f6773;
-}
-
-@mixin special-time() {
-  margin: 0;
-  padding: 10px 0;
-  font-size: 15px;
-  color: #808893;
-}

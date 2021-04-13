@@ -116,6 +116,11 @@ export default {
       font-size: 13px;
       font-style: normal;
       color: #202429;
+      // 한줄효과
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
     }
     .info-price {
       .dc {

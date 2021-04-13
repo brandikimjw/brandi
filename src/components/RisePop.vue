@@ -30,6 +30,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .event-item {
+  border-bottom: 1px solid #ebeef2;
+  &:last-child {
+    margin-top: 24px;
+  }
   a {
     display: block;
     .banner {

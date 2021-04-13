@@ -1,5 +1,8 @@
 <template>
   <div class="main-wrapper">
+    <div class="main-swiper">
+      <MainSwiper />
+    </div>
     <article class="main-today container">
       <h5>투데이베스트</h5>
       <NavTitle />
@@ -71,12 +74,13 @@
         <RisePop />
         <RisePop />
       </div>
+      <ButtonCommon />
     </article>
   </div>
 </template>
 
 <script>
-import MainBannerSwiper from "./MainBannerSwiper";
+import MainSwiper from "./MainSwiper";
 import NavTitle from "./NavTitle";
 import ProductNormal from "./ProductNormal";
 import ButtonCommon from "./ButtonCommon";
@@ -88,7 +92,7 @@ import RisePop from "./RisePop";
 export default {
   name: "PageMain",
   components: {
-    MainBannerSwiper,
+    MainSwiper,
     ProductNormal,
     ButtonCommon,
     NavTitle,
