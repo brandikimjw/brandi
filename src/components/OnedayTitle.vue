@@ -5,7 +5,7 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         width="90"
-        height="20"
+        height="30"
         viewBox="0 0 90 20"
       >
         <defs>
@@ -68,6 +68,9 @@
     display: inline-block;
     margin-bottom: 12px;
     text-align: center;
+    svg {
+      padding-top: 11px;
+    }
     .today-txt {
       display: inline-block;
       padding: 0 4px 4px;

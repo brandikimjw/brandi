@@ -2,8 +2,8 @@
   <section class="product-special">
     <div class="thumb">
       <a href="#">
-        <div class="thumb-img ir">이미지</div>
-        <div class="badge-pink">12%</div>
+        <div class="thumb-img hide-text">상품이미지</div>
+        <div class="badge-discount">12%</div>
       </a>
     </div>
     <div class="wrap-info">
@@ -30,13 +30,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.ir {
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-  overflow: hidden;
-  text-indent: -10000px;
-}
 // 컴포넌트 노말
 .product-special {
   width: 66%;
@@ -63,7 +56,7 @@ export default {
       background-repeat: no-repeat;
       background-position: 50%;
     }
-    .badge-pink {
+    .badge-discount {
       position: absolute;
       display: inline-block;
       top: 0;
@@ -77,43 +70,41 @@ export default {
     }
   }
 
-  .wrap-info {
-    .product-info {
-      box-sizing: border-box;
-      width: 100%;
-      .time {
-        text-align: center;
-        display: block;
-        padding: 10px 0;
-        font-size: 13px;
-        color: #808893;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ebeef2;
-      }
-    }
-    .product-title {
-      margin-top: 10px;
+  .product-info {
+    box-sizing: border-box;
+    width: 100%;
+    .time {
       text-align: center;
       display: block;
-      clear: both;
+      padding: 10px 0;
       font-size: 13px;
+      color: #808893;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ebeef2;
+    }
+  }
+  .product-title {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    clear: both;
+    font-size: 13px;
+    font-style: normal;
+    color: #202429;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+  .info-price {
+    .price {
+      display: block;
+      font-size: 15px;
+      font-weight: bold;
       font-style: normal;
       color: #202429;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      margin-bottom: 2px;
-      font-size: 13px;
-    }
-    .info-price {
-      .price {
-        display: block;
-        font-size: 15px;
-        font-weight: bold;
-        font-style: normal;
-        color: #202429;
-        text-align: center;
-      }
+      text-align: center;
     }
   }
 }

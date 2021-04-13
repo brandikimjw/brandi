@@ -4,11 +4,6 @@
       <!-- <Header /> -->
     </div>
     <div id="container">
-      <div class="cc__a">
-        <div class="cc__a--b">
-          <div class="cc__a cc-a__b"></div>
-        </div>
-      </div>
       <router-view />
     </div>
     <div id="footer">

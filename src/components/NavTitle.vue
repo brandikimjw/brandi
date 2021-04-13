@@ -14,7 +14,6 @@
 <style lang="scss" scoped>
 // 타이틀 네브
 .title-nav {
-  width: 100%;
   display: block;
   .today-tit {
     margin: 0 0 16px 0;

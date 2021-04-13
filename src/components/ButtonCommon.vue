@@ -9,17 +9,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.ir {
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-  overflow: hidden;
-  text-indent: -10000px;
-}
 .button-common {
-  margin: 0 auto;
   text-align: center;
-  margin-bottom: 60px;
   a {
     display: inline-block;
     min-width: 240px;
