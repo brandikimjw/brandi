@@ -64,8 +64,13 @@
       </div>
       <ButtonCommon />
     </article>
-    <article class="main-benefit container">
+    <article class="main-rise-pop container">
       <h5>지금 뜨고있는 기획전</h5>
+      <ButtonTitle />
+      <div class="rise-list">
+        <RisePop />
+        <RisePop />
+      </div>
     </article>
   </div>
 </template>

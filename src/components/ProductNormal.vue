@@ -3,15 +3,13 @@
     <div class="thumb">
       <a href="#">
         <div class="thumb-img hide-text">이미지</div>
-        <div class="badge-index">1</div>
+        <div class="badge-idx">1</div>
       </a>
     </div>
     <div class="wrap-info">
       <div class="product-info">
         <div class="sellor">프롬헤드투토</div>
-        <div class="oneday-svg">
-          <!-- 이미지로 삽입하기 -->
-        </div>
+        <div class="oneday-svg"></div>
       </div>
       <em class="product-title">글로우 플리츠 롱스커트</em>
       <div class="info-price">
