@@ -78,6 +78,7 @@ import ButtonCommon from "./ButtonCommon";
 import SpecialItem from "./SpecialItem";
 import ButtonTitle from "./ButtonTitle";
 import OnedayTitle from "./OnedayTitle";
+import RisePop from "./RisePop";
 
 export default {
   name: "PageMain",
@@ -89,6 +90,7 @@ export default {
     SpecialItem,
     ButtonTitle,
     OnedayTitle,
+    RisePop,
   },
   data() {
     return {};
