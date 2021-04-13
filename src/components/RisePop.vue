@@ -3,6 +3,7 @@
 <section>
   <div class="main-banner">
     <div class="banner-img"></div>
+    .banner-
   </div>
 </section>
 </template>

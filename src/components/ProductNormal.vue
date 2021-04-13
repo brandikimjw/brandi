@@ -73,7 +73,7 @@ export default {
       background-repeat: no-repeat;
       background-position: 50%;
     }
-    .badge-index {
+    .badge-idx {
       background: url(~@/assets/images/ic-bg-flag.png) no-repeat;
       position: absolute;
       left: 0;
