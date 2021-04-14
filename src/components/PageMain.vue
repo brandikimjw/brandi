@@ -29,7 +29,7 @@
       </div>
       <ButtonCommon />
     </article>
-    <aside class="main-sub-banner">
+    <aside class="main-sub-banner container">
       <h5>배너</h5>
       <SubBannerSwiper />
     </aside>

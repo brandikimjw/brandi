@@ -1,7 +1,7 @@
 <template>
-  <!-- Swiper -->
+  <!-- Main-Swiper -->
   <div class="main-banner-container">
-    <div class="swiper-container">
+    <div class="swiper-container main-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide hide-text">Slide 1</div>
         <div class="swiper-slide hide-text">Slide 2</div>
@@ -34,7 +34,7 @@ export default {
   methods: {
     initSlide() {
       // swiper 관련 설정
-      this.mainSlide = new Swiper(".swiper-container", {
+      this.mainSlide = new Swiper(".main-container", {
         slidesPerView: "auto",
         spaceBetween: 0,
         loop: false,
