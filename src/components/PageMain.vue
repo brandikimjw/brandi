@@ -31,6 +31,7 @@
     </article>
     <aside class="main-sub-banner">
       <h5>배너</h5>
+      <SubBannerSwiper />
     </aside>
     <article class="main-recommend container">
       <h5>당신을위한추천</h5>
@@ -88,6 +89,7 @@ import SpecialItem from "./SpecialItem";
 import ButtonTitle from "./ButtonTitle";
 import OnedayTitle from "./OnedayTitle";
 import RisePop from "./RisePop";
+import SubBannerSwiper from "./SubBannerSwiper";
 
 export default {
   name: "PageMain",
@@ -100,6 +102,7 @@ export default {
     ButtonTitle,
     OnedayTitle,
     RisePop,
+    SubBannerSwiper,
   },
   data() {
     return {};

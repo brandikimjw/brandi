@@ -1,24 +1,26 @@
 <template>
   <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide hide-text">Slide 1</div>
-      <div class="swiper-slide hide-text">Slide 2</div>
-      <div class="swiper-slide hide-text">Slide 3</div>
-      <div class="swiper-slide hide-text">Slide 4</div>
-      <div class="swiper-slide hide-text">Slide 5</div>
-      <div class="swiper-slide hide-text">Slide 6</div>
-      <div class="swiper-slide hide-text">Slide 7</div>
-      <div class="swiper-slide hide-text">Slide 8</div>
-      <div class="swiper-slide hide-text">Slide 9</div>
+  <div class="main-banner-container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide hide-text">Slide 1</div>
+        <div class="swiper-slide hide-text">Slide 2</div>
+        <div class="swiper-slide hide-text">Slide 3</div>
+        <div class="swiper-slide hide-text">Slide 4</div>
+        <div class="swiper-slide hide-text">Slide 5</div>
+        <div class="swiper-slide hide-text">Slide 6</div>
+        <div class="swiper-slide hide-text">Slide 7</div>
+        <div class="swiper-slide hide-text">Slide 8</div>
+        <div class="swiper-slide hide-text">Slide 9</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Swiper Button Play -->
+      <button @click="pauseBanner" class="swiper-button-pause">Pause</button>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- Swiper Button Play -->
-    <button @click="pauseBanner" class="swiper-button-pause">Pause</button>
   </div>
 </template>
 
