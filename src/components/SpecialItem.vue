@@ -22,11 +22,13 @@
 
 <script>
 export default {
+  name: "SpecialItem",
   data() {
     return {};
   },
 };
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>

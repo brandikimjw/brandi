@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  // name: "Item",
+  // name: "ProductNormal",
   // props: {
   //   imgSrc: {
   //     type: String,

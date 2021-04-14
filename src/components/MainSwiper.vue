@@ -12,9 +12,13 @@
       <div class="swiper-slide hide-text">Slide 8</div>
       <div class="swiper-slide hide-text">Slide 9</div>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <!-- Swiper Button Play -->
+    <button @click="pauseBanner" class="swiper-button-pause">Pause</button>
   </div>
 </template>
 
@@ -27,16 +31,20 @@ export default {
   },
   methods: {
     initSlide() {
-      // swiper 관련 설정u
+      // swiper 관련 설정
       this.mainSlide = new Swiper(".swiper-container", {
         slidesPerView: "auto",
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         loopAdditionalSlides: 2,
-        pagination: true,
+        //pagination: false,
         autoplay: {
           delay: 1000,
           disableOnInteraction: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
         },
         navigation: {
           // 버튼 사용자 지정
@@ -44,6 +52,12 @@ export default {
           prevEl: ".swiper-button-prev",
         },
       });
+      //console.log("this.mainSlide:", this.mainSlide);
+      // };
+    },
+    pauseBanner() {
+      console.log("this.mainSlide:", this.mainSlide);
+      this.mainSlide.autoplay.stop();
     },
   },
   mounted() {
@@ -55,7 +69,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import "./src/assets/scss/vendors/swiper.scss";
 .swiper-container {
   width: 100%;
   height: 100%;

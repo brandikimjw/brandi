@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ComponentFooter',
+  name: 'ComponentHeader',
   data () {
     return {}
   }

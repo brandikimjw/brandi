@@ -17,7 +17,7 @@
 <script>
 import ProductNormal from "./ProductNormal";
 export default {
-  name: "Risepop",
+  name: "RisePop",
   components: {
     ProductNormal,
   },
