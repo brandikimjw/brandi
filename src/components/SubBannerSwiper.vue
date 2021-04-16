@@ -15,23 +15,15 @@ export default {
   data() {
     return {
       SubSlide: "",
-      //ismobile에 데이터를 넣어줘야함 근데 pc인지 모바일인지 체크해서 넣어야겠죠?
-      ismobile: "",
+      //isMobile: false,
     };
   },
-  created() {
-    //브라우저 사이즈를 체크해서 ismobile에 true인지 false인지 넣어주면 되요
-    //window.addEventListener('resize') // 브라우저 사이즈가 변할 때 실행되는 이벤트
-    window.addEventListener("resize", sizeChanged());
-    //window.addEventListener('resize', sizeChanged() );
-    function sizeChanged() {
-      if (innerWidth <= 768) {
-        console.log("리사이즈");
-      } else {
-        console.log("취소");
-      }
-    }
-  },
+
+  // created() {
+  //   this.resizeHandler();
+  //   window.addEventListenner("resize", this.resizeHandler);
+  // },
+
   methods: {
     initbanner() {
       this.SubSlide = new Swiper(".sub-container", {
@@ -53,19 +45,43 @@ export default {
         },
       });
     },
+
+    // removeSlide() {
+    // },
+
+    // createSlide() {
+    // },
+
+    // checkMobile(viewPort) {
+    //   if (viewPort < 768) {
+    //     this.isMobile = true;
+    //   } else {
+    //     this.isMobile = false;
+    //   }
+    // },
+    // resizeHandler() {
+    //   this.checkMobile(window.innerWidth);
+    // },
   },
-  // watch 를 사용해서 ismobile에 변화가 생기는지 체크 변화가 생기면 함수가 실행되용
-  // 만약에 변하는 값이 ture면 슬라이드 생성해주면 되고 flase면 슬라이드 삭제하면 되겠죵
-  mounted() {
-    this.initbanner();
-    // 지금은 무조건 슬라이드가 생성되니까 모바일 에서만 실행되게 체크가 필요
-  },
+
+  // watch: {
+  //   isMobile(val) {
+  //     val ? this.createSlide() : this.removeSlide();
+  //   },
+  // },
+
+  // beforeDestory() {
+  //   window.removeEventListenner("resize", this.resizeHandler);
+  // },
+  // mounted() {
+  //   this.initbanner();
+  // },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.swiper-container {
+.sub-container {
   width: 100%;
   height: 100%;
 }

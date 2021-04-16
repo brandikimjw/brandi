@@ -6,11 +6,11 @@
         <span class="more">바로가기 &gt;</span>
       </div>
     </a>
-    <ul class="main-list">
+    <article class="main-list">
       <ProductNormal />
       <ProductNormal />
       <ProductNormal />
-    </ul>
+    </article>
   </div>
 </template>
 
@@ -54,13 +54,12 @@ export default {
       }
     }
   }
-  .main-list {
-    width: 100%;
-    display: inline-block;
-    /deep/ .product-normal {
+  /deep/ .main-list {
+    display: flex;
+    .product-normal {
+      width: calc(100% / 3);
+      padding: 0 4px 0;
       display: inline-block;
-      width: 32%;
-      padding: 0;
       .thumb {
         .thumb-img {
           padding-top: 90%;

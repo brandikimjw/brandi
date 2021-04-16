@@ -4,7 +4,7 @@
       <MainSwiper />
     </div>
     <article class="main-today container">
-      <h5>투데이베스트</h5>
+      <!-- <h5>투데이베스트</h5> -->
       <NavTitle />
       <div class="today-list">
         <ProductNormal />
@@ -19,7 +19,7 @@
       <ButtonCommon />
     </article>
     <article class="main-new container">
-      <h5>신상모아보기</h5>
+      <!-- <h5>신상모아보기</h5> -->
       <NavTitle />
       <div class="new-list">
         <ProductNormal />
@@ -30,11 +30,11 @@
       <ButtonCommon />
     </article>
     <aside class="main-sub-banner container">
-      <h5>배너</h5>
+      <!-- <h5>배너</h5> -->
       <SubBannerSwiper />
     </aside>
     <article class="main-recommend container">
-      <h5>당신을위한추천</h5>
+      <!-- <h5>당신을위한추천</h5> -->
       <ButtonTitle />
       <div class="recommend-list">
         <ProductNormal />
@@ -45,7 +45,7 @@
       <ButtonCommon />
     </article>
     <article class="main-special container">
-      <h5>놓칠 수 없는 브랜디 특가</h5>
+      <!-- <h5>놓칠 수 없는 브랜디 특가</h5> -->
       <ButtonTitle />
       <div class="special-list">
         <SpecialItem />
@@ -54,7 +54,7 @@
       </div>
     </article>
     <article class="main-oneday container">
-      <h5>하루배송 상품은 내일 도착</h5>
+      <!-- <h5>하루배송 상품은 내일 도착</h5> -->
       <OnedayTitle />
       <div class="today-list">
         <ProductNormal />
@@ -69,7 +69,7 @@
       <ButtonCommon />
     </article>
     <article class="main-rise-pop container">
-      <h5>지금 뜨고있는 기획전</h5>
+      <!-- <h5>지금 뜨고있는 기획전</h5> -->
       <ButtonTitle />
       <div class="rise-list">
         <RisePop />
