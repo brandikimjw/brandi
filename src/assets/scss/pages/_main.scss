@@ -1,3 +1,6 @@
+.main-wrapper{
+  overflow: hidden;
+}
 // today베스트
 .today-list {
   display: flex;
@@ -12,8 +15,7 @@
 .main-new {
   margin-top: 80px;
   .new-list {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: visible;
     width: calc(100% + 40px);
     height: 100%;
     margin: 0 -20px;
@@ -76,5 +78,35 @@
   .rise-list {
     margin-bottom: 12px;
     border-bottom: 1px solid #ebeef2;
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  //today베스트
+  .today-list {
+    display: flex;
+    flex-wrap: wrap;
+    .product-normal {
+      height: 100%;
+      width: calc(100% / 4);
+    }
+  }
+  // 신상 모아보기
+  .main-new {
+    .new-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      .product-normal {
+        height: 100%;
+        width: calc(100% / 4);
+      }
+    }
   }
 }

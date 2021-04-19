@@ -44,7 +44,7 @@ export default {
       margin-bottom: 8px;
       position: relative;
       .more {
-        padding: 8.5px 15px 8.5px 16px;
+        padding: 8px 15px 8px 16px;
         font-size: 12px;
         background-color: rgba(0, 0, 0, 0.4);
         color: #fff;

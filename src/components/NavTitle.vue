@@ -24,6 +24,7 @@ export default {
 // 타이틀 네브
 .title-nav {
   display: block;
+  margin-bottom: 24px;
   .today-tit {
     margin: 0 0 16px 0;
     font-size: 20px;
@@ -31,7 +32,6 @@ export default {
     word-break: break-word;
   }
   .today-box {
-    display: block;
     margin-bottom: 12px;
     text-align: center;
     .today-txt {
@@ -48,5 +48,42 @@ export default {
       }
     }
   }
+}
+
+// $breakpoints: (
+//     'small': 320px,
+//     'medium': 768px,
+//     'large': 1024px,
+// ) !default;
+//mideum
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .title-nav {
+    .today-tit {
+      width: 50%;
+      float: left;
+      font-size: 32px;
+      text-align: left;
+    }
+    .today-box {
+      width: 49%;
+      display: inline-block;
+      text-align: right;
+      .today-txt {
+        font-size: 17px;
+        line-height: 17px;
+      }
+    }
+  }
+  .today-list {
+    display: flex;
+    flex-wrap: wrap;
+    .product-normal {
+      height: 100%;
+      width: calc(100% / 4);
+    }
+  }
+}
+//large
+@media screen and (min-width: map-get($breakpoints, "large")) {
 }
 </style>
