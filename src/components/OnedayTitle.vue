@@ -1,6 +1,6 @@
 <template>
   <div class="title-nav">
-    <ul class="today-box">
+    <div class="today-box">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -46,7 +46,7 @@
           </g>
         </g>
       </svg>
-    </ul>
+    </div>
     <h2 class="today-tit">상품은 내일 도착</h2>
   </div>
 </template>
@@ -97,6 +97,24 @@ export default {
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  
+  .title-nav {
+    text-align: left;
+    margin-bottom: 24px;
+    margin-top: 100px;
+    .today-box {
+      height: 36px;
+      svg {
+        height: 34px;
+        width: 161px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .today-tit {
+      margin-bottom: 0;
+      font-size: 32px;
+      text-align: left;
+    }
+  }
 }
 </style>
