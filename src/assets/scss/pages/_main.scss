@@ -109,4 +109,44 @@
       }
     }
   }
+
+  //당신을 위한 추천
+  .main-recommend {
+    margin-top: 60px;
+    .recommend-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      .product-normal {
+        height: 100%;
+        width: calc(100% / 4);
+      }
+    }
+  }
+
+  //놓칠 수 없는 브랜디 특가
+  .main-special {
+    //overflow: hidden;
+    .special-list {
+      .special-image {
+        display: inline-block;
+        background: url(/static/img/img-specialprice@3x.138b59e.png) no-repeat;
+        background-size: cover;
+        width: calc(29% - 20px);
+        padding-top: 31%;
+      }
+      .product-special {
+        width: calc(71% / 3);
+        margin: 0 !important;
+        padding: 0 20px;
+      }
+    }
+  }
+
 }

@@ -1,7 +1,8 @@
 <template>
   <!--Sub-Swiper -->
   <div class="sub-banner-container">
-    <div class="swiper-container sub-container">
+    {{ screenSize }}
+    <div class="swiper-container sub-container" :class="screenSize">
       <div class="swiper-wrapper">
         <div class="swiper-slide hide-text">Slide 1</div>
         <div class="swiper-slide hide-text">Slide 2</div>
@@ -15,14 +16,9 @@ export default {
   data() {
     return {
       SubSlide: "",
-      isMobile: false,
+      screenSize: null,
     };
   },
-
-  // created() {
-  //   this.resizeHandler();
-  //   window.addEventListenner("resize", this.resizeHandler);
-  // },
 
   methods: {
     initbanner() {
@@ -45,37 +41,20 @@ export default {
         },
       });
     },
-
-    // removeSlide() {
-    // },
-
-    // createSlide() {
-    // },
-
-    // checkMobile(viewPort) {
-    //   if (viewPort < 768) {
-    //     this.isMobile = true;
-    //   } else {
-    //     this.isMobile = false;
-    //   }
-    // },
-    // resizeHandler() {
-    //   this.checkMobile(window.innerWidth);
-    // },
+    setScreenSize() {
+      if (window.innerWidth > 768) {
+        this.screenSize = "pc";
+      }
+      if (window.innerWidth <= 768) {
+        this.screenSize = "mobile";
+      }
+    },
+    created() {
+      this.setScreenSize();
+      //this.setSlider();
+      window.addEventListener("resize", this.setScreenSize);
+    },
   },
-
-  // watch: {
-  //   isMobile(val) {
-  //     val ? this.createSlide() : this.removeSlide();
-  //   },
-  // },
-
-  // beforeDestory() {
-  //   window.removeEventListenner("resize", this.resizeHandler);
-  // },
-  // mounted() {
-  //   this.initbanner();
-  // },
 };
 </script>
 
@@ -92,5 +71,16 @@ export default {
   background: url(~@/assets/images/mainbanner02.jpeg) no-repeat center;
   background-size: contain;
   padding-top: 50%;
+}
+
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  //today베스트
+  .mobile {
+    display: none;
+  }
+  .swiper-slide {
+    width: 50%;
+    margin-right: 30px;
+  }
 }
 </style>

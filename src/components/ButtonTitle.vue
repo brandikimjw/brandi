@@ -43,39 +43,54 @@ export default {
   .arrow-wrap {
     display: none;
     float: right;
-    .arrow-num {
-      display: inline-block;
-      width: auto;
-      margin-right: 12px;
-      font-size: 16px;
-      line-height: 48px;
-      color: #888;
-      vertical-align: text-bottom;
+  }
+}
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .title-nav {
+    margin-bottom: 24px;
+    overflow: hidden;
+    .today-tit {
+      float: left;
+      margin-bottom: 0;
+      font-size: 32px;
+      text-align: left;
+      display: block;
     }
-    .arrow-box {
-      display: inline-block;
-      border: 1px solid #f2f4f7;
-      border-radius: 0;
-      background-color: transparent;
-      text-shadow: none;
-      outline-color: #f2f4f7;
-      cursor: pointer;
-      .button-prev {
+    .arrow-wrap {
+      display: block;
+      float: right;
+      height: 48px;
+      .arrow-num {
+        line-height: 47px;
         display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat/center;
-        float: left;
+        width: auto;
+        margin-right: 12px;
+        font-size: 16px;
+        line-height: 48px;
+        color: #888;
+        vertical-align: text-bottom;
       }
-      .button-next {
+      .arrow-box {
+        cursor: pointer;
         display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat/center;
+        cursor: pointer;
+        .button-prev {
+          width: 40px;
+          height: 40px;
+          margin: 0;
+          padding: 0;
+          background: url(~@/assets/images/ic-btn-more-m@3x.png)
+            no-repeat/center;
+          float: left;
+        }
+        .button-next {
+          width: 40px;
+          height: 40px;
+          margin: 0;
+          padding: 0;
+          background: url(~@/assets/images/ic-btn-more-m@3x.png)
+            no-repeat/center;
+        }
       }
     }
   }

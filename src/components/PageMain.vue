@@ -48,6 +48,7 @@
       <!-- <h5>놓칠 수 없는 브랜디 특가</h5> -->
       <ButtonTitle />
       <div class="special-list">
+        <div class="special-image"></div>
         <SpecialItem />
         <SpecialItem />
         <SpecialItem />
