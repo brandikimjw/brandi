@@ -15,14 +15,24 @@
 export default {
   data() {
     return {
-      SubSlide: "",
+      slide: null,
       screenSize: null,
     };
   },
 
   methods: {
-    initbanner() {
-      this.SubSlide = new Swiper(".sub-container", {
+    setScreenSize() {
+      if (window.innerWidth > 768) {
+        this.screenSize = "pc";
+      }
+      if (window.innerWidth <= 768) {
+        this.screenSize = "mobile";
+      }
+    },
+    setSlider() {
+      //console.log(window.Swiper);
+      this.slider = new Swiper(".sub-container", {
+        // 스와이퍼 관련 옵션
         slidesPerView: 2,
         spaceBetween: 10,
         breakpoints: {
@@ -41,19 +51,11 @@ export default {
         },
       });
     },
-    setScreenSize() {
-      if (window.innerWidth > 768) {
-        this.screenSize = "pc";
-      }
-      if (window.innerWidth <= 768) {
-        this.screenSize = "mobile";
-      }
-    },
-    created() {
-      this.setScreenSize();
-      //this.setSlider();
-      window.addEventListener("resize", this.setScreenSize);
-    },
+  },
+  created() {
+    this.setScreenSize();
+    this.setSlider();
+    window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
@@ -61,21 +63,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .sub-container {
-  width: 100%;
-  height: 100%;
 }
 
 .swiper-slide {
+  //margin-top: 15%;
   text-align: center;
   font-size: 18px;
   background: url(~@/assets/images/mainbanner02.jpeg) no-repeat center;
   background-size: contain;
-  padding-top: 50%;
+  padding-top: 40%;
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //today베스트
-  .mobile {
+  .screenSize {
     display: none;
   }
   .swiper-slide {
