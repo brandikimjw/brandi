@@ -40,4 +40,18 @@ export default {
     padding-right: 8px;
   }
 }
+
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .button-common {
+    a {
+      min-width: 320px;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .btn-tit {
+    }
+    .btn-more {
+    }
+  }
+}
 </style>

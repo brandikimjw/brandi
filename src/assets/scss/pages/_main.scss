@@ -1,5 +1,6 @@
 .main-wrapper{
   overflow: hidden;
+  margin-bottom: 160px;
 }
 // today베스트
 .today-list {
@@ -145,6 +146,22 @@
         width: calc(71% / 3);
         margin: 0 !important;
         padding: 0 20px;
+      }
+    }
+  }
+
+  //지금 뜨고있는 기획전
+  .main-rise-pop {
+    .rise-list {
+      display: flex;
+      border: none;
+      .event-item {
+        width: calc(100% / 2);
+        margin-right: 32px;
+        border: none;
+        &:nth-child(2){
+          margin:0;
+        }
       }
     }
   }
