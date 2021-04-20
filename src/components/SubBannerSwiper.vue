@@ -4,8 +4,8 @@
     {{ screenSize }}
     <div class="swiper-container sub-container" :class="screenSize">
       <div class="swiper-wrapper">
-        <div class="swiper-slide hide-text">Slide 1</div>
-        <div class="swiper-slide hide-text">Slide 2</div>
+        <div class="swiper-slide hide-text"><a href="#">Slide 1</a></div>
+        <div class="swiper-slide hide-text"><a href="#">Slide 2</a></div>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
         this.screenSize = "pc";
       }
       if (window.innerWidth <= 768) {
-        this.screenSize = "mobile";
+        this.screenSize = setSlider();
       }
     },
     setSlider() {
@@ -62,11 +62,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.sub-container {
-}
-
 .swiper-slide {
-  //margin-top: 15%;
+  margin-top: 5%;
   text-align: center;
   font-size: 18px;
   background: url(~@/assets/images/mainbanner02.jpeg) no-repeat center;
@@ -77,7 +74,7 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //today베스트
   .screenSize {
-    display: none;
+    //display: none;
   }
   .swiper-slide {
     width: 50%;

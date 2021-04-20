@@ -3,36 +3,48 @@
   <div class="main-banner-container">
     <div class="swiper-container main-container">
       <ul class="swiper-wrapper">
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage02.jpeg"
-          alt="Slide 1"
-        />
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage03.jpeg"
-          alt="Slide 1"
-        />
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage02.jpeg"
-          alt="Slide 1"
-        />
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage02.jpeg"
-          alt="Slide 1"
-        />
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage02.jpeg"
-          alt="Slide 1"
-        />
-        <img
-          class="swiper-slide hide-text"
-          src="../assets/images/bannerImage02.jpeg"
-          alt="Slide 1"
-        />
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage02.jpeg"
+            alt="Slide 1"
+          />
+        </li>
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage03.jpeg"
+            alt="Slide 2"
+          />
+        </li>
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage02.jpeg"
+            alt="Slide 3"
+          />
+        </li>
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage03.jpeg"
+            alt="Slide 4"
+          />
+        </li>
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage02.jpeg"
+            alt="Slide 5"
+          />
+        </li>
+        <li class="swiper-slide">
+          <img
+            class="hide-text"
+            src="../assets/images/bannerImage03.jpeg"
+            alt="Slide 6"
+          />
+        </li>
       </ul>
       <!-- Add Arrows -->
       <div class="swiper-button-box">
@@ -65,11 +77,9 @@ export default {
       // swiper 관련 설정
       this.mainSlide = new Swiper(".main-container", {
         clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-        slidesPerView: 3,
-        spaceBetween: 0,
-        slidesPerGroup: 3,
+        slidesPerView: 1,
         loop: true,
-        loopAdditionalSlides: 3,
+        loopAdditionalSlides: 1,
         loopFillGroupWithBlank: true,
         centeredSlides: true,
         autoHeight: true,
@@ -91,7 +101,6 @@ export default {
           768: {
             slidesPerView: 1,
             spaceBetween: 0,
-            centeredSlides: true,
           },
         },
       });
@@ -111,22 +120,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .main-banner-container {
+  margin-bottom: 50px;
   .main-container {
-    margin: 0 auto;
-    overflow: hidden;
-    z-index: 1;
-    margin-bottom: 50px;
     .swiper-wrapper {
-      //overflow: visible;
-      // .swiper-slide {
-      //   position: relative;
-      //   background: url(~@/assets/images/bannerImage02.jpeg) no-repeat center;
-      //   background-size: contain;
-      //   padding-top: 41%;
-      // }
+      .swiper-slide {
+        display: inline-block;
+        display: block;
+        img {
+          width: 100%;
+          height: inherit;
+        }
+      }
     }
   }
+  .swiper-button-box {
+    display: none;
+  }
 }
+
 .main-banner-box {
   position: absolute;
   bottom: 12px;
@@ -162,46 +173,64 @@ export default {
     }
   }
 }
-.swiper-button-box {
-  display: none;
-  .swiper-button-next {
-    display: none;
-  }
-  .swiper-button-prev {
-    display: none;
-  }
-}
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .main-banner-container {
-    .main-container {
-      position: relative;
+    .swiper-container {
+      overflow: visible;
+      width: 83%;
+      margin: 0 auto;
       .swiper-wrapper {
         .swiper-slide {
         }
       }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 1000%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        left: -1000%;
+        bottom: 1%;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1000%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        right: -1000%;
+        bottom: 1%;
+      }
+    }
+    //swiperButton
+    .swiper-button-box {
+      display: block;
+      .swiper-button-next {
+        display: block;
+        background: url(~@/assets/images/ic-arrow-r@3x.png) no-repeat top
+          center/cover;
+        width: 90px;
+        height: 90px;
+        right: -50px;
+      }
+      .swiper-button-prev {
+        display: block;
+        background: url(~@/assets/images/ic-arrow-l@3x.png) no-repeat top
+          center/cover;
+        width: 90px;
+        height: 90px;
+        left: -50px;
+      }
     }
   }
-}
-.swiper-button-box {
-  display: block;
-  .swiper-button-next {
-    display: block;
-    background: url(~@/assets/images/ic-arrow-r@3x.png) no-repeat top
-      center/cover;
-    width: 90px;
-    height: 90px;
-    right: 10%;
-  }
-  .swiper-button-prev {
-    display: block;
-    background: url(~@/assets/images/ic-arrow-l@3x.png) no-repeat top
-      center/cover;
-    width: 90px;
-    height: 90px;
-    left: 10%;
-  }
-}
-.main-banner-box {
 }
 </style>
