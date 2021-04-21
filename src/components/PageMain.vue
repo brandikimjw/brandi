@@ -48,7 +48,12 @@
       <!-- <h5>놓칠 수 없는 브랜디 특가</h5> -->
       <ButtonTitle />
       <div class="special-list">
-        <div class="special-image"></div>
+        <div class="special-image">
+          <h3 class="hide-text">BRANDI TIME PRICE</h3>
+          <p class="hide-text">
+            지금 가입하면 5만원 쿠폰팩 지급! 추가할인 받고 구매하자!
+          </p>
+        </div>
         <SpecialItem />
         <SpecialItem />
         <SpecialItem />

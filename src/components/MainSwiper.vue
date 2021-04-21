@@ -141,8 +141,9 @@ export default {
   z-index: 100;
   bottom: 10%;
   .swiper-button-pause {
-    background: url(~@/assets/images/ic-stop-m@3x.png) no-repeat top;
-    background-size: cover;
+    background: url(~@/assets/images/ic-stop-m@3x.png) no-repeat center
+      rgba(32, 36, 41, 0.8);
+    background-size: 50%;
     width: 24px;
     height: 24px;
     margin: 0 4px 0 0;
@@ -150,7 +151,6 @@ export default {
     border: 0;
     border-radius: 50%;
     text-shadow: none;
-    background: rgba(32, 36, 41, 0.8);
     cursor: pointer;
     position: absolute;
     right: 46px;
