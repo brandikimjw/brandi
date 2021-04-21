@@ -121,16 +121,12 @@ export default {
 <style lang="scss" scoped>
 .main-banner-container {
   margin-bottom: 50px;
-  .main-container {
-    .swiper-wrapper {
-      .swiper-slide {
-        display: inline-block;
-        display: block;
-        img {
-          width: 100%;
-          height: inherit;
-        }
-      }
+  .swiper-slide {
+    display: inline-block;
+    display: block;
+    img {
+      width: 100%;
+      height: inherit;
     }
   }
   .swiper-button-box {
@@ -143,6 +139,7 @@ export default {
   bottom: 12px;
   right: 16px;
   z-index: 100;
+  bottom: 10%;
   .swiper-button-pause {
     background: url(~@/assets/images/ic-stop-m@3x.png) no-repeat top;
     background-size: cover;
@@ -180,10 +177,6 @@ export default {
       overflow: visible;
       width: 83%;
       margin: 0 auto;
-      .swiper-wrapper {
-        .swiper-slide {
-        }
-      }
 
       &::before {
         content: "";

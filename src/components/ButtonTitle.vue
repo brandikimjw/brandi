@@ -12,7 +12,7 @@
         <button
           type="button"
           aria-label="이전 리스트 이동"
-          class="button-prev"
+          class="button-next"
         ></button>
       </div>
     </ul>
@@ -79,17 +79,22 @@ export default {
           height: 40px;
           margin: 0;
           padding: 0;
-          background: url(~@/assets/images/ic-btn-more-m@3x.png)
-            no-repeat/center;
+          background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
+            center;
           float: left;
+          background-size: 25px 25px;
+          transform: rotate(180deg);
+          border: 1px solid #f2f4f7;
         }
         .button-next {
           width: 40px;
           height: 40px;
           margin: 0;
           padding: 0;
-          background: url(~@/assets/images/ic-btn-more-m@3x.png)
-            no-repeat/center;
+          background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
+            center;
+          border: 1px solid #f2f4f7;
+          background-size: 25px 25px;
         }
       }
     }
