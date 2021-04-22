@@ -1,8 +1,9 @@
 <template>
   <div class="button-common">
     <a href="#">
-      <span class="btn-tit">베스트</span>
-      <span class="btn-more">더보기&gt;</span>
+      <!-- <span class="btn-tit">베스트</span> -->
+      <span class="btn-more">더보기 &gt;</span>
+      <slot></slot>
     </a>
   </div>
 </template>

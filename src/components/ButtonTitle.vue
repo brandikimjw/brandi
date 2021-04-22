@@ -2,7 +2,7 @@
   <div class="title-nav">
     <h2 class="today-tit">TODAY 베스트</h2>
     <ul class="arrow-wrap">
-      <div class="arrow-num"><span>1</span><span>/2</span></div>
+      <div class="arrow-num"><span>1</span>/<span>2</span></div>
       <div class="arrow-box">
         <button
           type="button"

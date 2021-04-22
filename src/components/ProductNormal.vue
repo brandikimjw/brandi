@@ -3,18 +3,20 @@
     <div class="thumb">
       <a href="#">
         <div class="thumb-img hide-text">이미지</div>
-        <div class="badge-idx">1</div>
+        <div class="badge-idx">
+          {{ orderBadge }}
+        </div>
       </a>
     </div>
     <div class="wrap-info">
       <div class="product-info">
-        <div class="sellor">프롬헤드투토</div>
-        <div class="oneday-svg"></div>
+        <div class="sellor">{{ sellorName }}</div>
+        <div v-show="isOneDayShipping" class="oneday-svg"></div>
       </div>
-      <em class="product-title">글로우 플리츠 롱스커트</em>
+      <em class="product-title">{{ productName }}</em>
       <div class="info-price">
-        <strong class="dc">17%</strong>
-        <em class="dc-price">10,000</em>
+        <strong v-if="discountRate" class="dc">{{ discountRate }}%</strong>
+        <em class="dc-price">{{ price }}</em>
         <p class="price hide-text">14,000</p>
       </div>
     </div>
@@ -22,25 +24,10 @@
 </template>
 
 <script>
+import CardMixin from "./CardBase";
 export default {
-  // name: "ProductNormal",
-  // props: {
-  //   imgSrc: {
-  //     type: String,
-  //     default: "~@/assets/images/tshirts.jpeg",
-  //   },
-  //   productName: {
-  //     type: String,
-  //     default: "제품값이 입력되지 않았습니다.",
-  //   },
-  //   isBadge: {
-  //     type: Boolean,
-  //     default: true,
-  //   },
-  // },
-  data() {
-    return {};
-  },
+  name: "CardItemSmall",
+  mixins: [CardMixin],
 };
 </script>
 
@@ -49,7 +36,7 @@ export default {
 // 컴포넌트 노말
 .product-normal {
   display: block;
-  padding: 0 4px 0 4px;
+  padding: 0 4px 20px;
   margin-bottom: 3%;
   .thumb {
     overflow: hidden;

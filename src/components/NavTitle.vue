@@ -1,11 +1,13 @@
 <template>
-  <div class="title-nav">
-    <h2 class="today-tit">TODAY 베스트</h2>
-    <ul class="today-box">
-      <li class="today-txt active"><a href="#">전체</a></li>
-      <li class="today-txt"><a href="#">쇼핑몰마켓</a></li>
-      <li class="today-txt"><a href="#">브랜드</a></li>
-      <li class="today-txt"><a href="#">뷰티</a></li>
+  <div class="title-nav clearfix">
+    <h2 class="title-nav-tit">TODAY 베스트</h2>
+    <ul class="title-nav-box">
+      <li class="title-nav-txt active">
+        <a href="javascript:void(0);">전체</a>
+      </li>
+      <li class="title-nav-txt"><a href="#">쇼핑몰마켓</a></li>
+      <li class="title-nav-txt"><a href="#">브랜드</a></li>
+      <li class="title-nav-txt"><a href="#">뷰티</a></li>
     </ul>
   </div>
 </template>
@@ -25,16 +27,17 @@ export default {
 .title-nav {
   display: block;
   margin-bottom: 24px;
-  .today-tit {
+  .title-nav-tit {
+    width: 100%;
     margin: 0 0 16px 0;
     font-size: 20px;
     text-align: center;
     word-break: break-word;
   }
-  .today-box {
+  .title-nav-box {
     margin-bottom: 12px;
     text-align: center;
-    .today-txt {
+    .title-nav-txt {
       display: inline-block;
       padding: 0 4px 4px;
       font-size: 14px;
@@ -58,23 +61,23 @@ export default {
 //mideum
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
-    .today-tit {
-      width: 50%;
+    .title-nav-tit {
+      width: calc(100% - 27%);
       float: left;
       font-size: 32px;
       text-align: left;
     }
-    .today-box {
-      width: 49%;
+    .title-nav-box {
       display: inline-block;
       text-align: right;
-      .today-txt {
+      float: right;
+      .title-nav-txt {
         font-size: 17px;
         line-height: 17px;
       }
     }
   }
-  .today-list {
+  .title-nav-list {
     display: flex;
     flex-wrap: wrap;
     .product-normal {

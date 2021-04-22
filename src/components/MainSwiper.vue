@@ -97,12 +97,6 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        breakpoints: {
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-        },
       });
     },
     pauseBanner() {
@@ -120,7 +114,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .main-banner-container {
-  margin-bottom: 50px;
   .swiper-slide {
     display: inline-block;
     display: block;

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import PageMain from '@/components/PageMain'
+// import PageMain from '@/components/NewArrival'
 
 Vue.use(Router)
 
@@ -10,6 +11,6 @@ export default new Router({
       path: '/',
       name: 'PageMain',
       component: PageMain
-    }
+    },
   ]
 })
