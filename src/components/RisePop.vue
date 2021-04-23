@@ -1,15 +1,40 @@
 <template>
   <!-- 지금 뜨고있는 기획전 -->
   <div class="event-item">
-    <a href="#">
-      <div class="banner">
+    <div class="banner">
+      <a href="#">
         <span class="more">바로가기 &gt;</span>
-      </div>
-    </a>
+      </a>
+    </div>
+
     <article class="main-list">
-      <ProductNormal />
-      <ProductNormal />
-      <ProductNormal />
+      <ProductNormal
+        sellorName="브랜디"
+        orderBadge="1"
+        :isOneDayShipping="true"
+        storeName="스토어네임"
+        productName="플리츠 스커트"
+        :discountRate="10"
+        :price="50000"
+      />
+      <ProductNormal
+        sellorName="브랜디"
+        orderBadge="1"
+        :isOneDayShipping="true"
+        storeName="스토어네임"
+        productName="플리츠 스커트"
+        :discountRate="10"
+        :price="50000"
+      />
+      <ProductNormal
+        sellorName="브랜디"
+        orderBadge="1"
+        :isOneDayShipping="true"
+        storeName="스토어네임"
+        productName="플리츠 스커트"
+        :discountRate="10"
+        :price="50000"
+      />
     </article>
   </div>
 </template>
@@ -34,26 +59,24 @@ export default {
   &:last-child {
     margin-top: 24px;
   }
-  a {
-    display: block;
-    .banner {
-      background: url(~@/assets/images/pop-banner.jpeg) no-repeat;
-      width: 100%;
-      padding-top: 45%;
-      background-size: cover;
-      margin-bottom: 8px;
-      position: relative;
-      .more {
-        padding: 8px 15px 8px 16px;
-        font-size: 12px;
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
+  .banner {
+    background: url(~@/assets/images/pop-banner.jpeg) no-repeat;
+    width: 100%;
+    padding-top: 45%;
+    background-size: cover;
+    margin-bottom: 8px;
+    position: relative;
+    .more {
+      padding: 8px 15px 8px 16px;
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
+
   /deep/ .main-list {
     display: flex;
     .product-normal {

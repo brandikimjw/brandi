@@ -35,7 +35,9 @@
 }
 
 //서브 배너
-
+.main-sub-banner {
+  margin-top: 60px;
+}
 //당신을 위한 추천
 .main-recommend {
   margin-top: 60px;
@@ -69,6 +71,9 @@
     .product-special {
       display: inline-block;
       width: 66%;
+      &:nth-last-child(1){
+        padding-right: 0;
+      }
     }
   }
 }
@@ -76,6 +81,9 @@
 //하루배송 상품은 내일 도착
 .main-oneday {
   margin-top: 60px;
+  .badge-idx {
+    display: none;
+  }
 }
 //지금 뜨고있는 기획전
 .main-rise-pop {
@@ -137,14 +145,14 @@
 
   //놓칠 수 없는 브랜디 특가
   .main-special {
-    //overflow: hidden;
     .special-list {
       .special-image {
         display: inline-block;
-        background: url(~@/assets/images/img-specialprice@3x.png) no-repeat;
+        background: url(~@/assets/images/img-specialprice@3x.png) no-repeat center top;
         background-size: cover;
         width: calc(29% - 20px);
-        padding-top: 31%;
+        padding-top: 25%;
+        vertical-align: top;
       }
       .product-special {
         width: calc(71% / 3);

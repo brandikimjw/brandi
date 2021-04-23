@@ -10,7 +10,9 @@
     </div>
     <div class="wrap-info">
       <div class="product-info">
-        <div class="sellor">{{ sellorName }}</div>
+        <div class="sellor">
+          <a href="#">{{ sellorName }}</a>
+        </div>
         <div v-show="isOneDayShipping" class="oneday-svg"></div>
       </div>
       <em class="product-title">{{ productName }}</em>
@@ -35,28 +37,21 @@ export default {
 <style lang="scss" scoped>
 // 컴포넌트 노말
 .product-normal {
-  display: block;
-  padding: 0 4px 20px;
-  margin-bottom: 3%;
+  padding: 0 8px 30px;
+  //margin-bottom: 3%;
   .thumb {
     overflow: hidden;
     position: relative;
-    padding-top: 110%;
     border-radius: 0;
     a {
       display: block;
     }
-
     .thumb-img {
       background: url(~@/assets/images/tshirts.jpeg) no-repeat;
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       padding-top: 110%;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: 50%;
     }
     .badge-idx {
       background: url(~@/assets/images/ic-bg-flag.png) no-repeat;
@@ -72,29 +67,36 @@ export default {
       color: #fff;
       background-size: 100% 100%;
       z-index: 10;
-      z-index: 10;
     }
   }
 
   .wrap-info {
     .product-info {
+      position: relative;
+      padding-top: 10px;
       .sellor {
-        width: 48%;
-        display: inline-block;
+        width: 70%;
         overflow: hidden;
         color: #808893;
         font-size: 12px;
         font-style: normal;
         text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
       }
       .oneday-svg {
         background: url(~@/assets/images/ic-haru-l@3x.png) no-repeat;
         background-size: contain;
         background-position: top right;
-        display: inline-block;
-        width: 49%;
         height: 14px;
         text-align: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        margin-top: 10px;
       }
     }
     .product-title {

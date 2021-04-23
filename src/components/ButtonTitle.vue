@@ -8,11 +8,13 @@
           type="button"
           aria-label="이전 리스트 이동"
           class="button-prev"
+          disabled="disabled"
         ></button>
         <button
           type="button"
-          aria-label="이전 리스트 이동"
+          aria-label="다음 리스트 이동"
           class="button-next"
+          disabled="disabled"
         ></button>
       </div>
     </ul>
@@ -77,24 +79,29 @@ export default {
         .button-prev {
           width: 40px;
           height: 40px;
-          margin: 0;
+          margin-right: -4px;
           padding: 0;
           background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
-            center;
-          float: left;
+            center/cover;
           background-size: 25px 25px;
-          transform: rotate(180deg);
+          transform: rotateX(180deg);
           border: 1px solid #f2f4f7;
+
+          &[disabled] {
+            background: url(~@/assets/images/ic-square-arrow-l-n.png) no-repeat
+              center/cover;
+          }
         }
         .button-next {
           width: 40px;
           height: 40px;
           margin: 0;
           padding: 0;
-          background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
-            center;
+          background: url(~@/assets/images/ic-square-arrow-r-s.png) no-repeat
+            center/cover;
           border: 1px solid #f2f4f7;
-          background-size: 25px 25px;
+          background-size: 40px 40px;
+          cursor: pointer;
         }
       }
     }

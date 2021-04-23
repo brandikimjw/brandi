@@ -191,14 +191,78 @@
       <!-- <h5>하루배송 상품은 내일 도착</h5> -->
       <OnedayTitle />
       <div class="today-list">
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
-        <ProductNormal />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
+        <ProductNormal
+          sellorName="브랜디"
+          orderBadge="1"
+          :isOneDayShipping="true"
+          storeName="스토어네임"
+          productName="플리츠 스커트"
+          :discountRate="10"
+          :price="50000"
+        />
       </div>
       <ButtonCommon />
     </article>
@@ -250,7 +314,6 @@ export default {
 
 .main-oneday {
   .today-tit {
-    color: red;
   }
 }
 </style>

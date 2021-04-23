@@ -41,7 +41,6 @@ export default {
   .thumb {
     overflow: hidden;
     position: relative;
-    padding-top: 110%;
     border-radius: 0;
     a {
       display: block;
@@ -49,14 +48,10 @@ export default {
 
     .thumb-img {
       background: url(~@/assets/images/pants01.jpeg) no-repeat;
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       padding-top: 110%;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: 50%;
     }
     .badge-idx {
       position: absolute;

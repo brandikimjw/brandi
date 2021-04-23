@@ -3,10 +3,22 @@
   <div class="sub-banner-container">
     {{ screenSize }}
     <div class="swiper-container sub-container" :class="screenSize">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide hide-text"><a href="#">Slide 1</a></div>
-        <div class="swiper-slide hide-text"><a href="#">Slide 2</a></div>
-      </div>
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <a href="#"
+            ><img
+              src="../assets/images/mainbanner02.jpeg"
+              alt="서브배너 슬라이드 이미지1"
+          /></a>
+        </li>
+        <li class="swiper-slide">
+          <a href="#"
+            ><img
+              src="~@/assets/images/mainbanner02.jpeg"
+              alt="서브배너 슬라이드 이미지2"
+          /></a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -23,7 +35,7 @@ export default {
   methods: {
     setScreenSize() {
       if (window.innerWidth > 768) {
-        this.screenSize = "pc";
+        this.screenSize = "";
       }
       if (window.innerWidth <= 768) {
         this.screenSize = setSlider();
@@ -62,23 +74,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.swiper-slide {
-  margin-top: 5%;
-  text-align: center;
-  font-size: 18px;
-  background: url(~@/assets/images/mainbanner02.jpeg) no-repeat center;
-  background-size: contain;
-  padding-top: 40%;
+// .swiper-slide {
+//   text-align: center;
+//   //background: url(~@/assets/images/mainbanner02.jpeg) no-repeat center;
+//   background-size: contain;
+// }
+.swiper-wrapper {
+  height: 251px;
+  .swiper-slide {
+    max-width: 87%;
+    margin-right: 20px;
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //today베스트
-  .screenSize {
-    //display: none;
-  }
-  .swiper-slide {
-    width: 50%;
-    margin-right: 30px;
+  .swiper-wrapper {
+    display: flex;
+    margin: 0 auto;
+    .swiper-slide {
+      max-width: calc(50% - 16px);
+      margin-right: 32px;
+    }
   }
 }
 </style>

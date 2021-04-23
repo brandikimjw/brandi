@@ -25,7 +25,6 @@ export default {
 <style lang="scss" scoped>
 // 타이틀 네브
 .title-nav {
-  display: block;
   margin-bottom: 24px;
   .title-nav-tit {
     width: 100%;
@@ -62,18 +61,22 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
     .title-nav-tit {
-      width: calc(100% - 27%);
       float: left;
-      font-size: 32px;
       text-align: left;
+      font-size: 32px;
+      width: auto;
     }
     .title-nav-box {
-      display: inline-block;
-      text-align: right;
       float: right;
+      text-align: right;
+      margin-top: 8px;
       .title-nav-txt {
         font-size: 17px;
         line-height: 17px;
+        margin: 0 8px 0 0;
+        &:nth-last-child() {
+          margin: 0;
+        }
       }
     }
   }
