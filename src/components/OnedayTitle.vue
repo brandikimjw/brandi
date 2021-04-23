@@ -77,8 +77,8 @@ export default {
   .today-box {
     display: inline-block;
     text-align: center;
+    vertical-align: middle;
     .oneday-svg {
-      padding-top: 15px;
       width: 90px;
       height: 35px;
     }
@@ -104,7 +104,8 @@ export default {
     margin-bottom: 24px;
     margin-top: 100px;
     .today-box {
-      vertical-align: center;
+      margin-top: 5px;
+      vertical-align: top;
       .oneday-svg {
         width: 161px;
         height: 36px;

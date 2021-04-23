@@ -15,7 +15,9 @@
         </div>
         <div v-show="isOneDayShipping" class="oneday-svg"></div>
       </div>
-      <em class="product-title">{{ productName }}</em>
+      <em class="product-title"
+        ><a class="proudct-name" href="#">{{ productName }}</a></em
+      >
       <div class="info-price">
         <strong v-if="discountRate" class="dc">{{ discountRate }}%</strong>
         <em class="dc-price">{{ price }}</em>
@@ -110,6 +112,10 @@ export default {
       text-overflow: ellipsis;
       white-space: nowrap;
       word-wrap: normal;
+
+      .proudct-name {
+        color: #202429;
+      }
     }
     .info-price {
       .dc {

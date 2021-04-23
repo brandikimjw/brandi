@@ -20,7 +20,9 @@
 .main-new {
   margin-top: 80px;
   .new-list {
-    overflow: visible;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
     width: calc(100% + 40px);
     height: 100%;
     margin: 0 -20px;
@@ -85,6 +87,7 @@
     display: none;
   }
 }
+
 //지금 뜨고있는 기획전
 .main-rise-pop {
   margin-top: 60px;
