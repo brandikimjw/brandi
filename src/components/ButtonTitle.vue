@@ -79,7 +79,7 @@ export default {
         .button-prev {
           width: 40px;
           height: 40px;
-          margin-right: -4px;
+          margin-right: -5px;
           padding: 0;
           background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
             center/cover;
