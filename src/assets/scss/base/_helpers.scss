@@ -34,8 +34,9 @@ s, especially valuable on small screens
 .hide-text {
   overflow: hidden;
   padding: 0; /* 1 */
-  text-indent: 101%;
+  text-indent: -9999px;
   white-space: nowrap;
+  font-size: 0;
 }
 
 /**

@@ -219,4 +219,13 @@ export default {
     }
   }
 }
+@media screen and (min-width: map-get($breakpoints, "large")) {
+  .main-banner-container {
+    .main-container {
+      width: 1000px;
+    }
+  }
+}
+
+//#adaptive.main-banner .swiper-container
 </style>

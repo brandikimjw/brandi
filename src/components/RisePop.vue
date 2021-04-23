@@ -56,7 +56,7 @@ export default {
 .event-item {
   border-bottom: 1px solid #ebeef2;
   &:last-child {
-    margin-top: 24px;
+    margin-right: 0px;
   }
   .banner {
     position: relative;

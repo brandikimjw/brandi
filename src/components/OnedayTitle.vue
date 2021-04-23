@@ -76,10 +76,9 @@ export default {
   }
   .today-box {
     display: inline-block;
-    margin-bottom: 12px;
     text-align: center;
     .oneday-svg {
-      padding-top: 14px;
+      padding-top: 15px;
       width: 90px;
       height: 35px;
     }
@@ -105,11 +104,11 @@ export default {
     margin-bottom: 24px;
     margin-top: 100px;
     .today-box {
-      //height: 36px;
+      vertical-align: center;
       .oneday-svg {
         width: 161px;
         height: 36px;
-        padding: 5px 0 0 10px;
+        padding: 0px 0 0 10px;
       }
     }
     .today-tit {

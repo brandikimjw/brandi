@@ -71,9 +71,9 @@
     .product-special {
       display: inline-block;
       width: 66%;
-      &:nth-last-child(1){
-        padding-right: 0;
-      }
+      // &:nth-last-child(1){
+      //   padding-right: 0;
+      // }
     }
   }
 }
@@ -150,14 +150,18 @@
         display: inline-block;
         background: url(~@/assets/images/img-specialprice@3x.png) no-repeat center top;
         background-size: cover;
-        width: calc(29% - 20px);
-        padding-top: 25%;
+        width: calc(29% - 30px);
+        padding-top: 32%;
         vertical-align: top;
       }
       .product-special {
         width: calc(71% / 3);
-        margin: 0 !important;
         padding: 0 20px;
+        vertical-align: top;
+          &:nth-last-child(1){
+            width: calc(71% / 3.3);
+            padding-right: 0;
+          }
       }
     }
   }
@@ -172,10 +176,9 @@
         margin-right: 32px;
         border: none;
         &:nth-child(2){
-          margin:0;
+
         }
       }
     }
   }
-
 }
