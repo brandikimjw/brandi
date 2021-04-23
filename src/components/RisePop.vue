@@ -2,9 +2,8 @@
   <!-- 지금 뜨고있는 기획전 -->
   <div class="event-item">
     <div class="banner">
-      <a href="#">
-        <span class="more">바로가기 &gt;</span>
-      </a>
+      <a href="#" class="banner-link"></a>
+      <span class="more">바로가기 &gt;</span>
     </div>
 
     <article class="main-list">
@@ -60,20 +59,29 @@ export default {
     margin-top: 24px;
   }
   .banner {
-    background: url(~@/assets/images/pop-banner.jpeg) no-repeat;
-    width: 100%;
-    padding-top: 45%;
-    background-size: cover;
-    margin-bottom: 8px;
     position: relative;
+    .banner-link {
+      background: url(~@/assets/images/pop-banner.jpeg) no-repeat;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      padding-top: 45%;
+      margin-bottom: 8px;
+      line-height: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
     .more {
       padding: 8px 15px 8px 16px;
       font-size: 12px;
       background-color: rgba(0, 0, 0, 0.4);
       color: #fff;
       position: absolute;
-      right: 0;
       bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
     }
   }
 
