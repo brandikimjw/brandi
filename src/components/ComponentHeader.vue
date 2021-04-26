@@ -1,17 +1,17 @@
 <template>
   <header class="header">
-    <div class="nav">
-      <div class="nav-swiper-container">
+    <div class="nav product-list">
+      <div class="nav-swiper-container swiper-container">
         <nav class="swiper-wrapper">
-          <a href="#" class="nav-swiper-slide">홈</a>
-          <a href="#" class="nav-swiper-slide">베스트</a>
-          <a href="/PageNewTab" class="nav-swiper-slide">신상</a>
-          <a href="#" class="nav-swiper-slide">특가</a>
-          <a href="#" class="nav-swiper-slide">쇼핑몰마켓</a>
-          <a href="#" class="nav-swiper-slide">브랜드</a>
-          <a href="#" class="nav-swiper-slide">뷰티</a>
-          <a href="#" class="nav-swiper-slide">기획전</a>
-          <a href="#" class="nav-swiper-slide">스토어</a>
+          <a href="#" class="nav-swiper-slide-active swiper-slide">홈</a>
+          <a href="#" class="nav-swiper-slide swiper-slide">혜택존</a>
+          <a href="#" class="nav-swiper-slide swiper-slide">베스트</a>
+          <a href="/PageNewTab" class="nav-swiper-slide swiper-slide">신상</a>
+          <a href="#" class="nav-swiper-slide swiper-slide">특가</a>
+          <a href="#" class="nav-swiper-slide swiper-slide trend">트렌드</a>
+          <a href="#" class="nav-swiper-slide swiper-slide brand">브랜드</a>
+          <a href="#" class="nav-swiper-slide swiper-slide beauty">뷰티</a>
+          <a href="#" class="nav-swiper-slide swiper-slide">스토어</a>
         </nav>
         <!-- Add Pagination -->
         <!-- <div class="swiper-pagination"></div> -->
@@ -32,22 +32,22 @@ export default {
     navigtationSlide() {
       this.navSlide = new Swiper(".nav-swiper-container", {
         clickable: true,
-        slidesPerView: 5,
-        spaceBetween: 1,
-        freeMode: true,
-        grabCursor: true,
+        slidesPerView: 6,
+        spaceBetween: 0,
+        // freeMode: true,
+        // grabCursor: true,
         breakpoints: {
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 8,
+            spaceBetween: 0,
           },
           768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 9,
+            spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
+            slidesPerView: 9,
+            spaceBetween: 0,
           },
         },
       });
@@ -72,9 +72,8 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     .nav-swiper-slide {
-      display: flex;
       width: auto;
       display: block;
       position: relative;
@@ -83,7 +82,26 @@ export default {
       font-size: 15px;
       font-weight: bold;
       line-height: 21px;
+      word-break: keep-all;
+      text-align: center;
+      &:hover {
+        border-bottom: 2px solid #222;
+      }
     }
+    .trend {
+      color: #ff4569 !important;
+    }
+    .brand {
+      color: #cea375 !important;
+    }
+    .beauty {
+      color: #dea6a6 !important;
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .nav-swiper-container {
+    font-size: 14px;
   }
 }
 </style>
