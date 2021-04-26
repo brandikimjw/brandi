@@ -63,6 +63,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+// scss > components > _header.scss에 옮기고 import 시키키
 .header {
   border-bottom: 1px solid #ebeef2;
 }
