@@ -3,10 +3,12 @@
     <div class="nav product-list">
       <div class="nav-swiper-container swiper-container">
         <nav class="swiper-wrapper">
-          <a href="#" class="nav-swiper-slide-active swiper-slide">홈</a>
+          <a href="#" class="nav-swiper-slide active swiper-slide">홈</a>
           <a href="#" class="nav-swiper-slide swiper-slide">혜택존</a>
           <a href="#" class="nav-swiper-slide swiper-slide">베스트</a>
-          <a href="/PageNewTab" class="nav-swiper-slide swiper-slide">신상</a>
+          <router-link to="/newpage" class="nav-swiper-slide swiper-slide"
+            >신상</router-link
+          >
           <a href="#" class="nav-swiper-slide swiper-slide">특가</a>
           <a href="#" class="nav-swiper-slide swiper-slide trend">트렌드</a>
           <a href="#" class="nav-swiper-slide swiper-slide brand">브랜드</a>
@@ -86,6 +88,23 @@ export default {
       text-align: center;
       &:hover {
         border-bottom: 2px solid #222;
+      }
+      &.active {
+        &::before {
+          position: relative;
+          padding: 14px 10px;
+          color: #202429;
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 21px;
+          display: none;
+          position: absolute;
+          left: 7px;
+          right: 7px;
+          bottom: 0;
+          height: 2px;
+          background-color: #000;
+        }
       }
     }
     .trend {

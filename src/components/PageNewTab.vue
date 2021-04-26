@@ -1,10 +1,12 @@
-<template></template>
+<template>
+  <div>신상모아보기</div>
+</template>
 
 <script>
 // import MainSwiper from "./MainSwiper";
 
 export default {
-  name: "PageNew",
+  name: "newpage",
   components: {
     // MainSwiper,
   },

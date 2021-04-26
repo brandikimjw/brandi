@@ -4,6 +4,7 @@
       <Header />
     </div>
     <div id="container">
+      <router-link to="pagenewtab"></router-link>
       <router-view />
     </div>
     <div id="footer">
