@@ -63,6 +63,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.header {
+  border-bottom: 1px solid #ebeef2;
+}
 /deep/.nav-swiper-container {
   margin: 0 auto;
   position: relative;

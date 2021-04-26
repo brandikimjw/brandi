@@ -1,14 +1,16 @@
 <template>
-  <div>신상모아보기</div>
+  <div class="store-market-list-wrap">
+    <NavTitle />
+  </div>
 </template>
 
 <script>
-// import MainSwiper from "./MainSwiper";
+import NavTitle from "./NavTitle";
 
 export default {
   name: "newpage",
   components: {
-    // MainSwiper,
+    NavTitle,
   },
   data() {
     return {};
@@ -19,9 +21,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import "~@/assets/scss/pages/main";
-
-.main-oneday {
-  .today-tit {
-  }
-}
 </style>
