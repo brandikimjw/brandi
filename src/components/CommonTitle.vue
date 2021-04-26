@@ -27,6 +27,12 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  .title-common-tit {
+    text-align: left;
+    margin: 0px 0px 36px;
+    color: #222222;
+    font-size: 32px;
+  }
 }
 //large
 @media screen and (min-width: map-get($breakpoints, "large")) {
