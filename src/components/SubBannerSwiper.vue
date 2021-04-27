@@ -80,7 +80,6 @@ export default {
 //   background-size: contain;
 // }
 .swiper-wrapper {
-  height: 251px;
   .swiper-slide {
     max-width: 87%;
     margin-right: 20px;

@@ -163,6 +163,14 @@ export default {
     }
   }
 }
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  display: none;
+}
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .main-banner-container {
@@ -201,7 +209,6 @@ export default {
     .swiper-button-box {
       display: block;
       .swiper-button-next {
-        display: block;
         background: url(~@/assets/images/ic-arrow-r@3x.png) no-repeat top
           center/cover;
         width: 90px;
@@ -209,7 +216,6 @@ export default {
         right: -50px;
       }
       .swiper-button-prev {
-        display: block;
         background: url(~@/assets/images/ic-arrow-l@3x.png) no-repeat top
           center/cover;
         width: 90px;

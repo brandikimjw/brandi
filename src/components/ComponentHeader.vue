@@ -71,11 +71,9 @@ export default {
 }
 /deep/.nav-swiper-container {
   margin: 0 auto;
-  position: relative;
   overflow: hidden;
   z-index: 1;
   .swiper-wrapper {
-    position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -84,7 +82,6 @@ export default {
     .nav-swiper-slide {
       width: auto;
       display: block;
-      position: relative;
       padding: 14px 10px;
       color: #202429;
       font-size: 15px;
@@ -97,7 +94,6 @@ export default {
       }
       &.active {
         &::before {
-          position: relative;
           padding: 14px 10px;
           color: #202429;
           font-size: 15px;

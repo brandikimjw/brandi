@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 // 컴포넌트 노말
 .product-normal {
-  padding: 0 8px 30px;
+  padding: 0 4px 20px;
   //margin-bottom: 3%;
   .thumb {
     overflow: hidden;

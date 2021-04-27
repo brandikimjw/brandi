@@ -55,6 +55,9 @@ export default {
 <style lang="scss" scoped>
 .event-item {
   border-bottom: 1px solid #ebeef2;
+  &:first-child {
+    margin-bottom: 24px;
+  }
   &:last-child {
     margin-right: 0px;
   }
@@ -93,7 +96,7 @@ export default {
       display: inline-block;
       .thumb {
         .thumb-img {
-          padding-top: 90%;
+          padding-top: 110%;
         }
       }
       .wrap-info {
