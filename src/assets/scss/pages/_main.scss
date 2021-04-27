@@ -86,12 +86,14 @@
   .badge-idx {
     display: none;
   }
+}
 
 //지금 뜨고있는 기획전
 .main-rise-pop {
   margin-top: 60px;
   .rise-list {
     margin-bottom: 12px;
+    border-bottom: 1px solid #ebeef2;
   }
 }
 
@@ -164,8 +166,8 @@
             padding-right: 0;
           }
       }
-      margin: 0 ;
-      padding: 0;
+      margin: 0 -20px;
+      padding: 0 0 0 16px;
     }
   }
 
@@ -184,5 +186,4 @@
       }
     }
   }
-}
 }
