@@ -21,8 +21,8 @@ s, especially valuable on small screens
   max-width: $max-width; /* 1 */
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
-  padding-left: 16px; /* 3 */
-  padding-right: 16px; /* 3 */
+  // padding-left: 20px; /* 3 */
+  // padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
  }
 
@@ -37,7 +37,7 @@ s, especially valuable on small screens
   text-indent: -9999px;
   white-space: nowrap;
   font-size: 0;
-}
+}Ø
 
 /**
  * Hide element while making it readable for screen readers

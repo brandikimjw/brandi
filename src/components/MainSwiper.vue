@@ -117,6 +117,7 @@ export default {
   .swiper-slide {
     display: inline-block;
     display: block;
+    line-height: 0;
     img {
       width: 100%;
       height: inherit;
@@ -189,7 +190,6 @@ export default {
         background: rgba(0, 0, 0, 0.5);
         z-index: 10;
         left: -1000%;
-        bottom: 1%;
       }
 
       &::after {
@@ -202,7 +202,6 @@ export default {
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
         right: -1000%;
-        bottom: 1%;
       }
     }
     //swiperButton

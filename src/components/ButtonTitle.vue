@@ -79,9 +79,9 @@ export default {
         .button-prev {
           width: 40px;
           height: 40px;
-          margin-right: -5px;
+          margin-right: -6px;
           padding: 0;
-          background: url(~@/assets/images/ic-btn-more-m@3x.png) no-repeat
+          background: url(~@/assets/images/ic-square-arrow-l-n@3x.png) no-repeat
             center/cover;
           background-size: 25px 25px;
           transform: rotateX(180deg);

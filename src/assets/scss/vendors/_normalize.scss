@@ -371,3 +371,9 @@ img,fieldset {
 em {
   font-style: initial;
 }
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}

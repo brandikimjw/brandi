@@ -7,9 +7,13 @@
   margin-bottom: 50px;
 }
 // today베스트
+.main-today {
+  padding: 0 18px 0 18px;
+}
 .today-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -4px;
   .product-normal {
     height: 100%;
     width: calc(100%/2);
@@ -19,6 +23,7 @@
 // 신상 모아보기
 .main-new {
   margin-top: 80px;
+  padding: 0 18px 0 18px;
   .new-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -39,10 +44,12 @@
 //서브 배너
 .main-sub-banner {
   margin-top: 60px;
+  padding: 0 18px 0 18px;
 }
 //당신을 위한 추천
 .main-recommend {
   margin-top: 60px;
+  padding: 0 18px 0 18px;
   .recommend-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -67,8 +74,7 @@
     overflow-y: hidden;
     width: calc(100% + 40px);
     height: 100%;
-    margin: 0 -20px;
-    padding: 0 0 0 16px;
+    // padding: 0 0 0 16px;
     white-space: nowrap;
     .product-special {
       display: inline-block;
@@ -83,6 +89,7 @@
 //하루배송 상품은 내일 도착
 .main-oneday {
   margin-top: 60px;
+  padding: 0 18px 0 18px;
   .badge-idx {
     display: none;
   }
@@ -91,6 +98,7 @@
 //지금 뜨고있는 기획전
 .main-rise-pop {
   margin-top: 60px;
+  padding: 0 18px 0 18px;
   .rise-list {
     margin-bottom: 12px;
     border-bottom: 1px solid #ebeef2;
@@ -99,9 +107,13 @@
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //today베스트
+  .main-today {
+    padding: 0 20px 0 20px;
+  }
   .today-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -8px;
     .product-normal {
       height: 100%;
       width: calc(100% / 4);
@@ -109,6 +121,7 @@
   }
   // 신상 모아보기
   .main-new {
+    padding: 0 20px 0 20px;
     .new-list {
       display: flex;
       flex-wrap: wrap;
@@ -125,10 +138,15 @@
       }
     }
   }
+  //서브배너
+  .main-sub-banner {
+    padding: 0 20px 0 20px;
+  }
 
   //당신을 위한 추천
   .main-recommend {
     margin-top: 60px;
+    padding: 0 20px 0 20px;
     .recommend-list {
       display: flex;
       flex-wrap: wrap;
@@ -148,6 +166,7 @@
 
   //놓칠 수 없는 브랜디 특가
   .main-special {
+    padding: 0 20px 0 20px;
     .special-list {
       .special-image {
         display: inline-block;
@@ -166,13 +185,16 @@
             padding-right: 0;
           }
       }
-      margin: 0 -20px;
-      padding: 0 0 0 16px;
     }
+  }
+
+  .main-oneday {
+    padding: 0 20px 0 20px;
   }
 
   //지금 뜨고있는 기획전
   .main-rise-pop {
+    padding: 0 20px 0 20px;
     .rise-list {
       display: flex;
       border: none;

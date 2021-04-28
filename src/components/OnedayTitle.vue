@@ -109,7 +109,6 @@ export default {
       .oneday-svg {
         width: 161px;
         height: 36px;
-        padding: 0px 0 0 10px;
       }
     }
     .today-tit {

@@ -36,7 +36,7 @@ export default {
         clickable: true,
         slidesPerView: 6,
         spaceBetween: 0,
-        // freeMode: true,
+        freeMode: true,
         // grabCursor: true,
         breakpoints: {
           640: {
