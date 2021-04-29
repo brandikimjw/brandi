@@ -3,19 +3,30 @@
     <!-- 여기에 이제 스토어 신상 동그라미 스와이퍼 들어가면됌 -->
     <div class="market-list-container swiper-container">
       <nav class="market-store swiper-wrapper">
-        <a href="#" class="active swiper-slide">홈</a>
-        <a href="#" class="swiper-slide benefit">혜택존</a>
-        <a href="#" class="swiper-slide best">베스트</a>
-        <router-link to="/newpage" class="swiper-slide newbrand"
-          >신상</router-link
-        >
-        <a href="#" class="swiper-slide special">특가</a>
-        <a href="#" class="swiper-slide trend">트렌드</a>
-        <a href="#" class="swiper-slide brand">브랜드</a>
-        <a href="#" class="swiper-slide store">스토어</a>
-        <a href="#" class="swiper-slide beauty">뷰티</a>
+        <a href="#" class="swiper-slide active">
+          <div class="store-thum active hide-text">상품 이미지</div>
+          <div class="store-name active"><p class="active">업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
       </nav>
     </div>
+    <!-- swiper재도전 -->
+
     <div class="market-store-list">
       <ProductNormal
         sellorName="브랜디"
@@ -66,28 +77,29 @@ export default {
   },
   data() {
     return {
-      stroeSlide: "",
+      storeSlide: "",
     };
   },
   methods: {
     marketSlide() {
-      this.stroeSlide = new Swiper(".market-list-container", {
+      this.storeSlide = new Swiper(".market-list-container", {
         clickable: true,
-        slidesPerView: 6,
+        // auto 사용했을 시 슬라이더가 해제되는 문제 해결하기
+        slidesPerView: auto,
         spaceBetween: 0,
         freeMode: true,
-        // grabCursor: true,
+        grabCursor: true,
         breakpoints: {
           640: {
-            slidesPerView: 8,
+            slidesPerView: 6,
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 9,
+            slidesPerView: 6,
             spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 9,
+            slidesPerView: 6,
             spaceBetween: 0,
           },
         },
@@ -103,9 +115,37 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .market-list-container {
-  .market-store {
+  padding: 0 0px 0 18px;
+}
+.swiper-slide {
+  display: block;
+  width: 20%;
+  margin-right: 14px;
+  .store-thum {
+    background: url(~@/assets/images/ilang_profile.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding-bottom: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.02);
+    margin-bottom: 10px;
+    &.active {
+      border: 3px solid #ff204b inset;
+    }
   }
-  .swiper-slide {
+  .store-name {
+    p {
+      padding-bottom: 10px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      &.active {
+        font-size: 12px;
+        color: #ff204b;
+        border-bottom: solid 3px #ff204b;
+        font-weight: bold;
+      }
+    }
   }
 }
 .market-store-list {
