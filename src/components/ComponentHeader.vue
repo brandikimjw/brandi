@@ -39,10 +39,6 @@ export default {
         freeMode: true,
         // grabCursor: true,
         breakpoints: {
-          640: {
-            slidesPerView: 8,
-            spaceBetween: 0,
-          },
           768: {
             slidesPerView: 9,
             spaceBetween: 0,

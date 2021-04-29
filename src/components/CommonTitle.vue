@@ -18,20 +18,18 @@ export default {
 .title-common {
   width: 100%;
   font-weight: bold;
-  margin-top: 26px;
   .title-common-tit {
     text-align: center;
-    margin: 0px 16px 16px;
+    margin: 26px 0 16px 0;
     color: #222222;
     font-size: 20px;
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .title-common-tit {
-    text-align: left;
-    margin: 0px 0px 36px;
-    color: #222222;
-    font-size: 32px;
+  .title-common {
+    .title-common-tit {
+      text-align: left;
+    }
   }
 }
 //large
