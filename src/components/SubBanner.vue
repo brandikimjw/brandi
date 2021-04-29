@@ -22,11 +22,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .sub-banner-img {
-  width: 328px;
-  .a {
+  a {
     display: block;
-    > img {
-      max-width: 100%;
+    img {
+      width: 100%;
     }
   }
 }

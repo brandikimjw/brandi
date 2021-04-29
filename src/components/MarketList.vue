@@ -102,13 +102,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.market-list-container {
+  .market-store {
+  }
+  .swiper-slide {
+  }
+}
 .market-store-list {
   overflow-x: auto;
   overflow-y: hidden;
   //display: block;
   padding: 18px 0 18px 10px;
   white-space: nowrap;
-  background-color: #f8f9fb;
+  // background-color: #f8f9fb;
   .product-normal {
     width: 43%;
     display: inline-block;
