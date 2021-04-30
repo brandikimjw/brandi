@@ -147,8 +147,8 @@ export default {
     tabSlide() {
       this.tabTitleSlide = new Swiper(".category-filter-container", {
         clickable: true,
-        slidesPerView: 6,
-        spaceBetween: 0,
+        slidesPerView: "auto",
+        spaceBetween: "auto",
         freeMode: true,
         grabCursor: true,
         breakpoints: {
@@ -187,11 +187,10 @@ export default {
     text-align: center;
     .title-nav-txt {
       display: inline-block;
-
       font-size: 14px;
       color: #808893;
       a {
-        padding: 0px 16px 10px 16px;
+        padding: 0px 8px 10px 8px;
         font-size: 14px;
       }
       &.active {
@@ -210,22 +209,21 @@ export default {
   .category-filter-list {
     padding: 7px 16px;
     .swiper-slide {
-      display: block;
-      padding: 10px 13px;
-      width: auto;
       font-size: 13px;
+      line-height: 13px;
       a {
         display: block;
         text-align: center;
+        // padding: 10px 13px;
       }
     }
     .swiper-slide-active {
-      background: #ff204b;
-      border-radius: 18px;
+      //background: #ff204b;
+      //border-radius: 18px;
       a {
-        display: block;
-        color: #fff;
-        text-align: center;
+        // display: inline-block;
+        //color: #fff;
+        //text-align: center;
       }
     }
   }

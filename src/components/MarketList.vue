@@ -193,6 +193,10 @@ export default {
   overflow-x: auto;
   overflow-y: hidden;
   background: #f8f9fb;
+  border-bottom: 8px solid
+
+
+  #f2f4f7;
   //display: block;
   padding: 18px 0 18px 10px;
   white-space: nowrap;
