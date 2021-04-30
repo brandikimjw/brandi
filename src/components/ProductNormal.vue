@@ -21,7 +21,6 @@
       <div class="info-price">
         <strong v-if="discountRate" class="dc">{{ discountRate }}%</strong>
         <em class="dc-price">{{ price }}</em>
-        <p class="price hide-text">14,000</p>
       </div>
     </div>
   </section>

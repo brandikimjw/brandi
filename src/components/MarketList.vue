@@ -23,9 +23,14 @@
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name"><p>업타운홀릭</p></div>
         </a>
+        <div class="swiper-slide store-slide-more">
+          <a href="#" class="swiper-slide">
+            <div class="store-thum-more hide-text"></div>
+            <div class="store-name-more"><p>찜한 스토어 전체보기</p></div>
+          </a>
+        </div>
       </nav>
     </div>
-    <!-- swiper재도전 -->
 
     <div class="market-store-list">
       <ProductNormal
@@ -64,6 +69,12 @@
         :discountRate="10"
         :price="50000"
       />
+      <div class="product-more">
+        <a href="#">
+          <div class="more-arrow"></div>
+          <p class="more-text">신상더보기</p>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -84,22 +95,21 @@ export default {
     marketSlide() {
       this.storeSlide = new Swiper(".market-list-container", {
         clickable: true,
-        // auto 사용했을 시 슬라이더가 해제되는 문제 해결하기
-        slidesPerView: auto,
+        slidesPerView: "auto",
         spaceBetween: 0,
         freeMode: true,
         grabCursor: true,
         breakpoints: {
           640: {
-            slidesPerView: 6,
+            slidesPerView: "auto",
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 6,
+            slidesPerView: "auto",
             spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 6,
+            slidesPerView: "auto",
             spaceBetween: 0,
           },
         },
@@ -128,9 +138,12 @@ export default {
     padding-bottom: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid #ebeef2;
+    border-radius: 50%;
     margin-bottom: 10px;
+    display: inline-block;
     &.active {
-      border: 3px solid #ff204b inset;
+      border: 3px solid #ff204b;
     }
   }
   .store-name {
@@ -140,7 +153,7 @@ export default {
       margin-top: 10px;
       font-size: 12px;
       &.active {
-        font-size: 12px;
+        margin-top: 6px;
         color: #ff204b;
         border-bottom: solid 3px #ff204b;
         font-weight: bold;
@@ -148,9 +161,38 @@ export default {
     }
   }
 }
+
+.market-store {
+  .store-slide-more {
+    width: 100%;
+    padding-top: 20px;
+  }
+  .swiper-slide {
+    .store-thum-more {
+      margin: 0 auto;
+      background: url(~@/assets/images/btn-more@3x.png) no-repeat;
+      background-size: cover;
+      background-position: top center;
+      width: 26px;
+      height: 26px;
+      background-color: rgba(0, 0, 0, 0.02);
+      margin-bottom: 10px;
+    }
+    .store-name-more {
+      padding-bottom: 10px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #ff204b;
+    }
+  }
+}
+
+// 하단에 클릭하면 나오는 거
 .market-store-list {
   overflow-x: auto;
   overflow-y: hidden;
+  background: #f8f9fb;
   //display: block;
   padding: 18px 0 18px 10px;
   white-space: nowrap;
@@ -159,6 +201,32 @@ export default {
     width: 43%;
     display: inline-block;
     vertical-align: top;
+    padding: 0 4px 3px;
+    .thumb {
+      .badge-idx {
+        display: none;
+      }
+    }
+  }
+  .product-more {
+    display: inline-block;
+    width: 64px;
+    text-align: center;
+    margin-left: 26px;
+    margin: 15% 26px 15% 17px;
+    a {
+      .more-arrow {
+        background: url(~@/assets/images/btn-more-gray1g@3x.png) no-repeat center;
+        background-size: cover;
+        width: 64px;
+        height: 64px;
+      }
+      .more-text {
+        margin-top: 16px;
+        font-size: 11px;
+        color: #808893;
+      }
+    }
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
