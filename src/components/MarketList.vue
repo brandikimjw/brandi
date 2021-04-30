@@ -23,8 +23,20 @@
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name"><p>업타운홀릭</p></div>
         </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
+        <a href="#" class="swiper-slide">
+          <div class="store-thum hide-text">상품 이미지</div>
+          <div class="store-name"><p>업타운홀릭</p></div>
+        </a>
         <div class="swiper-slide store-slide-more">
-          <a href="#" class="swiper-slide">
+          <a href="#" class="swiper-more">
             <div class="store-thum-more hide-text"></div>
             <div class="store-name-more"><p>찜한 스토어 전체보기</p></div>
           </a>
@@ -94,11 +106,11 @@ export default {
   methods: {
     marketSlide() {
       this.storeSlide = new Swiper(".market-list-container", {
-        clickable: true,
+        clickable: 'true',
         slidesPerView: "auto",
         spaceBetween: 0,
-        freeMode: true,
-        grabCursor: true,
+        freeMode: 'true',
+        grabCursor: 'true',
         breakpoints: {
           640: {
             slidesPerView: "auto",
@@ -126,10 +138,11 @@ export default {
 <style lang="scss" scoped>
 .market-list-container {
   padding: 0 0px 0 18px;
+  border-bottom: 1px solid#f2f4f7;
 }
 .swiper-slide {
   display: block;
-  width: 20%;
+  width: 64px;
   margin-right: 14px;
   .store-thum {
     background: url(~@/assets/images/ilang_profile.jpg) no-repeat;
@@ -138,12 +151,13 @@ export default {
     padding-bottom: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.02);
-    border: 1px solid #ebeef2;
     border-radius: 50%;
     margin-bottom: 10px;
     display: inline-block;
+    box-shadow: 0 0 0 1px #ebeef2 inset;
     &.active {
-      border: 3px solid #ff204b;
+      // border: 3px solid #ff204b;
+      box-shadow: 0 0 0 3px #ff204b inset;
     }
   }
   .store-name {
@@ -153,7 +167,6 @@ export default {
       margin-top: 10px;
       font-size: 12px;
       &.active {
-        margin-top: 6px;
         color: #ff204b;
         border-bottom: solid 3px #ff204b;
         font-weight: bold;
@@ -164,7 +177,7 @@ export default {
 
 .market-store {
   .store-slide-more {
-    width: 100%;
+    width: 64px;
     padding-top: 20px;
   }
   .swiper-slide {
@@ -193,10 +206,7 @@ export default {
   overflow-x: auto;
   overflow-y: hidden;
   background: #f8f9fb;
-  border-bottom: 8px solid
-
-
-  #f2f4f7;
+  border-bottom: 8px solid#f2f4f7;
   //display: block;
   padding: 18px 0 18px 10px;
   white-space: nowrap;

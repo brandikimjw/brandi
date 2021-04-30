@@ -12,37 +12,37 @@
     <!-- tabBar -->
     <div class="category-filter-container swiper-container">
       <div class="category-filter-list swiper-wrapper">
-        <div class="swiper-slide-active swiper-slide">
+        <div class="active swiper-slide slide-category">
           <a href="#">전체</a>
         </div>
-        <div class="swiper-slide-next swiper-slide">
-          <a href="#">아우터</a>
+        <div class="swiper-slide-next swiper-slide slide-category">
+          <a class="active" href="#">아우터</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">상의</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">바지</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">원피스</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">스커트</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">신발</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">가방</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">주얼리</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">잡화</a>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide slide-category">
           <a href="#">라이프웨어</a>
         </div>
       </div>
@@ -146,21 +146,13 @@ export default {
   methods: {
     tabSlide() {
       this.tabTitleSlide = new Swiper(".category-filter-container", {
-        clickable: true,
         slidesPerView: "auto",
-        spaceBetween: "auto",
         freeMode: true,
-        grabCursor: true,
-        breakpoints: {
-          768: {
-            slidesPerView: 9,
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: 9,
-            spaceBetween: 0,
-          },
-        },
+        spaceBetween: 1,
+        loop: false,
+        pagination: false,
+        resistance: false,
+        slideToClickedSlide: true,
       });
     },
   },
@@ -208,13 +200,23 @@ export default {
   background: #f8f9fb;
   .category-filter-list {
     padding: 7px 16px;
-    .swiper-slide {
+    .slide-category {
+      width: auto;
       font-size: 13px;
       line-height: 13px;
+      &:nth-last-child() {
+        margin-right: 30px;
+      }
       a {
         display: block;
         text-align: center;
-        // padding: 10px 13px;
+        padding: 10px 13px;
+        color: #acb3bd;
+        &.active {
+          border-radius: 18px;
+          color: #fff;
+          background: #ff204b;
+        }
       }
     }
     .swiper-slide-active {
