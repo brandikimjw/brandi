@@ -216,7 +216,7 @@ export default {
     margin: 15% 26px 15% 17px;
     a {
       .more-arrow {
-        background: url(~@/assets/images/btn-more-gray1g@3x.png) no-repeat center;
+        background: url(~@/assets/images/btn-more-gray1@3x.png) no-repeat center;
         background-size: cover;
         width: 64px;
         height: 64px;
