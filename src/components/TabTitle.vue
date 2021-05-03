@@ -1,6 +1,6 @@
 <template>
   <div class="title-nav clearfix">
-    <h2 class="title-nav-tit product-list">TODAY 베스트</h2>
+    <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
       <li class="title-nav-txt active">
         <a href="javascript:void(0);">전체</a>
@@ -219,15 +219,6 @@ export default {
         }
       }
     }
-    .swiper-slide-active {
-      //background: #ff204b;
-      //border-radius: 18px;
-      a {
-        // display: inline-block;
-        //color: #fff;
-        //text-align: center;
-      }
-    }
   }
 }
 // today베스트
@@ -278,7 +269,7 @@ export default {
 }
 //today베스트
 .main-today {
-  padding: 0 20px 0 20px;
+  padding: 0 18px 0 18px;
 }
 .today-list {
   display: flex;
@@ -292,7 +283,71 @@ export default {
 
 //medium
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  
+  .title-nav {
+    .title-nav-tit {
+      width: 100%;
+      text-align: left;
+      padding: 0 20px 0 20px;
+    }
+    .title-nav-box {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 20px 0 20px;
+      .title-nav-txt {
+        width: calc(100% / 4);
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0rem;
+        a {
+          display: block;
+          padding: 16px 0 16px 0;
+          font-size: 18px;
+          border-bottom: 1px solid #e1e1e1;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+.category-filter-container {
+  width: 97%;
+  .category-filter-list {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    .slide-category {
+      display: inline-block;
+      width: calc(100% / 12);
+      a {
+        display: inline-block;
+        padding: 18px 14px;
+        font-size: 14px;
+        color: #808893;
+        &.active {
+          border-radius: 18px;
+          color: #ff204b;
+          background: none;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+// today베스트
+.new-today {
+  margin-top: 32px;
+  padding: 0 20px 0 20px;
+  .today-list {
+    margin: 0 -8px;
+    .product-normal {
+      height: 100%;
+      width: calc(100% / 4);
+    }
+  }
+}
+.new-today .today-list .product-normal {
+  padding: 0 8px 16px;
 }
 //large
 @media screen and (min-width: map-get($breakpoints, "large")) {

@@ -271,9 +271,8 @@ export default {
   //찜한 스토어 전체보기 아이콘
   .market-store {
     position: relative;
-    margin-right: 175px;
     border-bottom: 1px solid#ebeef2;
-    padding-right: 176px;
+    padding-right: 170px;
     box-sizing: border-box;
     .swiper-slide {
       width: calc((100% / 8) - 21px);

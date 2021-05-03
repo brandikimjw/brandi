@@ -7,6 +7,7 @@
     <aside class="sub-banner product-list">
       <SubBanner />
     </aside>
+    <!-- 인기신상:제플린에 없음 -->
     <section class="sub-popular-list-wrap product-list">
       <CommonTitle />
       <!-- 이거 통째로 가져오기 -->
@@ -122,23 +123,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.product-list {
-  padding: 0 18px 0 18px;
-}
 .sub-market-list-wrap {
   margin-top: 30px;
 }
+// 인기신상
 .sub-popular-list-wrap {
   margin-top: 30px;
+  padding: 0 18px 0 18px;
+  .button-common {
+    display: none;
+  }
 }
 .sub-today-new-wrap {
   margin-top: 30px;
 }
-.sub-banner {
-}
-// today베스트ㅜ_ㅜ
-.main-today {
-}
+
 .today-list {
   display: flex;
   flex-wrap: wrap;
@@ -149,10 +148,23 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  //내가 찜한 스토어 신상 - 전체 패딩 20px
+  .title-common {
+    margin-bottom: 36px;
+  }
+  .button-common {
+    display: block;
+    margin-top: 40px;
+  }
+  //new - 전체 패딩 20px
   .sub-market-list-wrap {
+    .button-common {
+      display: block;
+    }
+  }
+  .sub-popular-list-wrap {
     padding: 0 20px 0 20px;
   }
+
   //today베스트ㅜ_ㅜ가 아니라 겨울 필수템! 아우터 신상
   .today-list {
     display: flex;
