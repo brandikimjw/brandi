@@ -129,7 +129,7 @@ export default {
 // 인기신상
 .sub-popular-list-wrap {
   margin-top: 30px;
-  padding: 0 18px 0 18px;
+  // padding: 0 18px 0 18px;
   .button-common {
     display: none;
   }
@@ -162,12 +162,6 @@ export default {
     }
   }
   .sub-popular-list-wrap {
-    // .main-today {
-    //   padding: 0;
-    // }
-    .title-common {
-      padding: 0;
-    }
     padding: 0 20px 0 20px;
   }
 
