@@ -259,14 +259,11 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .sub-market-list-wrap {
+  .market-list-container {
     padding: 0 20px 0 20px;
   }
   .market-list-container {
     padding: 0;
-  }
-  .market-store {
-    margin-bottom: 30px;
   }
   //찜한 스토어 전체보기 아이콘
   .market-store {
@@ -274,6 +271,7 @@ export default {
     border-bottom: 1px solid#ebeef2;
     padding-right: 170px;
     box-sizing: border-box;
+    margin-bottom: 30px;
     .swiper-slide {
       width: calc((100% / 8) - 21px);
       margin-left: 24px;
@@ -333,6 +331,7 @@ export default {
     margin: 0 -8px;
     background: #fff;
     border: none;
+    padding: 0 20px 0 20px;
     .product-normal {
       height: 100%;
       width: calc(100% / 4);

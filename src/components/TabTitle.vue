@@ -267,6 +267,7 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
     .title-nav-tit {
+      font-size: 32px;
       width: 100%;
       text-align: left;
       padding: 0 20px 0 20px;
@@ -299,10 +300,10 @@ export default {
       margin: 0;
       .slide-category {
         display: inline-block;
-        width: calc(100% / 12);
+        width: calc(100% / 8);
         a {
           display: inline-block;
-          padding: 18px 14px;
+          padding: 18px 20px;
           font-size: 14px;
           color: #808893;
           &.active {
@@ -316,7 +317,7 @@ export default {
     }
   }
 
-  // today베스트
+  // today베스트 - 컨텐츠 가져온거
   .new-today {
     margin-top: 32px;
     padding: 0 20px 0 20px;

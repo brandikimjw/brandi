@@ -27,7 +27,7 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-common {
-    padding: 0;
+    padding: 0 20px 0 20px;
     .title-common-tit {
       text-align: left;
       font-size: 32px;

@@ -162,7 +162,10 @@ export default {
     }
   }
   .sub-popular-list-wrap {
-    .main-today {
+    // .main-today {
+    //   padding: 0;
+    // }
+    .title-common {
       padding: 0;
     }
     padding: 0 20px 0 20px;
