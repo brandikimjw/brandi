@@ -1,5 +1,21 @@
 <template>
   <header class="header">
+    <div class="artc-header">
+      <div class="artc-continer">
+        <div class="logo hide-text"><a href="#">브랜디</a></div>
+        <form method="get" action="/search" class="form-search">
+          <div class="form-cont">
+            <input
+              type="search"
+              aria-label="검색어 입력란"
+              class="input-search"
+            />
+            <button type="submit" class="button-search hide-text">검색</button>
+            <input type="hidden" name="r" value="/" />
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="nav product-list">
       <div class="nav-swiper-container swiper-container">
         <nav class="swiper-wrapper">
@@ -34,20 +50,10 @@ export default {
     navigtationSlide() {
       this.navSlide = new Swiper(".nav-swiper-container", {
         clickable: true,
-        slidesPerView: 6,
+        slidesPerView: "auto",
         spaceBetween: 0,
         freeMode: true,
-        // grabCursor: true,
-        breakpoints: {
-          768: {
-            slidesPerView: 9,
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: 9,
-            spaceBetween: 0,
-          },
-        },
+        grabCursor: true,
       });
     },
   },
@@ -64,6 +70,50 @@ export default {
 // 옆으로 드래그 했을때 다시 원상태로 돌아오지 않고 멈춰있게 하기
 .header {
   border-bottom: 1px solid #ebeef2;
+}
+.artc-header {
+  .artc-continer {
+    display: flex;
+    padding: 11px 16px 11px 16px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ebeef2;
+    .logo {
+      width: 99px;
+      height: 16px;
+      background: url(~@/assets/images/14-ic-01-logo-sign-ic-logo-branditxt@3x.png)
+        no-repeat top;
+      background-size: contain;
+      overflow: hidden;
+      line-height: 27px;
+      a {
+        display: block;
+      }
+    }
+  }
+  .form-search {
+    .form-cont {
+      .input-search {
+        // width: calc(100% - 63px);
+        height: 48px;
+        width: 48px;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        appearance: none;
+        font-size: 16px;
+        vertical-align: bottom;
+        opacity: 0;
+      }
+      .button-search {
+        width: 28px;
+        height: 28px;
+        background: url(~@/assets/images/14-ic-02-header-n-a-action-bar-icon-search-nor@3x.png)
+          no-repeat top/cover;
+      }
+    }
+  }
 }
 /deep/.nav-swiper-container {
   margin: 0 auto;
@@ -85,25 +135,25 @@ export default {
       line-height: 21px;
       word-break: keep-all;
       text-align: center;
-      &:hover {
-        border-bottom: 2px solid #222;
-      }
-      &.active {
-        &::before {
-          padding: 14px 10px;
-          color: #202429;
-          font-size: 15px;
-          font-weight: bold;
-          line-height: 21px;
-          display: none;
-          position: absolute;
-          left: 7px;
-          right: 7px;
-          bottom: 0;
-          height: 2px;
-          background-color: #000;
-        }
-      }
+      // &:hover {
+      //   border-bottom: 2px solid #222;
+      // }
+      // &.active {
+      //   &::before {
+      //     padding: 14px 10px;
+      //     color: #202429;
+      //     font-size: 15px;
+      //     font-weight: bold;
+      //     line-height: 21px;
+      //     display: none;
+      //     position: absolute;
+      //     left: 7px;
+      //     right: 7px;
+      //     bottom: 0;
+      //     height: 2px;
+      //     background-color: #000;
+      //   }
+      // }
     }
     .trend {
       color: #ff4569 !important;

@@ -149,7 +149,7 @@ export default {
 <style lang="scss" scoped>
 .market-list-container {
   padding: 0 0px 0 18px;
-  border-bottom: 1px solid#f2f4f7;
+  // border-bottom: 1px solid#f2f4f7;
 }
 .swiper-slide {
   display: block;
