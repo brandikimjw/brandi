@@ -106,11 +106,11 @@ export default {
   methods: {
     marketSlide() {
       this.storeSlide = new Swiper(".market-list-container", {
-        clickable: 'true',
+        clickable: "true",
         slidesPerView: "auto",
         spaceBetween: 0,
-        freeMode: 'true',
-        grabCursor: 'true',
+        freeMode: "true",
+        grabCursor: "true",
         breakpoints: {
           640: {
             slidesPerView: "auto",
@@ -166,6 +166,8 @@ export default {
       text-align: center;
       margin-top: 10px;
       font-size: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       &.active {
         color: #ff204b;
         border-bottom: solid 3px #ff204b;

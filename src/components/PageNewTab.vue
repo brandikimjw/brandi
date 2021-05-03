@@ -1,6 +1,6 @@
 <template>
   <article class="sub-new-wrapper">
-    <section class="sub-market-list-wrap product-list">
+    <section class="sub-market-list-wrap">
       <CommonTitle />
       <MarketList />
     </section>
@@ -89,7 +89,7 @@
         <ButtonCommon />
       </article>
     </section>
-    <section class="sub-today-new-wrap product-list">
+    <section class="sub-today-new-wrap">
       <!-- 탭매뉴 클릭하면 바뀌는 거 만들어주기 -->
       <TabTitle />
     </section>
@@ -122,6 +122,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.product-list {
+  padding: 0 18px 0 18px;
+}
 .sub-market-list-wrap {
   margin-top: 30px;
 }
@@ -132,12 +135,9 @@ export default {
   margin-top: 30px;
 }
 .sub-banner {
-  // 서브배너 컨테이너 패딩값
-  padding: 0 18px 0 18px;
 }
 // today베스트ㅜ_ㅜ
 .main-today {
-  padding: 0 18px 0 18px;
 }
 .today-list {
   display: flex;
@@ -150,7 +150,7 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //today베스트ㅜ_ㅜ가 아니라 겨울 필수템! 아우터 신상
-  .main-today {
+  .product-list {
     padding: 0 20px 0 20px;
   }
   .today-list {

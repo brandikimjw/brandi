@@ -1,6 +1,6 @@
 <template>
   <div class="title-nav clearfix">
-    <h2 class="title-nav-tit">TODAY 베스트</h2>
+    <h2 class="title-nav-tit product-list">TODAY 베스트</h2>
     <ul class="title-nav-box">
       <li class="title-nav-txt active">
         <a href="javascript:void(0);">전체</a>
@@ -290,6 +290,10 @@ export default {
   }
 }
 
+//medium
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  
+}
 //large
 @media screen and (min-width: map-get($breakpoints, "large")) {
 }

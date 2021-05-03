@@ -1,5 +1,5 @@
 <template>
-  <div class="title-common clearfix">
+  <div class="title-common product-list">
     <h2 class="title-common-tit">내가 찜한 스토어 신상</h2>
   </div>
 </template>
@@ -27,8 +27,10 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-common {
+    padding: 0 20px 0 20px;
     .title-common-tit {
       text-align: left;
+      font-size: 32px;
     }
   }
 }
