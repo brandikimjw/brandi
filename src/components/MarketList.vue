@@ -5,35 +5,51 @@
       <nav class="market-store swiper-wrapper">
         <a href="#" class="swiper-slide active">
           <div class="store-thum active hide-text">상품 이미지</div>
-          <div class="store-name active"><p class="active">업타운홀릭</p></div>
+          <div class="store-name active">
+            <p class="active ellipsis">업타운홀릭</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">럽앤썸</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">프렌치오브</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+          </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
-          <div class="store-name"><p>업타운홀릭</p></div>
+          <div class="store-name">
+            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+          </div>
         </a>
         <div class="swiper-slide store-slide-more">
           <a href="#" class="swiper-more">
@@ -65,7 +81,7 @@
       />
       <ProductNormal
         sellorName="브랜디"
-        orderBadge="1"
+        orderBadge="3"
         :isOneDayShipping="true"
         storeName="스토어네임"
         productName="플리츠 스커트"
@@ -75,6 +91,15 @@
       <ProductNormal
         sellorName="브랜디"
         orderBadge="1"
+        :isOneDayShipping="true"
+        storeName="스토어네임"
+        productName="플리츠 스커트"
+        :discountRate="10"
+        :price="50000"
+      />
+      <ProductNormal
+        sellorName="브랜디"
+        orderBadge="0"
         :isOneDayShipping="true"
         storeName="스토어네임"
         productName="플리츠 스커트"
@@ -111,20 +136,6 @@ export default {
         spaceBetween: 0,
         freeMode: "true",
         grabCursor: "true",
-        breakpoints: {
-          640: {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-          },
-          768: {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-          },
-        },
       });
     },
   },
@@ -161,6 +172,8 @@ export default {
     }
   }
   .store-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     p {
       padding-bottom: 10px;
       text-align: center;
@@ -246,6 +259,90 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  .sub-market-list-wrap {
+    padding: 0 20px 0 20px;
+  }
+  .market-list-container {
+    padding: 0;
+  }
+  .market-store {
+    margin-bottom: 30px;
+  }
+  //찜한 스토어 전체보기 아이콘
+  .market-store {
+    position: relative;
+    margin-right: 175px;
+    border-bottom: 1px solid#ebeef2;
+    padding-right: 176px;
+    box-sizing: border-box;
+    .swiper-slide {
+      width: calc((100% / 8) - 21px);
+      margin-left: 24px;
+      p {
+        font-size: 18px;
+      }
+    }
+    .store-slide-more {
+      border-left: 1px solid #ebeef2;
+      position: absolute;
+      right: 20px;
+      top: -11px;
+      background: #fff;
+      width: auto;
+      .swiper-more {
+        .store-thum-more {
+          //핑크 화살표 이미지
+          display: none;
+        }
+        .store-name-more {
+          p {
+            width: 88px;
+            height: 44px;
+            margin: 20px 0 10px 31px;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+            line-height: 1.28;
+            text-align: center;
+            color: #444444;
+
+            &::before {
+              content: "";
+              background: url(~@/assets/images/path-2@3x.png) no-repeat
+                center/cover;
+              width: 6px;
+              height: 10px;
+              position: absolute;
+              right: 40px;
+              bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //마켓 프로덕트 리스트
+  .market-store-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    margin: 0 -8px;
+    background: #fff;
+    border: none;
+    .product-normal {
+      height: 100%;
+      width: calc(100% / 4);
+      padding: 0 8px 30px;
+    }
+    .product-more {
+      display: none;
+    }
+  }
 }
 //large
 @media screen and (min-width: map-get($breakpoints, "large")) {

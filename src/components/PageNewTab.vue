@@ -1,5 +1,5 @@
 <template>
-  <article class="sub-new-wrapper">
+  <article class="sub-new-wrapper product-list">
     <section class="sub-market-list-wrap">
       <CommonTitle />
       <MarketList />
@@ -149,10 +149,11 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  //today베스트ㅜ_ㅜ가 아니라 겨울 필수템! 아우터 신상
-  .product-list {
+  //내가 찜한 스토어 신상 - 전체 패딩 20px
+  .sub-market-list-wrap {
     padding: 0 20px 0 20px;
   }
+  //today베스트ㅜ_ㅜ가 아니라 겨울 필수템! 아우터 신상
   .today-list {
     display: flex;
     flex-wrap: wrap;

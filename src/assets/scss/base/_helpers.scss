@@ -54,3 +54,11 @@ s, especially valuable on small screens
   position: absolute;
   width: 1px;
 }
+
+// 한줄효과
+.ellipsis{
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
