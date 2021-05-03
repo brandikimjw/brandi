@@ -223,8 +223,8 @@ export default {
 }
 // today베스트
 .new-today {
+  margin-top: 32px;
   padding: 0 18px 0 18px;
-  margin-top: 16px;
   .today-list {
     display: flex;
     flex-wrap: wrap;
@@ -235,15 +235,11 @@ export default {
     }
   }
 }
-
+.new-today .today-list .product-normal {
+  padding: 0 8px 16px;
+}
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
-    .title-nav-tit {
-      float: left;
-      text-align: left;
-      font-size: 32px;
-      width: auto;
-    }
     .title-nav-box {
       float: right;
       text-align: right;
@@ -263,24 +259,10 @@ export default {
     flex-wrap: wrap;
     .product-normal {
       height: 100%;
-      width: calc(100% / 4);
+      width: calc(100% / 2);
     }
   }
 }
-//today베스트
-.main-today {
-  padding: 0 18px 0 18px;
-}
-.today-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -8px;
-  .product-normal {
-    height: 100%;
-    width: calc(100% / 4);
-  }
-}
-
 //medium
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
@@ -309,46 +291,49 @@ export default {
       }
     }
   }
-}
-.category-filter-container {
-  width: 97%;
-  .category-filter-list {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    .slide-category {
-      display: inline-block;
-      width: calc(100% / 12);
-      a {
+  .category-filter-container {
+    width: 97%;
+    .category-filter-list {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      .slide-category {
         display: inline-block;
-        padding: 18px 14px;
-        font-size: 14px;
-        color: #808893;
-        &.active {
-          border-radius: 18px;
-          color: #ff204b;
-          background: none;
-          font-weight: bold;
+        width: calc(100% / 12);
+        a {
+          display: inline-block;
+          padding: 18px 14px;
+          font-size: 14px;
+          color: #808893;
+          &.active {
+            border-radius: 18px;
+            color: #ff204b;
+            background: none;
+            font-weight: bold;
+          }
         }
       }
     }
   }
-}
-// today베스트
-.new-today {
-  margin-top: 32px;
-  padding: 0 20px 0 20px;
-  .today-list {
-    margin: 0 -8px;
-    .product-normal {
-      height: 100%;
-      width: calc(100% / 4);
+
+  // today베스트
+  .new-today {
+    margin-top: 32px;
+    padding: 0 20px 0 20px;
+    .today-list {
+      margin: 0 -8px;
+      margin-bottom: 40px;
+      .product-normal {
+        height: 100%;
+        width: calc(100% / 4);
+      }
     }
   }
+  .new-today .today-list .product-normal {
+    padding: 0 8px 16px;
+  }
 }
-.new-today .today-list .product-normal {
-  padding: 0 8px 16px;
-}
+
 //large
 @media screen and (min-width: map-get($breakpoints, "large")) {
 }
