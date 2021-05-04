@@ -131,11 +131,12 @@ export default {
   methods: {
     marketSlide() {
       this.storeSlide = new Swiper(".market-list-container", {
-        clickable: "true",
+        clickable: true,
         slidesPerView: "auto",
         spaceBetween: 0,
-        freeMode: "true",
-        grabCursor: "true",
+        freeMode: true,
+        grabCursor: true,
+        slidesOffsetBefore: 16,
       });
     },
   },
@@ -148,7 +149,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .market-list-container {
-  padding: 0 0px 0 18px;
+  //padding: 0 0px 0 18px;
   // border-bottom: 1px solid#f2f4f7;
 }
 .swiper-slide {
@@ -172,15 +173,12 @@ export default {
     }
   }
   .store-name {
-    white-space: nowrap;
-    text-overflow: ellipsis;
     p {
+      @include elli();
       padding-bottom: 10px;
       text-align: center;
       margin-top: 10px;
       font-size: 12px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       &.active {
         color: #ff204b;
         border-bottom: solid 3px #ff204b;
@@ -259,12 +257,6 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .market-list-container {
-    padding: 0 20px 0 20px;
-  }
-  .market-list-container {
-    padding: 0;
-  }
   //찜한 스토어 전체보기 아이콘
   .market-store {
     position: relative;
@@ -274,7 +266,6 @@ export default {
     margin-bottom: 30px;
     .swiper-slide {
       width: calc((100% / 8) - 21px);
-      margin-left: 24px;
       p {
         font-size: 18px;
       }
@@ -282,7 +273,7 @@ export default {
     .store-slide-more {
       border-left: 1px solid #ebeef2;
       position: absolute;
-      right: 20px;
+      right: 24px;
       top: -11px;
       background: #fff;
       width: auto;
@@ -326,12 +317,10 @@ export default {
     overflow-x: auto;
     overflow-y: hidden;
     overflow: visible;
-    margin: 0;
-    padding: 0;
     margin: 0 -8px;
     background: #fff;
     border: none;
-    padding: 0 20px 0 20px;
+    padding: 0;
     .product-normal {
       height: 100%;
       width: calc(100% / 4);

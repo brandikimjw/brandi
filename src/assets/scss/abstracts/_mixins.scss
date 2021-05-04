@@ -22,3 +22,15 @@
     @content;
   }
 }
+
+@mixin elli() {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

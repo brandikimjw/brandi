@@ -1,5 +1,5 @@
 <template>
-  <article class="sub-new-wrapper product-list">
+  <div class="sub-new-wrapper product-list">
     <section class="sub-market-list-wrap">
       <CommonTitle />
       <MarketList />
@@ -94,7 +94,7 @@
       <!-- 탭매뉴 클릭하면 바뀌는 거 만들어주기 -->
       <TabTitle />
     </section>
-  </article>
+  </div>
 </template>
 
 <script>
@@ -123,13 +123,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+// 모바일영역 패딩값잡기
+.title-common {
+  padding: 0 16px 0 16px;
+}
 .sub-market-list-wrap {
-  margin-top: 30px;
+  margin-top: 26px;
+}
+.main-today {
+  padding: 0 16px 0 16px;
 }
 // 인기신상
 .sub-popular-list-wrap {
   margin-top: 30px;
-  // padding: 0 18px 0 18px;
+  //padding: 0 16px 0 16px;
   .button-common {
     display: none;
   }
@@ -138,6 +145,12 @@ export default {
   margin-top: 30px;
 }
 
+// 오늘의 신상
+.new-today {
+  .today-list {
+    padding: 0 16px 0 16px;
+  }
+}
 .today-list {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +160,27 @@ export default {
     width: calc(100% / 2);
   }
 }
+
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  //패딩 초기화
+  .sub-popular-list-wrap {
+    padding: 0;
+  }
+  .title-common {
+    padding: 0;
+  }
+  // 오늘의 신상
+  .new-today {
+    .today-list {
+      padding: 0;
+    }
+  }
+  .main-today {
+    padding: 0;
+  }
+  .market-store-list {
+    padding: 0;
+  }
   .title-common {
     margin-bottom: 36px;
   }
@@ -157,11 +190,12 @@ export default {
   }
   //new - 전체 패딩 20px
   .sub-market-list-wrap {
+    margin-top: 90px;
     .button-common {
       display: block;
     }
   }
-  .sub-popular-list-wrap {
+  .sub-new-wrapper {
     padding: 0 20px 0 20px;
   }
 

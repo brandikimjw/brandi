@@ -32,15 +32,8 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  // .sub-banner-img {
-  //   a {
-  //     padding: 15px;
-  //     display: block;
-  //     .sub-mobile {
-  //       display: inline-block;
-  //       width: 70%;
-  //     }
-  //   }
-  // }
+  .sub-banner-img {
+    padding: 0;
+  }
 }
 </style>

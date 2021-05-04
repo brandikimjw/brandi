@@ -15,7 +15,7 @@
         <div class="active swiper-slide slide-category">
           <a href="#">전체</a>
         </div>
-        <div class="swiper-slide-next swiper-slide slide-category">
+        <div class="swiper-slide slide-category">
           <a class="active" href="#">아우터</a>
         </div>
         <div class="swiper-slide slide-category">
@@ -153,6 +153,7 @@ export default {
         pagination: false,
         resistance: false,
         slideToClickedSlide: true,
+        slidesOffsetAfter: 32,
       });
     },
   },
@@ -228,7 +229,7 @@ export default {
   .today-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -4px;
+    margin: 0 -8px;
     .product-normal {
       height: 100%;
       width: calc(100% / 2);
@@ -240,43 +241,15 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .title-nav {
-    .title-nav-box {
-      float: right;
-      text-align: right;
-      margin-top: 8px;
-      .title-nav-txt {
-        font-size: 17px;
-        line-height: 17px;
-        margin: 0 8px 0 0;
-        &:nth-last-child() {
-          margin: 0;
-        }
-      }
-    }
-  }
-  .title-nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    .product-normal {
-      height: 100%;
-      width: calc(100% / 2);
-    }
-  }
-}
-//medium
-@media screen and (min-width: map-get($breakpoints, "medium")) {
-  .title-nav {
     .title-nav-tit {
       font-size: 32px;
       width: 100%;
       text-align: left;
-      padding: 0 20px 0 20px;
     }
     .title-nav-box {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      padding: 0 20px 0 20px;
       .title-nav-txt {
         width: calc(100% / 4);
         box-sizing: border-box;
@@ -293,14 +266,14 @@ export default {
     }
   }
   .category-filter-container {
-    width: 97%;
+    width: 100%;
     .category-filter-list {
       text-align: center;
       padding: 0;
       margin: 0;
       .slide-category {
         display: inline-block;
-        width: calc(100% / 8);
+
         a {
           display: inline-block;
           padding: 18px 20px;
@@ -320,7 +293,7 @@ export default {
   // today베스트 - 컨텐츠 가져온거
   .new-today {
     margin-top: 32px;
-    padding: 0 20px 0 20px;
+    padding: 0;
     .today-list {
       margin: 0 -8px;
       margin-bottom: 40px;

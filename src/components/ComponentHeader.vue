@@ -14,6 +14,11 @@
             <input type="hidden" name="r" value="/" />
           </div>
         </form>
+        <nav class="nav-mine">
+          <a href="#" class="btn-cart hide-text">장바구니</a>
+          <a href="#" class="btn-favor"></a>
+          <a href="#" class="btn-mypage"></a>
+        </nav>
       </div>
     </div>
     <div class="nav product-list">
