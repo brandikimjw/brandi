@@ -2,50 +2,50 @@
   <div class="title-nav clearfix">
     <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
-      <li class="title-nav-txt active">
+      <li class="title-nav-txt">
         <a href="javascript:void(0);">전체</a>
       </li>
-      <li class="title-nav-txt"><a href="#">쇼핑몰마켓</a></li>
+      <li class="title-nav-txt"><a class="active" href="#">쇼핑몰마켓</a></li>
       <li class="title-nav-txt"><a href="#">브랜드</a></li>
       <li class="title-nav-txt"><a href="#">뷰티</a></li>
     </ul>
     <!-- tabBar -->
     <div class="category-filter-container swiper-container">
-      <div class="category-filter-list swiper-wrapper">
-        <div class="active swiper-slide slide-category">
+      <ul class="category-filter-list swiper-wrapper">
+        <li class="active swiper-slide slide-category">
           <a href="#">전체</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a class="active" href="#">아우터</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">상의</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">바지</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">원피스</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">스커트</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">신발</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">가방</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">주얼리</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">잡화</a>
-        </div>
-        <div class="swiper-slide slide-category">
+        </li>
+        <li class="swiper-slide slide-category">
           <a href="#">라이프웨어</a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <!-- 이거 통째로 가져오기 -->
     <article class="new-today product-list">
@@ -169,34 +169,36 @@ export default {
 .title-nav {
   // margin: 0 -4px;
   .title-nav-tit {
+    margin-bottom: 18px;
+    padding: 0 16px 0 16px;
     width: 100%;
-    margin: 0 0 16px 0;
     font-size: 20px;
     text-align: center;
     word-break: break-word;
   }
+  // 오늘의 신상 탭 카테고리 큰영역
   .title-nav-box {
-    margin-bottom: 12px;
     text-align: center;
     .title-nav-txt {
       display: inline-block;
-      font-size: 14px;
-      color: #808893;
+      margin-left: 8px;
       a {
-        padding: 0px 8px 10px 8px;
+        display: block;
+        padding: 0 4px;
         font-size: 14px;
-      }
-      &.active {
-        a {
-          border-bottom: 3px solid #ff204b;
-          font-weight: bold;
+        color: #888;
+
+        &.active {
+          padding-bottom: 8px;
+          border-bottom: 2px solid #ff204b;
+          font-weight: 700;
           color: #ff204b;
         }
       }
     }
   }
 }
-// 리스트 스와이퍼
+// 오늘의 신상 스와이퍼
 .category-filter-container {
   background: #f8f9fb;
   .category-filter-list {
@@ -204,10 +206,6 @@ export default {
     .slide-category {
       width: auto;
       font-size: 13px;
-      line-height: 13px;
-      &:nth-last-child() {
-        margin-right: 30px;
-      }
       a {
         display: block;
         text-align: center;
@@ -222,6 +220,7 @@ export default {
     }
   }
 }
+
 // today베스트
 .new-today {
   margin-top: 32px;
@@ -236,54 +235,48 @@ export default {
     }
   }
 }
-.new-today .today-list .product-normal {
-  padding: 0 8px 16px;
-}
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  // 타이틀 네브
   .title-nav {
     .title-nav-tit {
-      font-size: 32px;
-      width: 100%;
+      // 오늘의 신상 타이틀 -Q
+      padding: 0;
+      font-size: 36px;
       text-align: left;
     }
+    // 오늘의 신상 탭 카테고리 큰영역
     .title-nav-box {
+      margin-top: 44px;
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex: wrap;
+      text-align: center;
+      border-bottom: 1px solid #e1e1e1;
       .title-nav-txt {
-        width: calc(100% / 4);
-        box-sizing: border-box;
-        text-align: center;
-        margin: 0rem;
+        width: 100%;
         a {
-          display: block;
-          padding: 16px 0 16px 0;
           font-size: 18px;
-          border-bottom: 1px solid #e1e1e1;
-          box-sizing: border-box;
         }
       }
     }
   }
+  // 오늘의 신상 탭 클릭후 나오는 영역 스와이퍼
   .category-filter-container {
-    width: 100%;
     .category-filter-list {
-      text-align: center;
+      display: inline-block;
       padding: 0;
-      margin: 0;
+      text-align: center;
+      white-space: nowrap;
       .slide-category {
         display: inline-block;
-
         a {
-          display: inline-block;
           padding: 18px 20px;
           font-size: 14px;
           color: #808893;
           &.active {
-            border-radius: 18px;
             color: #ff204b;
             background: none;
-            font-weight: bold;
+            border-radius: 0;
           }
         }
       }
@@ -302,9 +295,6 @@ export default {
         width: calc(100% / 4);
       }
     }
-  }
-  .new-today .today-list .product-normal {
-    padding: 0 8px 16px;
   }
 }
 
