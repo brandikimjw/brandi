@@ -125,10 +125,19 @@ export default {
   },
   data() {
     return {
-      storeSlide: "",
+      slide: null,
+      isMobile: null,
     };
   },
   methods: {
+    setScreenSize() {
+      if (window.innerWidth > 768) {
+        this.isMobile = false;
+      }
+      if (window.innerWidth <= 768) {
+        this.isMobile = true;
+      }
+    },
     marketSlide() {
       this.storeSlide = new Swiper(".market-list-container", {
         clickable: true,
@@ -137,21 +146,29 @@ export default {
         freeMode: true,
         grabCursor: true,
         slidesOffsetBefore: 16,
+        watchOverflow: true,
       });
     },
   },
-  mounted() {
+  watch: {
+    isMobile(newVal) {
+      if (newVal) {
+        this.marketSlide();
+      } else {
+        this.storeSlide.destroy();
+      }
+    },
+  },
+  created() {
+    this.setScreenSize();
     this.marketSlide();
+    window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.market-list-container {
-  //padding: 0 0px 0 18px;
-  // border-bottom: 1px solid#f2f4f7;
-}
 .swiper-slide {
   display: block;
   width: 64px;
