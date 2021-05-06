@@ -2,12 +2,38 @@
   <div class="title-nav clearfix">
     <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
-      <li class="title-nav-txt">
-        <a href="javascript:void(0);">전체</a>
+      <li class="title-nav-txt" v-bind:class="{ home: active === 'home' }">
+        <a
+          href="javascript:void(0);"
+          v-bind:class="{ on: active === 'home' }"
+          v-on:click="makeActive('home')"
+          >전체</a
+        >
       </li>
-      <li class="title-nav-txt"><a class="active" href="#">쇼핑몰마켓</a></li>
-      <li class="title-nav-txt"><a href="#">브랜드</a></li>
-      <li class="title-nav-txt"><a href="#">뷰티</a></li>
+      <li class="title-nav-txt">
+        <a
+          href="javascript:void(0);"
+          v-bind:class="{ on: active === 'project' }"
+          v-on:click="makeActive('project')"
+          >쇼핑몰마켓</a
+        >
+      </li>
+      <li class="title-nav-txt">
+        <a
+          href="javascript:void(0);"
+          v-bind:class="{ on: active === 'services' }"
+          v-on:click="makeActive('services')"
+          >브랜드</a
+        >
+      </li>
+      <li class="title-nav-txt" v-bind:class="{ home: active === 'home' }">
+        <a
+          href="javascript:void(0);"
+          v-bind:class="{ on: active === 'contact' }"
+          v-on:click="makeActive('contact')"
+          >뷰티</a
+        >
+      </li>
     </ul>
     <!-- tabBar -->
     <div class="category-filter-container swiper-container">
@@ -141,6 +167,7 @@ export default {
   data() {
     return {
       tabTitleSlide: "",
+      active: "home",
     };
   },
   methods: {
@@ -156,9 +183,9 @@ export default {
         slidesOffsetAfter: 32,
       });
     },
-  },
-  mounted() {
-    this.tabSlide();
+    makeActive: function (item) {
+      this.active = item;
+    },
   },
 };
 </script>
@@ -188,7 +215,7 @@ export default {
         font-size: 14px;
         color: #888;
 
-        &.active {
+        &.on {
           padding-bottom: 8px;
           border-bottom: 2px solid #ff204b;
           font-weight: 700;

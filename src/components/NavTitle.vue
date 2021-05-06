@@ -2,12 +2,18 @@
   <div class="title-nav clearfix">
     <h2 class="title-nav-tit">TODAY 베스트</h2>
     <ul class="title-nav-box">
-      <li class="title-nav-txt active">
+      <li class="title-nav-txt">
         <a href="javascript:void(0);">전체</a>
       </li>
-      <li class="title-nav-txt"><a href="#">쇼핑몰마켓</a></li>
-      <li class="title-nav-txt"><a href="#">브랜드</a></li>
-      <li class="title-nav-txt"><a href="#">뷰티</a></li>
+      <li class="title-nav-txt">
+        <a href="#">쇼핑몰마켓</a>
+      </li>
+      <li class="title-nav-txt">
+        <a href="#">브랜드</a>
+      </li>
+      <li class="title-nav-txt">
+        <a href="#">뷰티</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,7 +22,14 @@
 export default {
   name: "NavTitle",
   data() {
-    return {};
+    return {
+      active: "home",
+    };
+  },
+  methods: {
+    makeActive: function (item) {
+      this.active = item;
+    },
   },
 };
 </script>
@@ -41,7 +54,10 @@ export default {
       padding: 0 4px 4px;
       font-size: 14px;
       color: #808893;
-      &.active {
+      &.nav.home .home,
+      nav.projects .projects,
+      nav.services .services,
+      nav.contact .contact .active {
         a {
           border-bottom: 2px solid #ff204b;
           font-weight: 700;

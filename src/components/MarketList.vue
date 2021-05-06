@@ -162,7 +162,7 @@ export default {
   created() {
     this.setScreenSize();
     this.marketSlide();
-    window.addEventListener("resize", this.setScreenSize);
+    //window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
@@ -185,7 +185,6 @@ export default {
     display: inline-block;
     box-shadow: 0 0 0 1px #ebeef2 inset;
     &.active {
-      // border: 3px solid #ff204b;
       box-shadow: 0 0 0 3px #ff204b inset;
     }
   }
@@ -274,11 +273,11 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  //찜한 스토어 전체보기 아이콘
+  //찜한 스토어 신상
   .market-store {
     position: relative;
     border-bottom: 1px solid#ebeef2;
-    padding-right: 170px;
+    padding-right: 176px;
     box-sizing: border-box;
     margin-bottom: 30px;
     .swiper-slide {
@@ -289,28 +288,22 @@ export default {
     }
     .store-slide-more {
       border-left: 1px solid #ebeef2;
-      position: absolute;
-      right: 24px;
-      top: -11px;
-      background: #fff;
-      width: auto;
       .swiper-more {
         .store-thum-more {
           //핑크 화살표 이미지
           display: none;
         }
         .store-name-more {
+          background: #fff;
+          padding: 30px;
+          line-height: 1.2;
           p {
             width: 88px;
             height: 44px;
-            margin: 20px 0 10px 31px;
             font-size: 18px;
             font-weight: bold;
-            font-style: normal;
-            line-height: 1.28;
             text-align: center;
             color: #444444;
-
             &::before {
               content: "";
               background: url(~@/assets/images/path-2@3x.png) no-repeat
@@ -331,15 +324,11 @@ export default {
   .market-store-list {
     display: flex;
     flex-wrap: wrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overflow: visible;
     margin: 0 -8px;
     background: #fff;
     border: none;
     padding: 0;
     .product-normal {
-      height: 100%;
       width: calc(100% / 4);
       padding: 0 8px 30px;
     }
