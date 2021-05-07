@@ -194,7 +194,6 @@ export default {
 <style lang="scss" scoped>
 // 타이틀 네브
 .title-nav {
-  // margin: 0 -4px;
   .title-nav-tit {
     margin-bottom: 18px;
     padding: 0 16px 0 16px;

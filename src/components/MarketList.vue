@@ -24,7 +24,7 @@
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p >업타운홀릭홀릭업타운홀릭</p>
+            <p>업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
@@ -54,7 +54,7 @@
         <div class="swiper-slide store-slide-more">
           <a href="#" class="swiper-more">
             <div class="store-thum-more hide-text"></div>
-            <div class="store-name-more"><p>찜한 스토어 전체보기</p></div>
+            <p class="store-name-more">찜한 스토어 전체보기</p>
           </a>
         </div>
       </nav>
@@ -195,7 +195,7 @@ export default {
       text-align: center;
       margin-top: 10px;
       font-size: 12px;
-      &.on {
+      &.active {
         color: #ff204b;
         border-bottom: solid 3px #ff204b;
         font-weight: bold;
@@ -236,10 +236,8 @@ export default {
   overflow-y: hidden;
   background: #f8f9fb;
   border-bottom: 8px solid#f2f4f7;
-  //display: block;
   padding: 18px 0 18px 10px;
   white-space: nowrap;
-  // background-color: #f8f9fb;
   .product-normal {
     width: 43%;
     display: inline-block;
@@ -275,45 +273,55 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   //찜한 스토어 신상
   .market-store {
-    position: relative;
     border-bottom: 1px solid#ebeef2;
     padding-right: 176px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     .swiper-slide {
       width: calc((100% / 8) - 21px);
+      margin-left: 24px;
+      margin-right: 0;
+      &:first-child {
+        margin-left: 0;
+      }
       p {
         font-size: 18px;
       }
     }
     .store-slide-more {
+      position: absolute;
+      top: 0;
+      bottom: 18px;
+      width: 152px;
+      right: 0px;
+      height: calc(100% - 18px);
       border-left: 1px solid #ebeef2;
+      background-color: #fff;
       .swiper-more {
+        display: block;
+        height: 100%;
+        padding: 0;
         .store-thum-more {
-          //핑크 화살표 이미지
           display: none;
         }
         .store-name-more {
-          background: #fff;
-          padding: 30px;
-          line-height: 1.2;
-          p {
-            width: 88px;
-            height: 44px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            color: #444444;
-            &::before {
-              content: "";
-              background: url(~@/assets/images/path-2@3x.png) no-repeat
-                center/cover;
-              width: 6px;
-              height: 10px;
-              position: absolute;
-              right: 40px;
-              bottom: 40px;
-            }
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          font-size: 18px;
+          font-weight: 700;
+          color: #444;
+          padding: 0 23px;
+          &:after {
+            display: block;
+            margin: 12px auto 0;
+            content: "";
+            background: url(~@/assets/images/path-2@3x.png) no-repeat
+              center/cover;
+            width: 6px;
+            height: 10px;
           }
         }
       }
@@ -336,8 +344,5 @@ export default {
       display: none;
     }
   }
-}
-//large
-@media screen and (min-width: map-get($breakpoints, "large")) {
 }
 </style>
