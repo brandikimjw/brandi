@@ -2,7 +2,7 @@
   <div class="title-nav clearfix">
     <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
-      <li class="title-nav-txt" v-bind:class="{ home: active === 'home' }">
+      <li class="title-nav-txt">
         <a
           href="javascript:void(0);"
           v-bind:class="{ on: active === 'home' }"
@@ -26,7 +26,7 @@
           >브랜드</a
         >
       </li>
-      <li class="title-nav-txt" v-bind:class="{ home: active === 'home' }">
+      <li class="title-nav-txt">
         <a
           href="javascript:void(0);"
           v-bind:class="{ on: active === 'contact' }"
@@ -38,11 +38,11 @@
     <!-- tabBar -->
     <div class="category-filter-container swiper-container">
       <ul class="category-filter-list swiper-wrapper">
-        <li class="active swiper-slide slide-category">
+        <li class="swiper-slide slide-category">
           <a href="#">전체</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a class="active" href="#">아우터</a>
+          <a class="on" href="#">아우터</a>
         </li>
         <li class="swiper-slide slide-category">
           <a href="#">상의</a>
@@ -171,6 +171,9 @@ export default {
     };
   },
   methods: {
+    makeActive: function (item) {
+      this.active = item;
+    },
     tabSlide() {
       this.tabTitleSlide = new Swiper(".category-filter-container", {
         slidesPerView: "auto",
@@ -182,9 +185,6 @@ export default {
         slideToClickedSlide: true,
         slidesOffsetAfter: 32,
       });
-    },
-    makeActive: function (item) {
-      this.active = item;
     },
   },
 };
@@ -238,7 +238,7 @@ export default {
         text-align: center;
         padding: 10px 13px;
         color: #acb3bd;
-        &.active {
+        &.on {
           border-radius: 18px;
           color: #fff;
           background: #ff204b;
@@ -300,7 +300,7 @@ export default {
           padding: 18px 20px;
           font-size: 14px;
           color: #808893;
-          &.active {
+          &.on {
             color: #ff204b;
             background: none;
             border-radius: 0;

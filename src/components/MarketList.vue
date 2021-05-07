@@ -6,49 +6,49 @@
         <a href="#" class="swiper-slide active">
           <div class="store-thum active hide-text">상품 이미지</div>
           <div class="store-name active">
-            <p class="active ellipsis">업타운홀릭</p>
+            <p class="active">업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">럽앤썸</p>
+            <p>럽앤썸</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">프렌치오브</p>
+            <p>프렌치오브</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+            <p >업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+            <p>업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+            <p>업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+            <p>업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <a href="#" class="swiper-slide">
           <div class="store-thum hide-text">상품 이미지</div>
           <div class="store-name">
-            <p class="ellipsis">업타운홀릭홀릭업타운홀릭</p>
+            <p>업타운홀릭홀릭업타운홀릭</p>
           </div>
         </a>
         <div class="swiper-slide store-slide-more">
@@ -162,7 +162,7 @@ export default {
   created() {
     this.setScreenSize();
     this.marketSlide();
-    //window.addEventListener("resize", this.setScreenSize);
+    window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
@@ -190,12 +190,12 @@ export default {
   }
   .store-name {
     p {
-      @include elli();
+      @include ellipsis();
       padding-bottom: 10px;
       text-align: center;
       margin-top: 10px;
       font-size: 12px;
-      &.active {
+      &.on {
         color: #ff204b;
         border-bottom: solid 3px #ff204b;
         font-weight: bold;

@@ -30,7 +30,9 @@
           <router-link to="/newpage" class="nav-swiper-slide swiper-slide"
             >신상</router-link
           >
-          <a href="#" class="nav-swiper-slide swiper-slide">특가</a>
+          <router-link to="/timedeal" class="nav-swiper-slide swiper-slide"
+            >특가</router-link
+          >
           <a href="#" class="nav-swiper-slide swiper-slide trend">트렌드</a>
           <a href="#" class="nav-swiper-slide swiper-slide brand">브랜드</a>
           <a href="#" class="nav-swiper-slide swiper-slide beauty">뷰티</a>
