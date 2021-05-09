@@ -1,8 +1,8 @@
 <template>
   <div class="sub-new-wrapper product-list">
+    <FavorStoreLink />
     <section class="sub-market-list-wrap">
       <CommonTitle />
-      <FavorStoreLink />
       <MarketList />
     </section>
     <aside class="sub-banner product-list">

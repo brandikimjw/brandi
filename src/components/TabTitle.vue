@@ -1,5 +1,5 @@
 <template>
-  <div class="title-nav clearfix">
+  <div class="title-nav">
     <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
       <li class="title-nav-txt">
