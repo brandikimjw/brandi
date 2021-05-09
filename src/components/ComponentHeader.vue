@@ -21,8 +21,8 @@
         </nav>
       </div>
     </div>
-    <div class="nav product-list">
-      <div class="nav-swiper-container swiper-container">
+    <div class="header-nav-wrap product-list">
+      <div class="header-nav-container swiper-container">
         <nav class="swiper-wrapper">
           <a href="#" class="nav-swiper-slide active swiper-slide">홈</a>
           <a href="#" class="nav-swiper-slide swiper-slide">혜택존</a>
@@ -122,7 +122,7 @@ export default {
     }
   }
 }
-/deep/.nav-swiper-container {
+/deep/.header-nav-container {
   margin: 0 auto;
   overflow: hidden;
   z-index: 1;
@@ -132,7 +132,7 @@ export default {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    .nav-swiper-slide {
+    > a {
       width: auto;
       display: block;
       padding: 14px 10px;
@@ -142,25 +142,10 @@ export default {
       line-height: 21px;
       word-break: keep-all;
       text-align: center;
-      // &:hover {
-      //   border-bottom: 2px solid #222;
-      // }
-      // &.active {
-      //   &::before {
-      //     padding: 14px 10px;
-      //     color: #202429;
-      //     font-size: 15px;
-      //     font-weight: bold;
-      //     line-height: 21px;
-      //     display: none;
-      //     position: absolute;
-      //     left: 7px;
-      //     right: 7px;
-      //     bottom: 0;
-      //     height: 2px;
-      //     background-color: #000;
-      //   }
-      // }
+
+      &.active {
+        display: inline-block;
+      }
     }
     .trend {
       color: #ff4569 !important;
@@ -174,8 +159,14 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .nav-swiper-container {
-    font-size: 14px;
+  .header-nav-container {
+    height: inherit;
+    .swiper-wrapper {
+      > a {
+        font-size: 16px;
+        padding: 18px 0 18px 0;
+      }
+    }
   }
 }
 </style>

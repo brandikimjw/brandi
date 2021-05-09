@@ -36,8 +36,8 @@
       </li>
     </ul>
     <!-- tabBar -->
-    <div class="category-filter-container swiper-container">
-      <ul class="category-filter-list swiper-wrapper">
+    <div class="swiper-container category-filter-container">
+      <ul class="swiper-wrapper category-filter-list">
         <li class="swiper-slide slide-category">
           <a
             href="javascript:click();"
@@ -176,8 +176,8 @@ export default {
   },
   data() {
     return {
-      tabTitleSlide: "",
       active: "total",
+      tabTitleSlide: "",
     };
   },
   methods: {
