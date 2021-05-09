@@ -4,33 +4,33 @@
     <ul class="title-nav-box">
       <li class="title-nav-txt">
         <a
-          href="javascript:void(0);"
-          v-bind:class="{ on: active === 'home' }"
-          v-on:click="makeActive('home')"
+          href="javascript:click();"
+          v-bind:class="{ on: active === 'total' }"
+          v-on:click="makeActive('total')"
           >전체</a
         >
       </li>
       <li class="title-nav-txt">
         <a
-          href="javascript:void(0);"
-          v-bind:class="{ on: active === 'project' }"
-          v-on:click="makeActive('project')"
+          href="javascript:click();"
+          v-bind:class="{ on: active === 'market' }"
+          v-on:click="makeActive('market')"
           >쇼핑몰마켓</a
         >
       </li>
       <li class="title-nav-txt">
         <a
-          href="javascript:void(0);"
-          v-bind:class="{ on: active === 'services' }"
-          v-on:click="makeActive('services')"
+          href="javascript:click();"
+          v-bind:class="{ on: active === 'brand' }"
+          v-on:click="makeActive('brand')"
           >브랜드</a
         >
       </li>
       <li class="title-nav-txt">
         <a
-          href="javascript:void(0);"
-          v-bind:class="{ on: active === 'contact' }"
-          v-on:click="makeActive('contact')"
+          href="javascript:click();"
+          v-bind:class="{ on: active === 'beauty' }"
+          v-on:click="makeActive('beauty')"
           >뷰티</a
         >
       </li>
@@ -39,37 +39,47 @@
     <div class="category-filter-container swiper-container">
       <ul class="category-filter-list swiper-wrapper">
         <li class="swiper-slide slide-category">
-          <a href="#">전체</a>
+          <a
+            href="javascript:click();"
+            v-bind:class="{ on: active === 'productTotal' }"
+            v-on:click="makeActive('productTotal')"
+            >전체</a
+          >
         </li>
         <li class="swiper-slide slide-category">
-          <a class="on" href="#">아우터</a>
+          <a
+            href="javascript:click();"
+            v-bind:class="{ on: active === 'outer' }"
+            v-on:click="makeActive('outer')"
+            >아우터</a
+          >
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">상의</a>
+          <a href="javascript:click();">상의</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">바지</a>
+          <a href="javascript:click();">바지</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">원피스</a>
+          <a href="javascript:click();">원피스</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">스커트</a>
+          <a href="javascript:click();">스커트</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">신발</a>
+          <a href="javascript:click();">신발</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">가방</a>
+          <a href="javascript:click();">가방</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">주얼리</a>
+          <a href="javascript:click();">주얼리</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">잡화</a>
+          <a href="javascript:click();">잡화</a>
         </li>
         <li class="swiper-slide slide-category">
-          <a href="#">라이프웨어</a>
+          <a href="javascript:click();">라이프웨어</a>
         </li>
       </ul>
     </div>
@@ -167,7 +177,7 @@ export default {
   data() {
     return {
       tabTitleSlide: "",
-      active: "home",
+      active: "total",
     };
   },
   methods: {

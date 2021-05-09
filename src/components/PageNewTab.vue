@@ -2,6 +2,7 @@
   <div class="sub-new-wrapper product-list">
     <section class="sub-market-list-wrap">
       <CommonTitle />
+      <FavorStoreLink />
       <MarketList />
     </section>
     <aside class="sub-banner product-list">
@@ -104,6 +105,7 @@ import SubBanner from "./SubBanner";
 import ProductNormal from "./ProductNormal";
 import ButtonCommon from "./ButtonCommon";
 import TabTitle from "./TabTitle";
+import FavorStoreLink from "./FavorStoreLink";
 
 export default {
   name: "newpage",
@@ -114,6 +116,7 @@ export default {
     ProductNormal,
     ButtonCommon,
     TabTitle,
+    FavorStoreLink,
   },
   data() {
     return {};

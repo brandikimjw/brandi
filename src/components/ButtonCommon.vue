@@ -49,10 +49,6 @@ export default {
       padding: 15px;
       font-size: 14px;
     }
-    .btn-tit {
-    }
-    .btn-more {
-    }
   }
 }
 </style>
