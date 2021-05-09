@@ -105,4 +105,6 @@ export default {
     }
   }
 }
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+}
 </style>

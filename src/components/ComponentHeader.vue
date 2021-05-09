@@ -48,6 +48,7 @@
 <script>
 // import MainSwiper from "./MainSwiper";
 export default {
+  name: "Header",
   data() {
     return {
       navSlide: "",
@@ -55,12 +56,14 @@ export default {
   },
   methods: {
     navigtationSlide() {
-      this.navSlide = new Swiper(".nav-swiper-container", {
+      this.navSlide = new Swiper(".header-nav-container", {
         clickable: true,
         slidesPerView: "auto",
         spaceBetween: 0,
         freeMode: true,
         grabCursor: true,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
       });
     },
   },

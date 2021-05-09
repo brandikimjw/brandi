@@ -102,7 +102,6 @@ export default {
   .title-nav {
     text-align: left;
     margin-bottom: 24px;
-    margin-top: 100px;
     .today-box {
       margin-top: 5px;
       vertical-align: top;

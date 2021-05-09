@@ -95,7 +95,6 @@ export default {
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .sub-banner-wrap {
-    margin: 0 0 100px;
     .swiper-wrapper {
       .swiper-slide {
         max-width: 50%;
