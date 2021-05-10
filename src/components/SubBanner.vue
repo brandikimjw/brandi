@@ -1,12 +1,23 @@
 <template>
-  <div class="sub-banner-img product-list">
-    <a href="#">
-      <img
-        src="~@/assets/images/mweb_new_tab_banner.png"
-        alt="이벤트 서브 배너 이미지"
-        class="sub-moblie"
-      />
-    </a>
+  <div class="sub-banner-wrap product-list">
+    <div class="sub-banner-mobile">
+      <a href="#">
+        <img
+          src="~@/assets/images/mweb_new_tab_banner.png"
+          alt="이벤트 서브 배너 이미지"
+          class="sub-moblie"
+        />
+      </a>
+    </div>
+    <div class="sub-banner-web product-list">
+      <a href="#">
+        <img
+          src="~@/assets/images/web_new_tab_banner_20210310.png"
+          alt="이벤트 서브 배너 이미지"
+          class="sub-moblie"
+        />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -22,18 +33,30 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.sub-banner-img {
+.sub-banner-mobile {
   padding: 0 18px 0 18px;
-  a {
+  > a {
     display: block;
     img {
       width: 100%;
     }
   }
 }
+.sub-banner-web {
+  display: none;
+}
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .sub-banner-img {
-    padding: 0;
+  .sub-banner-mobile {
+    display: none;
+  }
+  .sub-banner-web {
+    display: block;
+    > a {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 </style>
