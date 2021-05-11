@@ -36,6 +36,7 @@ export default {
 .sub-banner-mobile {
   padding: 0 18px 0 18px;
   > a {
+    line-height: 0;
     display: block;
     img {
       width: 100%;
@@ -52,8 +53,10 @@ export default {
   .sub-banner-web {
     display: block;
     > a {
+      line-height: 0;
       display: block;
       img {
+        line-height: 0;
         width: 100%;
       }
     }
