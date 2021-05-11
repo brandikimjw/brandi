@@ -125,8 +125,8 @@ export default {
   },
   data() {
     return {
-      slide: null,
-      isMobile: null,
+      storeSlide: null,
+      isMobile: '',
     };
   },
   methods: {
@@ -161,6 +161,8 @@ export default {
   },
   created() {
     this.setScreenSize();
+  },
+  mounted() {
     this.marketSlide();
     window.addEventListener("resize", this.setScreenSize);
   },

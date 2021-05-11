@@ -2,84 +2,15 @@
   <div class="title-nav">
     <h2 class="title-nav-tit product-list">오늘의 신상</h2>
     <ul class="title-nav-box">
-      <li class="title-nav-txt">
-        <a
-          href="javascript:click();"
-          v-bind:class="{ on: active === 'total' }"
-          v-on:click="makeActive('total')"
-          >전체</a
-        >
-      </li>
-      <li class="title-nav-txt">
-        <a
-          href="javascript:click();"
-          v-bind:class="{ on: active === 'market' }"
-          v-on:click="makeActive('market')"
-          >쇼핑몰마켓</a
-        >
-      </li>
-      <li class="title-nav-txt">
-        <a
-          href="javascript:click();"
-          v-bind:class="{ on: active === 'brand' }"
-          v-on:click="makeActive('brand')"
-          >브랜드</a
-        >
-      </li>
-      <li class="title-nav-txt">
-        <a
-          href="javascript:click();"
-          v-bind:class="{ on: active === 'beauty' }"
-          v-on:click="makeActive('beauty')"
-          >뷰티</a
-        >
-      </li>
+      <li class="title-nav-txt" v-for="(item, index) in testList" :key="index">
+				<a href="#" @click.prevent="clickMenu2(index)" :class="{ on : index === currentIndex2 }">{{ item.txt }}</a>
+			</li>
     </ul>
     <!-- tabBar -->
     <div class="swiper-container category-filter-container">
       <ul class="swiper-wrapper category-filter-list">
-        <li class="swiper-slide slide-category">
-          <a
-            href="javascript:click();"
-            v-bind:class="{ on: active === 'productTotal' }"
-            v-on:click="makeActive('productTotal')"
-            >전체</a
-          >
-        </li>
-        <li class="swiper-slide slide-category">
-          <a
-            href="javascript:click();"
-            v-bind:class="{ on: active === 'outer' }"
-            v-on:click="makeActive('outer')"
-            >아우터</a
-          >
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">상의</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">바지</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">원피스</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">스커트</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">신발</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">가방</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">주얼리</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">잡화</a>
-        </li>
-        <li class="swiper-slide slide-category">
-          <a href="javascript:click();">라이프웨어</a>
+        <li class="swiper-slide slide-category" v-for="(item, index) in testList2" :key="index">
+          <a href="#" @click.prevent="clickMenu3(index)" :class="{ on : index === currentIndex3 }">{{ item.txt2 }}</a>
         </li>
       </ul>
     </div>
@@ -169,20 +100,67 @@
 import ProductNormal from "./ProductNormal";
 import ButtonCommon from "./ButtonCommon";
 export default {
-  name: "Tabtitle",
+  name: "TabTitle",
   components: {
     ProductNormal,
     ButtonCommon,
   },
   data() {
     return {
-      active: "total",
-      tabTitleSlide: "",
+      currentIndex : '1',
+      currentIndex2 : 0,
+      currentIndex3 : 1,
+      testList : [
+        {
+          txt : '전체',
+        },
+        {
+          txt : '트렌드',
+        },
+        {
+          txt : '브랜드',
+        },
+        {
+          txt : '뷰티',
+        },
+      ],
+      testList2 : [
+        {
+          txt2 : '전체',
+        },
+        {
+          txt2 : '아우터',
+        },
+        {
+          txt2 : '바지',
+        },
+        {
+          txt2 : '양말',
+        },
+        {
+          txt2 : '자켓',
+        },
+        {
+          txt2 : '티셔츠',
+        },
+        {
+          txt2 : '가디건',
+        },
+      ],
     };
   },
   methods: {
-    makeActive: function (item) {
-      this.active = item;
+		clickMenu2 (event) {
+      this.currentIndex2 = event.target.dataset.index
+    },
+    clickMenu2 (index) {
+      this.currentIndex2 = index
+    },
+    clickMenu3 (event) {
+      this.currentIndex3 = event.target.dataset.index
+    },
+    clickMenu3 (index) {
+      this.currentIndex3 = index
     },
     tabSlide() {
       this.tabTitleSlide = new Swiper(".category-filter-container", {
@@ -196,6 +174,9 @@ export default {
         slidesOffsetAfter: 32,
       });
     },
+  },
+  mounted() {
+    this.tabSlide();
   },
 };
 </script>
