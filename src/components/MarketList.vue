@@ -223,7 +223,6 @@ export default {
     .store-name-more {
       padding-bottom: 10px;
       text-align: center;
-      margin-top: 10px;
       font-size: 12px;
       color: #ff204b;
     }

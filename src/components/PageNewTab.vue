@@ -129,6 +129,7 @@ export default {
 // 모바일영역 패딩값잡기
 .title-common {
   padding: 0 16px 0 16px;
+  margin: 26px 0 16px 0;
 }
 .sub-market-list-wrap {
   margin-top: 26px;

@@ -4,7 +4,7 @@
       <a href="#">
         <img
           src="~@/assets/images/mweb_new_tab_banner.png"
-          alt="이벤트 서브 배너 이미지"
+          alt="신상고정배너 mobile"
           class="sub-moblie"
         />
       </a>
@@ -13,8 +13,8 @@
       <a href="#">
         <img
           src="~@/assets/images/web_new_tab_banner_20210310.png"
-          alt="이벤트 서브 배너 이미지"
-          class="sub-moblie"
+          alt="신상고정배너 web"
+          class="sub-web"
         />
       </a>
     </div>

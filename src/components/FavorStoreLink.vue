@@ -1,7 +1,7 @@
 <template>
   <!-- 마음에 드는 스토어 찜하고 신상 알림 받아보세요! -->
   <div class="favor-store-link-wrap product-list">
-    <div class="favor-link-icon"></div>
+    <span class="favor-link-icon"></span>
     <div class="favor-link-text">
       <strong>인기 스토어 찜 하러 가기</strong>
       <p>마음에 드는 스토어 찜하고 신상 알림 받아보세요!</p>
@@ -32,6 +32,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   .favor-link-icon {
+    display: block;
     background: url(~@/assets/images/image@3x.png) no-repeat top center/contain;
     width: 32px;
     height: 50px;
