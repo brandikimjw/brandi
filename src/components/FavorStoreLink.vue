@@ -37,6 +37,7 @@ export default {
     display: block;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     .favor-link-icon {
       background: url(~@/assets/images/image@3x.png) no-repeat top center/contain;
       width: 32px;
