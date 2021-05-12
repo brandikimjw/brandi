@@ -54,13 +54,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .event-item {
-  border-bottom: 1px solid #ebeef2;
-  &:first-child {
-    margin-bottom: 24px;
-  }
-  &:last-child {
-    margin-right: 0px;
-  }
   .banner {
     position: relative;
     .banner-link {

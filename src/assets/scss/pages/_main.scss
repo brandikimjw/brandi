@@ -9,6 +9,9 @@
 // today베스트
 .main-today {
   padding: 0 16px 0 16px;
+  .title-nav {
+    overflow: hidden;
+  }
 }
 .today-list {
   display: flex;
@@ -17,6 +20,9 @@
   .product-normal {
     height: 100%;
     width: calc(100%/2);
+    .badge-idx {
+      display: block;
+    }
   }
 }
 
@@ -24,6 +30,9 @@
 .main-new {
   margin-top: 80px;
   padding: 0 16px 0 16px;
+  .title-nav {
+    overflow: hidden;
+  }
   .new-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -36,7 +45,11 @@
     .product-normal {
       display: inline-block;
       width: calc(100% / 2);
+      padding: 0 4px 20px;
       vertical-align: top;
+      &:last-child {
+        margin-right: 16px;
+      }
     }
   }
 }
@@ -60,15 +73,19 @@
     .product-normal {
       display: inline-block;
       width: calc(100% / 2);
+      padding: 0 4px 20px;
       vertical-align: top;
+      &:last-child {
+        margin-right: 16px;
+      }
     }
   }
 }
 
 //놓칠 수 없는 브랜디 특가
 .main-special {
+  padding: 0 16px 0 16px;
   padding-top: 60px;
-  margin: 0 16px 0 16px;
   .special-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -95,8 +112,6 @@
   margin-top: 60px;
   padding: 0 16px 0 16px;
   .rise-list {
-    margin-bottom: 12px;
-    border-bottom: 1px solid #ebeef2;
   }
 }
 
@@ -144,7 +159,7 @@
     padding: 0 20px 0 20px;
     .recommend-list {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
       overflow: visible;
@@ -171,6 +186,7 @@
         width: calc(29% - 30px);
         padding-top: 32%;
         vertical-align: top;
+        margin-right: 10px;
       }
       .product-special {
         width: calc(71% / 3);
@@ -193,7 +209,6 @@
       }
 
   }
-
   .main-oneday {
     padding: 0 20px 0 20px;
   }
@@ -208,6 +223,9 @@
         width: calc(100% / 2);
         margin-right: 32px;
         border: none;
+        &:last-child {
+          margin: 0;
+        }
       }
     }
   }

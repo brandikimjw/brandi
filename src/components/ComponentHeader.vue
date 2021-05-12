@@ -75,11 +75,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-// scss > components > _header.scss에 옮기고 import 시키키
-// 웹화면으로 봤을때 스와이퍼 제거되는거
-// 옆으로 드래그 했을때 다시 원상태로 돌아오지 않고 멈춰있게 하기
 .header {
   border-bottom: 1px solid #ebeef2;
+  &.fixed {
+    .header-nav-wrap {
+      position: relative;
+      .header-nav-container {
+        position: fixed;
+        left:50%;
+        top:0;
+        width:100%;
+        transform:translate(-50%, 0);
+      }
+    }
+  }
 }
 .artc-header {
   .artc-continer {

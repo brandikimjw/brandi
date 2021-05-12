@@ -39,7 +39,6 @@ export default {
 // 컴포넌트 노말
 .product-normal {
   padding: 0 4px 20px;
-  //margin-bottom: 3%;
   .thumb {
     overflow: hidden;
     position: relative;
@@ -55,6 +54,7 @@ export default {
       background-repeat: no-repeat;
     }
     .badge-idx {
+      display: none;
       background: url(~@/assets/images/ic-bg-flag.png) no-repeat;
       position: absolute;
       left: 0;
@@ -72,9 +72,9 @@ export default {
   }
 
   .wrap-info {
+    margin-top: 10px;
     .product-info {
       position: relative;
-      padding-top: 10px;
       .sellor {
         width: 70%;
         overflow: hidden;
@@ -97,7 +97,6 @@ export default {
         right: 0;
         top: 0;
         width: 100px;
-        margin-top: 10px;
       }
     }
     .product-title {
