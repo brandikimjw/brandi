@@ -83,6 +83,7 @@ export default {
 
   /deep/ .main-list {
     display: flex;
+    margin: 0 -6px;
     .product-normal {
       width: calc(100% / 3);
       padding: 0 4px 0;
