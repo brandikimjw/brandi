@@ -122,12 +122,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
-    margin-bottom: 60px;
     .product-normal {
       height: 100%;
       width: calc(100% / 4);
     }
   }
+
   // 신상 모아보기
   .main-new {
     padding: 0 20px 0 20px;

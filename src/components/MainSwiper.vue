@@ -121,6 +121,7 @@ export default {
     img {
       width: 100%;
       height: inherit;
+      cursor: pointer;
     }
   }
   .swiper-button-box {
@@ -228,6 +229,20 @@ export default {
   .main-banner-container {
     .main-container {
       width: 1000px;
+    }
+  }
+  .main-banner-box {
+    .pagination-box {
+      .swiper-pagination {
+        padding: 11px 21px 12px;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+    }
+    .swiper-button-pause {
+      width: 38px;
+      height: 38px;
+      left: -60%;
     }
   }
 }

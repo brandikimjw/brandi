@@ -140,6 +140,20 @@ export default {
   .today-list {
     .product-normal {
       padding: 0 8px 16px;
+      .wrap-info {
+        .sellor {
+          font-size: 13px;
+        }
+        .product-title {
+          font-size: 15px;
+        }
+        .dc {
+          font-size: 18px;
+        }
+        .dc-price {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
