@@ -21,13 +21,13 @@ export default {
           txt : '전체',
         },
         {
-          txt : '베스트',
+          txt : '트렌드',
         },
         {
-          txt : '신상품',
+          txt : '브랜드',
         },
         {
-          txt : '특가상품',
+          txt : '뷰티',
         },
       ],
 		}
@@ -86,13 +86,18 @@ export default {
       width: auto;
     }
     .title-nav-box {
+      display: flex;
+      flex: wrap;
       float: right;
-      text-align: right;
-      margin-top: 8px;
+      margin: 9px 0 0 0;
       .title-nav-txt {
         font-size: 17px;
         line-height: 17px;
-        margin: 0 8px 0 0;
+        margin-left: 19px;
+        > a {
+          padding: 0 4px 4px;
+          font-size: 17px;
+        }
         &:nth-last-child() {
           margin: 0;
         }
