@@ -24,7 +24,7 @@
     <div class="header-nav-wrap product-list">
       <div class="header-nav-container swiper-container">
         <nav class="swiper-wrapper">
-          <a href="#" class="nav-swiper-slide active swiper-slide">홈</a>
+          <a href="#" class="nav-swiper-slide line swiper-slide">홈</a>
           <a href="#" class="nav-swiper-slide swiper-slide">혜택존</a>
           <a href="#" class="nav-swiper-slide swiper-slide">베스트</a>
           <router-link to="/newpage" class="nav-swiper-slide swiper-slide"
@@ -52,9 +52,18 @@ export default {
   data() {
     return {
       navSlide: "",
+      isMobile: '',
     };
   },
   methods: {
+    setScreenSize() {
+      if (window.innerWidth > 768) {
+        this.isMobile = false;
+      }
+      if (window.innerWidth <= 768) {
+        this.isMobile = true;
+      }
+    },
     navigtationSlide() {
       this.navSlide = new Swiper(".header-nav-container", {
         clickable: true,
@@ -64,11 +73,25 @@ export default {
         grabCursor: true,
         slidesOffsetBefore: 16,
         slidesOffsetAfter: 16,
+        watchOverflow: true,
       });
     },
   },
+  watch: {
+    isMobile(newVal) {
+      if (newVal) {
+        this.navigtationSlide();
+      } else {
+        this.navSlide.destroy();
+      }
+    },
+  },
+  created() {
+    this.setScreenSize();
+  },
   mounted() {
     this.navigtationSlide();
+    window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
@@ -155,8 +178,9 @@ export default {
       word-break: keep-all;
       text-align: center;
 
-      &.active {
+      &.line {
         display: inline-block;
+        border-bottom: 3px solid #202429;
       }
     }
     .trend {
@@ -172,11 +196,17 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .header-nav-container {
+    padding: 0 12px 0 12px;
     height: inherit;
     .swiper-wrapper {
-      > a {
-        font-size: 16px;
-        padding: 18px 0 18px 0;
+      .swiper-slide {
+        padding: 18px 8px;
+        font-size: 18px;
+        line-height: 24px;
+
+        &:hover {
+          border-bottom: 3px solid #202429;
+        }
       }
     }
   }

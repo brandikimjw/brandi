@@ -29,7 +29,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .favor-store-link-wrap {
-  padding: 24px 16px;
+  padding: 16px;
   border-bottom: 8px solid #f2f4f7;
   > a {
     width: 100%;

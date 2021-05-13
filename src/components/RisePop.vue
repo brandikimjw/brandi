@@ -91,20 +91,6 @@ export default {
       width: calc(100% / 3);
       padding: 0 4px 0;
       display: inline-block;
-        .wrap-info {
-          .sellor {
-            font-size: 13px;
-          }
-          .product-title {
-            font-size: 15px;
-          }
-          .dc {
-            font-size: 18px;
-          }
-          .dc-price {
-            font-size: 18px;
-          }
-        }
       .thumb {
         .thumb-img {
           padding-top: 110%;
@@ -127,5 +113,31 @@ export default {
       }
     }
   }
+}
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  /deep/ .main-list {
+    display: flex;
+    margin: 0 -4px;
+    .product-normal {
+      width: calc(100% / 3);
+      padding: 0 4px 0;
+      display: inline-block;
+        .wrap-info {
+          .sellor {
+            font-size: 13px;
+          }
+          .product-title {
+            font-size: 15px;
+          }
+          .dc {
+            font-size: 18px;
+          }
+          .dc-price {
+            font-size: 18px;
+          }
+        }
+    }
+  }
+
 }
 </style>

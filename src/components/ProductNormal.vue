@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 // 컴포넌트 노말
 .product-normal {
-  padding: 0 4px 20px;
+  padding: 0 4px 16px;
   .thumb {
     overflow: hidden;
     position: relative;
@@ -143,7 +143,7 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .today-list {
     .product-normal {
-      padding: 0 8px 30px;
+      padding: 0 8px 20px;
       .wrap-info {
         .sellor {
           font-size: 13px;
