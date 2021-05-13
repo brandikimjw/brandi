@@ -139,7 +139,7 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .today-list {
     .product-normal {
-      padding: 0 8px 16px;
+      padding: 0 8px 30px;
       .wrap-info {
         .sellor {
           font-size: 13px;
