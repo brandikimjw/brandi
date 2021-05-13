@@ -84,7 +84,7 @@
 
 //놓칠 수 없는 브랜디 특가
 .main-special {
-  padding: 0 16px 0 16px;
+  padding: 0 0px 0 16px;
   padding-top: 60px;
   .special-list {
     overflow-x: auto;
@@ -221,7 +221,6 @@
     .rise-list {
       display: flex;
       border: none;
-      margin-bottom: 60px;
       .event-item {
         width: calc(100% / 2);
         margin-right: 32px;

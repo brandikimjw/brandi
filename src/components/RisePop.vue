@@ -54,6 +54,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .event-item {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ebeef2;
   .banner {
     position: relative;
     .banner-link {
@@ -83,7 +86,7 @@ export default {
 
   /deep/ .main-list {
     display: flex;
-    margin: 0 -6px;
+    margin: 0 -4px;
     .product-normal {
       width: calc(100% / 3);
       padding: 0 4px 0;
