@@ -340,6 +340,22 @@ export default {
     .product-normal {
       width: calc(100% / 4);
       padding: 0 8px 30px;
+      /deep/ .wrap-info {
+        .sellor {
+          > a {
+            font-size: 13px;
+          }
+        }
+        .product-title {
+          > a {
+            font-size: 15px;
+          }
+        }
+        .info-price {
+          .dc {font-size: 18px;}
+          .dc-price {font-size: 18px;}
+        }
+      }
     }
     .product-more {
       display: none;

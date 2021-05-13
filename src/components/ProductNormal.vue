@@ -46,12 +46,16 @@ export default {
     a {
       display: block;
     }
-    .thumb-img {
-      background: url(~@/assets/images/tshirts.jpeg) no-repeat;
-      width: 100%;
-      padding-top: 110%;
-      background-size: cover;
-      background-repeat: no-repeat;
+      .thumb-img {
+        background: url(~@/assets/images/tshirts.jpeg) no-repeat;
+        width: 100%;
+        padding-top: 110%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+          transform: scale(1.1);
+      }
     }
     .badge-idx {
       display: none;
