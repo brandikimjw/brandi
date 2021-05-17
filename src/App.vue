@@ -11,18 +11,23 @@
     <div id="footer">
       <Footer />
     </div>
+    <div id="tab">
+    <TabBar />
+    </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/ComponentHeader";
 import Footer from "./components/ComponentFooter";
+import TabBar from "./components/TabBar";
 
 export default {
   name: "App",
   components: {
     Header,
     Footer,
+    TabBar
   },
 };
 </script>

@@ -75,7 +75,7 @@ export default {
   //이용약관 처리방침
   .link-wrap {
     border-bottom: 1px solid #ebeef2;
-    padding: 20px 16px 0 16px;
+    padding: 20px 16px;
     .links-about {
     display: flex;
     flex: wrap;

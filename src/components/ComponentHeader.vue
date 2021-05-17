@@ -46,9 +46,10 @@
 </template>
 
 <script>
-// import MainSwiper from "./MainSwiper";
 export default {
   name: "Header",
+  components: {
+  },
   data() {
     return {
       navSlide: "",
