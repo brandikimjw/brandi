@@ -81,6 +81,7 @@ export default {
     text-align: center;
     text-indent: -999px;
     padding: 14px 20px;
+    width: 20%;
   }
   a {
   width: 100%;
@@ -131,6 +132,11 @@ export default {
       background: url(~@/assets/images/icons-gnb-ic-gnb-my@3x.png) no-repeat;
       background-size: 28px 28px;
     }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .tab-wrap {
+    display: none;
   }
 }
 </style>

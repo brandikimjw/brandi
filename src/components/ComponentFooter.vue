@@ -1,7 +1,7 @@
 <template>
   <footer class="footer-wrap">
     <nav class="link-wrap">
-      <div class="links-about product-list">
+      <div class="links-about">
         <a href="#" target="_blank" class="terms">이용약관</a>
         <a href="#" target="_blank" class="privacy">개인정보처리방침</a>
         <a href="#" target="_blank" class="business">사업자정보확인</a>
@@ -22,13 +22,13 @@
       </div>
       <div class="brandi-info active">
         <div class="bundle">
-          <span class="part">대표이사 : 서정민</span>
-          <span class="part">사업자등록번호 : 220-88-93187</span>
+          <span class="part dash">대표이사 : 서정민</span>
+          <span class="part dash">사업자등록번호 : 220-88-93187</span>
           <span class="part">통신판매업신고 : 2016-서울강남-00359</span>
         </div>
         <div class="bundle">
-          <span class="part">호스팅사업자 : (주)브랜디</span>
-          <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)</span>
+          <span class="part dash">호스팅사업자 : (주)브랜디</span>
+          <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)</span><br />
           <span class="part">개인정보관리책임자 : 윤석호( <a href="#">(privacy@brandi.co.kr)</a> )</span>
         </div>
       </div>
@@ -214,4 +214,264 @@ export default {
       }
     }
   }
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .link-wrap {
+    .links-about {
+      position: relative;
+      > a {
+        font-size: 14px;
+      }
+      .privacy{
+        position: relative;
+        margin-left: 12px;
+        padding-left: 12px;
+        font-weight: bold;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 3px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+      .business {
+        position: relative;
+        margin-left: 12px;
+        padding-left: 12px;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 3px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+      .admin {
+        position: relative;
+        margin-left: 12px;
+        padding-left: 12px;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 3px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+    }
+  }
+  .footer-wrap {
+    .links-social {
+      .question {
+        width: auto;
+        padding-left: 35px;
+        background-position: left top;
+        color: #5f6773;
+        font-size: 14px;
+        line-height: 32px;
+        text-indent: 0;
+      }
+      .kakao {
+        width: auto;
+        padding-left: 35px;
+        background-position: left top;
+        color: #5f6773;
+        font-size: 14px;
+        line-height: 32px;
+        text-indent: 0;
+      }
+      .facebook {
+        width: auto;
+        padding-left: 35px;
+        background-position: left top;
+        color: #5f6773;
+        font-size: 14px;
+        line-height: 32px;
+        text-indent: 0;
+      }
+      .instagram {
+        width: auto;
+        padding-left: 35px;
+        background-position: left top;
+        color: #5f6773;
+        font-size: 14px;
+        line-height: 32px;
+        text-indent: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: map-get($breakpoints, "large")) {
+    .link-wrap {
+    .links-about {
+      position: relative;
+      > a {
+        font-size: 14px;
+      }
+      .privacy{
+        position: relative;
+        margin-left: 10px;
+        padding-left: 14px;
+        font-weight: bold;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+      .business {
+        position: relative;
+        margin-left: 10px;
+        padding-left: 14px;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+      .admin {
+        position: relative;
+        margin-left: 10px;
+        padding-left: 14px;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 1px;
+          height: 14px;
+          background-color: #acb3bd;
+        }
+      }
+    }
+  }
+  .footer-wrap {
+    .links-about {
+      display: inline;
+      padding: 0 15% 0 10%;
+    }
+    .links-social {
+      display: inline;
+      .question {
+        font-size: 14px;
+        width: auto;
+        padding-bottom: 15px;
+        padding-top: 5px;
+      }
+      .kakao {
+        font-size: 14px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+      }
+      .facebook {
+        font-size: 14px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+      }
+      .instagram {
+        font-size: 14px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+      }
+    }
+  }
+.info-company {
+  display: inline-block;
+  width: 70%;
+  box-sizing: content-box;
+  .tit-h1 {
+    font-size: 18px;
+    float: left;
+    a {
+      color: #313842;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+.brandi-info {
+  display: inline-block;
+  width: 70%;
+  box-sizing: content-box;
+  .bundle {
+    .part {
+      display: inline;
+      font-size: 14px;
+      line-height: 0px;
+      position: relative;
+      margin-right: 5px;
+      letter-spacing: -0.2px;
+    }
+    .dash {
+      &:after {
+        display: inline-block;
+        content: '';
+        width: 1px;
+        height: 12px;
+        background-color: #5f6773;
+        position: absolute;
+        right: -5px; top: 5px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.info-wrap {
+  position: relative;
+  .alert {
+    display: inline-block;
+    width: 70%;
+    box-sizing: content-box;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.info-cs {
+  display: inline-block;
+  width: 30%;
+  float: right;
+  box-sizing: content-box;
+  margin: 0;
+  position: absolute;
+  top: 0; right: 0;
+  .tit-h1 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+  .info {
+    > h3 {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 5px;
+    }
+    span,
+    a {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+}
 </style>
