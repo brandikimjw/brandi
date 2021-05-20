@@ -368,7 +368,7 @@ export default {
   .footer-wrap {
     .links-about {
       display: inline;
-      padding: 0 15% 0 10%;
+      padding: 0 15% 0 20%;
     }
     .links-social {
       display: inline;
