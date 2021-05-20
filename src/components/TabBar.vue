@@ -2,7 +2,7 @@
   <div class="tab-wrap">
     <ul class="tab-item">
       <li class="item" v-for="(item, index) in navList" :key="index">
-        <a href="#" @click.prevent="clickMenu2(index)" :class="`'tab', tab-${item.currentName}`">{{ item.title }}</a>
+        <a href="#" @click.prevent="clickMenu2(index)" :class=" `'tab', tab-${item.currentName}`">{{ item.title }}</a>
       </li>
     </ul>
   </div>
@@ -78,7 +78,6 @@ export default {
     flex: wrap;
     font-size: 11px;
     justify-content: space-between;
-    text-align: center;
     text-indent: -999px;
     padding: 14px 20px;
     width: 20%;

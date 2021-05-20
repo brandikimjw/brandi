@@ -7,20 +7,20 @@
         <a href="#" target="_blank" class="business">사업자정보확인</a>
         <a href="#" target="_blank" class="admin">인재채용</a>
       </div>
-      <div class="links-social product-list">
+      <div class="links-social">
         <a href="#" target="_blank" class="question">자주묻는 질문</a>
         <a href="#" target="_blank" class="kakao">플러스친구</a>
         <a href="#" target="_blank" class="facebook">페이스북</a>
         <a href="#" target="_blank" class="instagram">인스타그램</a>
       </div>
     </nav>
-    <address class="info-wrap product-list">
+    <address class="info-wrap product-list" @click.prevent="$event.target.parentElement.parentElement.parentElement.classList.toggle('active')">
       <div class="info-company">
-        <h1 class="tit-h1">
+        <div class="tit-h1">
           <a href="#">(주)브랜디</a>
-        </h1>
+        </div>
       </div>
-      <div class="brandi-info active">
+      <div class="brandi-info">
         <div class="bundle">
           <span class="part dash">대표이사 : 서정민</span>
           <span class="part dash">사업자등록번호 : 220-88-93187</span>
@@ -28,7 +28,7 @@
         </div>
         <div class="bundle">
           <span class="part dash">호스팅사업자 : (주)브랜디</span>
-          <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)</span><br />
+          <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)</span>
           <span class="part">개인정보관리책임자 : 윤석호( <a href="#">(privacy@brandi.co.kr)</a> )</span>
         </div>
       </div>
@@ -137,6 +137,7 @@ export default {
   //브랜디 제목
   .info-company {
     font-style: normal;
+
     .tit-h1 {
       margin: 0 0 8px;
       color: #313842;
@@ -144,6 +145,12 @@ export default {
       font-weight: 700;
       > a {
         display: block;
+
+        &.active {
+         .brandi-info {
+           display: block;
+         }
+        }
       }
       ::after {
         display: inline-block;
@@ -178,6 +185,12 @@ export default {
       font-style: normal;
       margin-top: 8px;
       line-height: 16px;
+    }
+
+    &.active {
+      .brandi-info {
+        display: block;
+      }
     }
   }
   .info-cs {
@@ -312,66 +325,64 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "large")) {
     .link-wrap {
-    .links-about {
-      position: relative;
-      > a {
-        font-size: 14px;
-      }
-      .privacy{
+      display: flex;
+      justify-content: space-around;
+      line-height: 28px;
+      .links-about {
         position: relative;
-        margin-left: 10px;
-        padding-left: 14px;
-        font-weight: bold;
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 5px;
-          width: 1px;
-          height: 14px;
-          background-color: #acb3bd;
+        margin: 0;
+        > a {
+          font-size: 14px;
+        }
+        .privacy{
+          position: relative;
+          margin-left: 10px;
+          padding-left: 14px;
+          font-weight: bold;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 1px;
+            height: 14px;
+            background-color: #acb3bd;
+          }
+        }
+        .business {
+          position: relative;
+          margin-left: 10px;
+          padding-left: 14px;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 1px;
+            height: 14px;
+            background-color: #acb3bd;
+          }
+        }
+        .admin {
+          position: relative;
+          margin-left: 10px;
+          padding-left: 14px;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 1px;
+            height: 14px;
+            background-color: #acb3bd;
+          }
         }
       }
-      .business {
-        position: relative;
-        margin-left: 10px;
-        padding-left: 14px;
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 5px;
-          width: 1px;
-          height: 14px;
-          background-color: #acb3bd;
-        }
-      }
-      .admin {
-        position: relative;
-        margin-left: 10px;
-        padding-left: 14px;
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 5px;
-          width: 1px;
-          height: 14px;
-          background-color: #acb3bd;
-        }
-      }
-    }
-  }
-  .footer-wrap {
-    .links-about {
-      display: inline;
-      padding: 0 15% 0 20%;
-    }
-    .links-social {
-      display: inline;
+      .links-social {
+        display: inline-block;
       .question {
         font-size: 14px;
         width: auto;
@@ -395,83 +406,84 @@ export default {
       }
     }
   }
-.info-company {
-  display: inline-block;
-  width: 70%;
-  box-sizing: content-box;
-  .tit-h1 {
-    font-size: 18px;
-    float: left;
-    a {
-      color: #313842;
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
-.brandi-info {
-  display: inline-block;
-  width: 70%;
-  box-sizing: content-box;
-  .bundle {
-    .part {
-      display: inline;
-      font-size: 14px;
-      line-height: 0px;
-      position: relative;
-      margin-right: 5px;
-      letter-spacing: -0.2px;
-    }
-    .dash {
-      &:after {
-        display: inline-block;
-        content: '';
-        width: 1px;
-        height: 12px;
-        background-color: #5f6773;
-        position: absolute;
-        right: -5px; top: 5px;
-        margin-left: 5px;
-      }
-    }
-  }
-}
-.info-wrap {
-  position: relative;
-  .alert {
+
+  .info-company {
     display: inline-block;
     width: 70%;
     box-sizing: content-box;
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-.info-cs {
-  display: inline-block;
-  width: 30%;
-  float: right;
-  box-sizing: content-box;
-  margin: 0;
-  position: absolute;
-  top: 0; right: 0;
-  .tit-h1 {
-    font-size: 18px;
-    line-height: 18px;
-    margin-bottom: 16px;
-  }
-  .info {
-    > h3 {
-      font-size: 14px;
-      line-height: 16px;
-      margin-bottom: 5px;
-    }
-    span,
-    a {
-      font-size: 14px;
-      line-height: 16px;
+    .tit-h1 {
+      font-size: 18px;
+      float: left;
+      a {
+        color: #313842;
+        &::after {
+          display: none;
+        }
+      }
     }
   }
-}
+  .brandi-info {
+    display: inline-block;
+    width: 70%;
+    box-sizing: content-box;
+    .bundle {
+      .part {
+        display: inline;
+        font-size: 14px;
+        line-height: 0px;
+        position: relative;
+        margin-right: 5px;
+        letter-spacing: -0.2px;
+      }
+      .dash {
+        &:after {
+          display: inline-block;
+          content: '';
+          width: 1px;
+          height: 12px;
+          background-color: #5f6773;
+          position: absolute;
+          right: -5px; top: 5px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .info-wrap {
+    position: relative;
+    .alert {
+      display: inline-block;
+      width: 70%;
+      box-sizing: content-box;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .info-cs {
+    display: inline-block;
+    width: 30%;
+    float: right;
+    box-sizing: content-box;
+    margin: 0;
+    position: absolute;
+    top: 0; right: 0;
+    .tit-h1 {
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
+    .info {
+      > h3 {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 5px;
+      }
+      span,
+      a {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
 }
 </style>
