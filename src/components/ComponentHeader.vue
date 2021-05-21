@@ -313,9 +313,10 @@ export default {
         .nav-mine {
           flex: 0 0 auto;
           width: 180px;
-          height: 40px;
+          height: 50px;
           margin-right: 0px;
-          padding-top: 10px;
+          vertical-align: middle;
+          line-height: 50px;
 
           .btn-cart{
             position: static;
