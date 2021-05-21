@@ -190,6 +190,7 @@ export default {
     &.active {
       .brandi-info {
         display: block;
+        transition: all 1s;
       }
     }
   }

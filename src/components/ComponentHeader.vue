@@ -15,7 +15,9 @@
           <!-- //form 버튼,인풋 -->
           <!-- 장바구니/짬하기/마이페이지 -->
           <nav class="nav-mine">
-            <a href="#" class="btn-cart hide-text"></a>
+            <a href="#" class="btn-cart">
+              <span class="count">99+</span>
+            </a>
             <a href="#" class="btn-favor"></a>
             <a href="#" class="btn-mypage"></a>
           </nav>
@@ -193,28 +195,18 @@ export default {
     overflow:hidden;
     text-indent:-999px;
   }
-
-  .btn-cart{
-    display: inline-block;
-    background:url(~@/assets/images/ic-cart-s@3x.png) no-repeat;
-    background-size: cover;
-    position: absolute;
-    right: 20px; top: 25px;
-    .count{
-      position:absolute;
-      right:10px;
-      top:10px;
-      min-width:14px;
-      height:12px;
-      padding:0 4px;
-      border-radius:6px;
-      font-size:8px;
-      line-height:12px;
-      text-indent:0;
-      text-align:center;
-      text-indent: -999px;
+  .nav-mine {
+    position: relative;
+    .btn-cart{
+      display: inline-block;
+      background:url(~@/assets/images/ic-cart-s@3x.png) no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 4px;
+      bottom: -2px;
     }
   }
+
   .btn-favor{
     display:none;
     background: url(~@/assets/images/ic-favorite@3x.png) no-repeat;
@@ -325,13 +317,17 @@ export default {
             text-indent: -999px;
             margin-right: 20px;
 
-            &::before {
-              content: '99+';
+            .count {
               display: inline-block;
-              width: 20px;
-              height: 12px;
+              font-size: 8px;
+              color: #fff;
               background-color: #ff365e;
-              left: 0; top: 0;
+              position: absolute;
+              left: 20px; top: 3px;
+              text-indent: 0;
+              line-height: 12px;
+              padding: 2px 4px 2px 4px;
+              border-radius: 8px;
             }
           }
           .btn-favor{
