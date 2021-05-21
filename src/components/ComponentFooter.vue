@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-wrap">
-    <nav class="link-wrap">
+    <nav class="link-wrap product-list">
       <div class="links-about">
         <a href="#" target="_blank" class="terms">이용약관</a>
         <a href="#" target="_blank" class="privacy">개인정보처리방침</a>
@@ -47,7 +47,7 @@
         </div>
         <div class="info">
           <h3 class="tit-h2">고객문의</h3>
-          <a href="#"> brandics@brandi.co.kr</a>
+          <a href="mailto:brandics@brandi.co.kr"> brandics@brandi.co.kr</a>
         </div>
       </div>
     </address>
@@ -68,7 +68,6 @@ export default {
   .footer-wrap {
     border-top: 1px solid #ebeef2;
     background: #F7F8FA;
-    //전체영역 마진패딩
     margin-top: 80px;
     padding-bottom: 80px;
   }
@@ -327,8 +326,9 @@ export default {
 @media screen and (min-width: map-get($breakpoints, "large")) {
     .link-wrap {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       line-height: 28px;
+
       .links-about {
         position: relative;
         margin: 0;
@@ -426,6 +426,7 @@ export default {
   .brandi-info {
     display: inline-block;
     width: 70%;
+    line-height: 21px;
     box-sizing: content-box;
     .bundle {
       .part {

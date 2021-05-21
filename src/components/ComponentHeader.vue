@@ -165,7 +165,7 @@ export default {
     flex:1 1 auto;
     margin:-10px 0;
     padding:0 2px 0 12px;
-    justify-content:space-between;
+    justify-content:flex-end;
     display: none;
   }
 
@@ -276,6 +276,7 @@ export default {
           display: flex;
           margin-left: 45%;
           min-height: 40px;
+          margin-right: 40px;
           border-bottom: 2px solid #202429;
           position: relative;
           .button-search {
@@ -285,12 +286,11 @@ export default {
             width: 32px;
             height: 32px;
           }
-          input {display: block; border: none;}
-          .inpt-search {
-            width: 60%;
-            height: 38px;
-            vertical-align: top;
-            opacity: 1;
+          input {
+            display: block;
+            border: none;
+            width: 270px;
+            line-height: 20px;
           }
         }
         .nav-mine {
