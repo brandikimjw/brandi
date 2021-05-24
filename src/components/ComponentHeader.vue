@@ -3,7 +3,7 @@
     <div class="artc-header">
         <div class="artc-continer product-list">
           <!-- 로고이미지 -->
-          <h1 class="logo hide-text"><a href="#" class="link">브랜디</a></h1>
+          <h1 class="logo hide-text"><a href="/" class="link">브랜디</a></h1>
           <!-- form 버튼,인풋 -->
           <form method="get" action="/search" class="form-search">
             <div class="form-cont">
@@ -27,22 +27,24 @@
     <div class="header-nav-wrap product-list">
       <div class="header-nav-container swiper-container">
         <nav class="swiper-wrapper">
-          <a href="#" class="nav-swiper-slide line swiper-slide">홈</a>
-          <a href="#" class="nav-swiper-slide swiper-slide">혜택존</a>
-          <a href="#" class="nav-swiper-slide swiper-slide">베스트</a>
-          <router-link to="/newpage" class="nav-swiper-slide swiper-slide"
-            >신상</router-link
-          >
-          <router-link to="/timedeal" class="nav-swiper-slide swiper-slide"
-            >특가</router-link
-          >
-          <a href="#" class="nav-swiper-slide swiper-slide trend">트렌드</a>
-          <a href="#" class="nav-swiper-slide swiper-slide brand">브랜드</a>
-          <a href="#" class="nav-swiper-slide swiper-slide beauty">뷰티</a>
-          <a href="#" class="nav-swiper-slide swiper-slide">스토어</a>
+          <a href="#" class="swiper-slide line">홈</a>
+          <a href="#" class="swiper-slide">혜택존</a>
+          <a href="#" class="swiper-slide">베스트</a>
+          <router-link to="/newpage" class="swiper-slide">신상</router-link>
+          <router-link to="/timedeal" class="swiper-slide">특가</router-link>
+          <div href="#" class="swiper-slide">
+            <a href="#" class="category trend">트렌드</a>
+            <div class="wrap-items">
+              <div v-for="(category, index) in categoryList" :key="index">
+              <a href="#" class="tit">{{category.title}}</a>
+              <a href="#" v-for="(category2, index) in subCategoryList" :key="index" class="item">{{category2.item}}</a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="swiper-slide brand">브랜드</a>
+          <a href="#" class="swiper-slide beauty">뷰티</a>
+          <a href="#" class="swiper-slide">스토어</a>
         </nav>
-        <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
       </div>
     </div>
   </header>
@@ -57,6 +59,60 @@ export default {
     return {
       navSlide: "",
       isMobile: '',
+      currentIndex : '1',
+      currentIndex : 0,
+      categoryList : [
+        {
+          title : '아우터',
+        },
+        {
+          title : '가방',
+        },
+        {
+          title : '상의',
+        },
+        {
+          title : '주얼리',
+        },
+        {
+          title : '바지',
+        },
+        {
+          title : '잡화',
+        },
+        {
+          title : '원피스',
+        },
+        {
+          title : '라이프웨어',
+        },
+        {
+          title : '스커트',
+        },
+        {
+          title : '빅사이즈',
+        },
+        {
+          title : '신발',
+        },
+      ],
+      subCategoryList : [
+        {
+          item : '자켓',
+        },
+        {
+          item : '가디건',
+        },
+        {
+          item : '코트',
+        },
+        {
+          item : '점퍼',
+        },
+        {
+          item : '패딩',
+        },
+      ]
     };
   },
   methods: {
@@ -96,6 +152,34 @@ export default {
   mounted() {
     this.navigtationSlide();
     window.addEventListener("resize", this.setScreenSize);
+
+    // 하위 카테고리
+    const categoryTabs = document.querySelectorAll('.header-nav-container .swiper-wrapper .swiper-slide')
+    const removeActivation = function () {
+      for(let el of categoryTabs){
+        el.classList.remove('on')
+      }
+    }
+
+    for (let el of categoryTabs) {
+      el.addEventListener('mouseenter', function(){
+        removeActivation()
+        this.classList.add('on')
+      })
+      el.addEventListener('focusin', function(){
+        removeActivation()
+        this.classList.add('on')
+      })
+      el.addEventListener('mouseleave', function(){
+        this.classList.remove('on')
+      })
+      el.addEventListener('focusout', function(){
+        const that = this
+        setTimeout(() => {
+          if(!(that.contains(document.activeElement))) that.classList.remove('on')
+        }, 100)
+      })
+    }
   },
 };
 </script>
@@ -103,6 +187,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .header {
+  border-bottom: 1px solid #ebeef2;
   .artc-header {
     border-bottom: 1px solid #ebeef2;
     .artc-continer {
@@ -228,7 +313,7 @@ export default {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    > a {
+    > a,div {
       width: auto;
       display: block;
       padding: 14px 10px;
@@ -257,7 +342,7 @@ export default {
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .header {
+    .header {
     .artc-header {
       .logo {
           width: 180px;
@@ -289,7 +374,7 @@ export default {
           input {
             display: block;
             border: none;
-            width: 270px;
+            width: calc(100% - 40px);
             line-height: 20px;
           }
         }

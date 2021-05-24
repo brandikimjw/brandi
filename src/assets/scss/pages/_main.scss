@@ -20,8 +20,10 @@
   .product-normal {
     height: 100%;
     width: calc(100%/2);
-    .badge-idx {
-      display: block;
+    .thumb {
+      .badge-idx {
+        display: block;
+      }
     }
   }
 }

@@ -16,27 +16,27 @@ export default {
       currentIndex : '1',
       currentIndex2 : 0,
       navList : [
-    {
-      title : '홈',
-      currentName : 'home'
-    },
-    {
-      title : '하루배송',
-      currentName : 'todaydelivery'
-    },
-    {
-      title : '카테고리',
-      currentName : 'cate'
-    },
-    {
-      title : '찜',
-      currentName : 'favor'
-    },
-    {
-      title : '마이페이지',
-      currentName : 'my'
-    },
-  ]
+        {
+          title : '홈',
+          currentName : 'home'
+        },
+        {
+          title : '하루배송',
+          currentName : 'todaydelivery'
+        },
+        {
+          title : '카테고리',
+          currentName : 'cate'
+        },
+        {
+          title : '찜',
+          currentName : 'favor'
+        },
+        {
+          title : '마이페이지',
+          currentName : 'my'
+        },
+      ]
     }
 	},
   methods: {
@@ -100,7 +100,7 @@ export default {
       background-size: 28px 28px;
 
       &.on{
-        background: url(~@/assets/images/icons-gn-bnew-s-ic-gnb-category-s@3x.png) no-repeat;
+        background: url(~@/assets/images/icons-gn-bnew-s-ic-gnb-haru-s@3x.png) no-repeat;
         background-size: 28px 28px;
       }
     }
@@ -126,7 +126,7 @@ export default {
       background-size: 28px 28px;
 
       &.on{
-        background: url(~@/assets/images/ic-gnb-home-s@3x.png) no-repeat;
+        background: url(~@/assets/images/icons-gn-bnew-s-ic-gnb-wish-s@3x.png) no-repeat;
         background-size: 28px 28px;
       }
     }
@@ -139,7 +139,7 @@ export default {
       background-size: 28px 28px;
 
       &.on{
-        background: url(~@/assets/images/ic-gnb-home-s@3x.png) no-repeat;
+        background: url(~@/assets/images/icons-gn-bnew-s-ic-gnb-my-s@3x.png) no-repeat;
         background-size: 28px 28px;
       }
     }

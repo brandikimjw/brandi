@@ -144,9 +144,7 @@ export default {
       font-weight: 700;
       position: relative;
       > a {
-        display: inline-block;
-        width: 338px;
-        height: 21px;
+        display: block;
 
         &:after {
         display: inline-block;
@@ -158,7 +156,7 @@ export default {
         height: 12px;
         margin-left: 5px;
         position: absolute;
-        left: 20%;
+        left: 65px;
         top: 28%;
         }
 
