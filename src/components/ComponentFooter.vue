@@ -142,16 +142,13 @@ export default {
       color: #313842;
       font-size: 15px;
       font-weight: 700;
+      position: relative;
       > a {
-        display: block;
+        display: inline-block;
+        width: 338px;
+        height: 21px;
 
-        &.active {
-         .brandi-info {
-           display: block;
-         }
-        }
-      }
-      ::after {
+        &:after {
         display: inline-block;
         content: '';
         box-sizing: content-box;
@@ -160,9 +157,21 @@ export default {
         width: 12px;
         height: 12px;
         margin-left: 5px;
+        position: absolute;
+        left: 20%;
+        top: 28%;
+        }
+
+        &.active {
+         .brandi-info {
+           display: block;
+         }
+        }
       }
     }
   }
+
+
   //브랜디 정보
   .brandi-info {
     display: none;
@@ -189,7 +198,15 @@ export default {
     &.active {
       .brandi-info {
         display: block;
-        transition: all 1s;
+      }
+      .info-company {
+        .tit-h1 {
+          > a {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
     }
   }
