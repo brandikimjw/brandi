@@ -96,23 +96,6 @@ export default {
           title : '신발',
         },
       ],
-      subCategoryList : [
-        {
-          item : '자켓',
-        },
-        {
-          item : '가디건',
-        },
-        {
-          item : '코트',
-        },
-        {
-          item : '점퍼',
-        },
-        {
-          item : '패딩',
-        },
-      ]
     };
   },
   methods: {
@@ -342,7 +325,7 @@ export default {
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-    .header {
+  .header {
     .artc-header {
       .logo {
           width: 180px;
@@ -387,6 +370,7 @@ export default {
 
       .artc-continer {
         padding: 31px 20px;
+        position: static;
         .nav-mine {
           flex: 0 0 auto;
           width: 180px;
@@ -448,17 +432,31 @@ export default {
       }
     }
   }
-  .header-nav-container {
-    padding: 0 12px 0 12px;
-    height: inherit;
-    .swiper-wrapper {
-      .swiper-slide {
-        padding: 18px 8px;
-        font-size: 18px;
-        line-height: 24px;
-
-        &:hover {
-          border-bottom: 3px solid #202429;
+  .header-nav-wrap {
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    .header-nav-container {
+      padding: 0 12px 0 12px;
+      height: inherit;
+      position: static;
+      .swiper-wrapper {
+        position: static;
+        .swiper-slide {
+          padding: 18px 8px;
+          font-size: 18px;
+          line-height: 24px;
+          position: static;
+          // &:hover {
+          //   border-bottom: 3px solid #202429;
+          // }
+        }
+        .wrap-items {
+          position: absolute;
+          width: 100%;
+          left: 0; top: 0;
         }
       }
     }
