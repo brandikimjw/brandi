@@ -24,7 +24,7 @@
         </div>
     </div>
     <!-- 하단 카테고리 메뉴 -->
-    <div class="header-nav-wrap product-list">
+    <!-- <div class="header-nav-wrap product-list">
       <div class="header-nav-container swiper-container">
         <nav class="swiper-wrapper">
           <a href="#" class="swiper-slide line">홈</a>
@@ -34,7 +34,7 @@
           <router-link to="/timedeal" class="swiper-slide">특가</router-link>
           <div href="#" class="swiper-slide">
             <a href="#" class="category trend">트렌드</a>
-            <div class="wrap-items">
+            <div class="wrap-category">
               <div v-for="(category, index) in categoryList" :key="index">
               <a href="#" class="tit">{{category.title}}</a>
               <a href="#" v-for="(category2, index) in subCategoryList" :key="index" class="item">{{category2.item}}</a>
@@ -45,6 +45,28 @@
           <a href="#" class="swiper-slide beauty">뷰티</a>
           <a href="#" class="swiper-slide">스토어</a>
         </nav>
+      </div>
+    </div> -->
+    <!-- 하단 카테고리 메뉴 -->
+    <div class="artc-main">
+      <div class="inner">
+        <div class="header-nav-container swiper-container">
+            <nav class="swiper-wrapper">
+                <a href="#" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
+                  <!-- 트렌드 아이템 -->
+                  <div class="wrap-item" v-if="titleItems.getCurrentName === 'trend'" :class="{ on : listOne }">
+                    <div class="inner">
+                      <ul v-for="(subItems, index) in subItems" :key="index">
+                        {{subItems.txt}}
+                        <li v-for="(subItems, index) in subItems.subItems" :key="index">
+                          <a href="#">{{ subItems.item }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+            </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -57,46 +79,130 @@ export default {
   },
   data() {
     return {
+      trend: false,
+      listOne: false,
       navSlide: "",
       isMobile: '',
       currentIndex : '1',
       currentIndex : 0,
-      categoryList : [
+      titleItems: [
         {
-          title : '아우터',
+          txt: "홈",
+          getCurrentName: "home",
         },
         {
-          title : '가방',
+          txt: "하루배송",
+          getCurrentName: "oneday",
         },
         {
-          title : '상의',
+          txt: "혜택존",
+          getCurrentName: "benefit",
         },
         {
-          title : '주얼리',
+          txt: "베스트",
+          getCurrentName: "best",
         },
         {
-          title : '바지',
+          txt: "신상특가",
+          getCurrentName: "special",
         },
         {
-          title : '잡화',
+          txt: "트렌드",
+          getCurrentName: "trend",
         },
         {
-          title : '원피스',
+          txt: "브랜드",
+          getCurrentName: "brand",
         },
         {
-          title : '라이프웨어',
-        },
-        {
-          title : '스커트',
-        },
-        {
-          title : '빅사이즈',
-        },
-        {
-          title : '신발',
+          txt: "뷰티스토어",
+          getCurrentName: "beauty",
         },
       ],
-    };
+      subItems: [
+        {
+          txt: "옷",
+          subItems: [
+            { item: "자켓1" },
+            { item: "자켓2" },
+            { item: "자켓3" },
+            { item: "자켓4" },
+          ],
+        },
+        {
+          txt: "바지",
+          subItems: [
+            { item: "바지1" },
+            { item: "바지2" },
+            { item: "바지3" },
+            { item: "바지4" },
+          ],
+        },
+        {
+          txt: "치마",
+          subItems: [
+            { item: "치마1" },
+            { item: "치마2" },
+            { item: "치마3" },
+            { item: "치마4" },
+          ],
+        },
+        {
+          txt: "원피스",
+          subItems: [
+            { item: "원피스1" },
+            { item: "원피스2" },
+            { item: "원피스3" },
+            { item: "원피스4" },
+          ],
+        },
+        {
+          txt: "청바지",
+          subItems: [
+            { item: "청바지1" },
+            { item: "청바지2" },
+            { item: "청바지3" },
+            { item: "청바지4" },
+          ],
+        },
+        {
+          txt: "양말",
+          subItems: [
+            { item: "양말1" },
+            { item: "양말2.item" },
+            { item: "양말3.item" },
+            { item: "양말4.item" },
+          ],
+        },
+        {
+          txt: "신발",
+          subItems: [
+            { item: "신발1.item1" },
+            { item: "신발2.item1" },
+            { item: "신발3.item1" },
+            { item: "신발4.item1" },
+          ],
+        },
+        {
+          txt: "티셔츠",
+          subItems: [
+            { item: "티셔츠1.item1" },
+            { item: "티셔츠2.item2" },
+            { item: "티셔츠3.item3" },
+            { item: "티셔츠4.item4" },
+          ],
+        },
+        {
+          txt: "바지",
+          subItems: [
+            { item: "바지1.item1" },
+            { item: "바지2.item2" },
+            { item: "바지3.item3" },
+            { item: "바지4.item4" },
+          ],
+        },
+      ],
+    }
   },
   methods: {
     setScreenSize() {
@@ -119,6 +225,13 @@ export default {
         watchOverflow: true,
       });
     },
+    showList(titleItems) {
+      if(titleItems.getCurrentName === 'trend') {
+        this.listOne = true
+      } else {
+        this.listOne = false
+      }
+    }
   },
   watch: {
     isMobile(newVal) {
@@ -135,42 +248,14 @@ export default {
   mounted() {
     this.navigtationSlide();
     window.addEventListener("resize", this.setScreenSize);
-
-    // 하위 카테고리
-    const categoryTabs = document.querySelectorAll('.header-nav-container .swiper-wrapper .swiper-slide')
-    const removeActivation = function () {
-      for(let el of categoryTabs){
-        el.classList.remove('on')
-      }
-    }
-
-    for (let el of categoryTabs) {
-      el.addEventListener('mouseenter', function(){
-        removeActivation()
-        this.classList.add('on')
-      })
-      el.addEventListener('focusin', function(){
-        removeActivation()
-        this.classList.add('on')
-      })
-      el.addEventListener('mouseleave', function(){
-        this.classList.remove('on')
-      })
-      el.addEventListener('focusout', function(){
-        const that = this
-        setTimeout(() => {
-          if(!(that.contains(document.activeElement))) that.classList.remove('on')
-        }, 100)
-      })
-    }
-  },
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .header {
-  border-bottom: 1px solid #ebeef2;
+  border-bottom: 1px solid #d3d7df;
   .artc-header {
     border-bottom: 1px solid #ebeef2;
     .artc-continer {
@@ -285,47 +370,38 @@ export default {
   }
 }
 
-//헤더 밑에 메뉴
-/deep/.header-nav-container {
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 1;
-  .swiper-wrapper {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    > a,div {
-      width: auto;
-      display: block;
-      padding: 14px 10px;
-      color: #202429;
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 21px;
-      word-break: keep-all;
-      text-align: center;
-
-      &.line {
-        display: inline-block;
-        border-bottom: 3px solid #202429;
+//GNB메뉴
+.artc-main {
+  width: 100%;
+  .inner {
+    .header-nav-container {
+      .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .swiper-slide {
+          width: auto;
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 21px;
+          word-break: keep-all;
+          text-align: center;
+          padding: 14px 10px;
+          color: #202429;
+          &.trend { color: #ff4569; }
+          &.brand { color: #cea375; }
+          &.beauty { color: #dea6a6; }
+            .wrap-item {
+              display: none;
+            }
+        }
       }
-    }
-    .trend {
-      color: #ff4569 !important;
-    }
-    .brand {
-      color: #cea375 !important;
-    }
-    .beauty {
-      color: #dea6a6 !important;
     }
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .header {
+    border-bottom: 1px solid #d3d7df;
     .artc-header {
       .logo {
           width: 180px;
@@ -432,31 +508,120 @@ export default {
       }
     }
   }
-  .header-nav-wrap {
+  //GNB메뉴
+  .artc-main {
     position: relative;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    .header-nav-container {
-      padding: 0 12px 0 12px;
-      height: inherit;
-      position: static;
-      .swiper-wrapper {
+    z-index: 999;
+    overflow: visible;
+    .inner {
+      width: 1200px;
+      margin: 0 auto;
+      .header-nav-container {
         position: static;
-        .swiper-slide {
-          padding: 18px 8px;
-          font-size: 18px;
-          line-height: 24px;
+        .swiper-wrapper {
           position: static;
-          // &:hover {
-          //   border-bottom: 3px solid #202429;
-          // }
-        }
-        .wrap-items {
-          position: absolute;
-          width: 100%;
-          left: 0; top: 0;
+          padding: 0 12px 0 12px;
+          transform: none;
+          > a{
+            &.home {
+              position: relative;
+              &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                left: 0; bottom: 0;
+                background: #202429;
+              }
+            }
+          }
+          .swiper-slide {
+            display: block;
+            position: static;
+            padding: 18px 18px;
+            font-size: 18px;
+            line-height: 24px;
+
+            &:hover {
+              border-bottom: 3px solid #202429;
+              padding: 18px 18px 15px 18px;
+            }
+
+            &.trend{
+             &:hover {
+              border-bottom: 3px solid #ff4569;
+              padding: 18px 18px 15px 18px;
+             }
+            }
+            &.brand{
+             &:hover {
+              border-bottom: 3px solid #cea375;
+              padding: 18px 18px 15px 18px;
+             }
+            }
+            &.beauty{
+             &:hover {
+              border-bottom: 3px solid #dea6a6;
+              padding: 18px 18px 15px 18px;
+             }
+            }
+
+
+
+            .wrap-item {
+              display: block;
+              border-top: 1px solid #d3d7df;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 60px;
+              z-index: 10;
+              background: #fff;
+              overflow: hidden;
+              max-height: 0;
+              &.on {
+                max-height: 2400px;
+                transition: max-height .5s ease-in-out;
+              }
+              .inner{
+                max-width: 1200px;
+                display: flex;
+                flex-wrap: wrap;
+                border-left: 1px solid #e1e1e1;
+                border-right: 1px solid #e1e1e1;
+                ul {
+                  position: relative;
+                  padding: 32px 20px;
+                  box-sizing: border-box;
+                  color: #202429;
+                  font-size: 16px;
+                  font-weight: bold;
+                  width: calc(100%/6);
+                  &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 200%;
+                    background: #e1e1e1;
+                    position: absolute;
+                    right: 0; top: 0;
+                  }
+
+                  li {
+                    > a {
+                      display: block;
+                      font-size: 15px;
+                      margin-top: 8px;
+                      color: #737373;
+                      font-size: 16px;
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
