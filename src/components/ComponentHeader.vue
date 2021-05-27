@@ -26,31 +26,6 @@
           </nav>
         </div>
     </div>
-    <!-- 하단 카테고리 메뉴 -->
-    <!-- <div class="header-nav-wrap product-list">
-      <div class="header-nav-container swiper-container">
-        <nav class="swiper-wrapper">
-          <a href="#" class="swiper-slide line">홈</a>
-          <a href="#" class="swiper-slide">혜택존</a>
-          <a href="#" class="swiper-slide">베스트</a>
-          <router-link to="/newpage" class="swiper-slide">신상</router-link>
-          <router-link to="/timedeal" class="swiper-slide">특가</router-link>
-          <div href="#" class="swiper-slide">
-            <a href="#" class="category trend">트렌드</a>
-            <div class="wrap-category">
-              <div v-for="(category, index) in categoryList" :key="index">
-              <a href="#" class="tit">{{category.title}}</a>
-              <a href="#" v-for="(category2, index) in subCategoryList" :key="index" class="item">{{category2.item}}</a>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="swiper-slide brand">브랜드</a>
-          <a href="#" class="swiper-slide beauty">뷰티</a>
-          <a href="#" class="swiper-slide">스토어</a>
-        </nav>
-      </div>
-    </div> -->
-    <!-- 하단 카테고리 메뉴 -->
     <div class="artc-main">
       <div class="inner">
         <div class="header-nav-container swiper-container">
@@ -71,6 +46,7 @@
             </nav>
         </div>
       </div>
+      <!-- <li>scrollTop() : <span class="pageYOffset">0</span>px</li> -->
     </div>
   </header>
 </template>
@@ -249,6 +225,20 @@ export default {
       } else {
         this.listOne = false
       }
+    },
+    headerSticky(){
+      let mobileSticky = document.querySelector('.artc-main');
+      //let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+      //document.querySelector(".pageYOffset").innerText = pageYOffset + screen.height;
+      //console.log(mobileSticky);
+      //console.log(mobileSticky.getBoundingClientRect().top);
+      if ( mobileSticky.getBoundingClientRect().top < 0 ){
+        document.querySelector('.artc-header').style.minHeight = 0
+        mobileSticky.classList.add('fixed')
+      }else {
+        //mobileSticky.classList.remove('fixed')
+        //document.querySelector('.artc-header').style.minHeight =
+      }
     }
   },
   watch: {
@@ -262,10 +252,12 @@ export default {
   },
   created() {
     this.setScreenSize();
+    this.navigtationSlide();
+    window.addEventListener('resize', this.setScreenSize);
   },
   mounted() {
-    this.navigtationSlide();
-    window.addEventListener("resize", this.setScreenSize);
+    //this.headerSticky();
+    window.addEventListener('scroll', this.headerSticky);
   }
 };
 </script>
@@ -391,6 +383,15 @@ export default {
 //GNB메뉴
 .artc-main {
   width: 100%;
+  background-color: #fff;
+  &.fixed {
+    position:fixed;
+    left:50%;
+    top:0;
+    width:100%;
+    transform:translate(-50%, 0);
+    z-index: 99999999;
+  }
   .inner {
     .header-nav-container {
       .swiper-wrapper {
