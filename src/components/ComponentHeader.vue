@@ -32,7 +32,7 @@
             <nav class="swiper-wrapper">
                 <a :href="titleItems.link" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
                   <!-- 트렌드 아이템 -->
-                  <div class="wrap-item" v-if="titleItems.getCurrentName === 'trend'||'brand'||'beauty' " :class="{ on : listOne }">
+                  <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' " :class="{ on : listOne }">
                     <div class="inner">
                       <ul v-for="(subItems, index) in subItems" :key="index">
                         {{subItems.txt}}
@@ -220,7 +220,7 @@ export default {
       });
     },
     showList(titleItems) {
-      if(titleItems.getCurrentName === 'trend' || 'brand' || 'beauty') {
+      if(titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty') {
         this.listOne = true
       } else {
         this.listOne = false
