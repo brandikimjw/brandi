@@ -4,8 +4,6 @@
       <Header />
     </div>
     <div id="container">
-      <router-link to="pagenewtab"></router-link>
-      <router-link to="timedeal"></router-link>
       <router-view />
     </div>
     <div id="footer">

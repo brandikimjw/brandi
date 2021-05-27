@@ -3,23 +3,26 @@
     <div class="artc-header">
         <div class="artc-continer product-list">
           <!-- 로고이미지 -->
-          <h1 class="logo hide-text"><a href="/" class="link">브랜디</a></h1>
+          <h1 class="logo hide-text"><a href="/" class="link">BRANDI</a></h1>
           <!-- form 버튼,인풋 -->
           <form method="get" action="/search" class="form-search">
             <div class="form-cont">
               <input type="search" aria-label="검색어 입력란" class="input-search" />
-              <button type="submit" class="button-search hide-text">검색</button>
+              <button type="submit" name="search" class="button-search hide-text">검색</button>
               <input type="hidden" name="r" value="/" />
             </div>
           </form>
           <!-- //form 버튼,인풋 -->
           <!-- 장바구니/짬하기/마이페이지 -->
           <nav class="nav-mine">
-            <a href="#" class="btn-cart">
+            <a href="#" class="btn-cart hide-text">
               <span class="count">99+</span>
+              장바구니
             </a>
-            <a href="#" class="btn-favor"></a>
-            <a href="#" class="btn-mypage"></a>
+            <a href="#" class="btn-favor hide-text">찜하기</a>
+            <a href="#" class="btn-mypage hide-text">
+              마이페이지
+            </a>
           </nav>
         </div>
     </div>
@@ -52,9 +55,9 @@
       <div class="inner">
         <div class="header-nav-container swiper-container">
             <nav class="swiper-wrapper">
-                <a href="#" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
+                <a :href="titleItems.link" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
                   <!-- 트렌드 아이템 -->
-                  <div class="wrap-item" v-if="titleItems.getCurrentName === 'trend'" :class="{ on : listOne }">
+                  <div class="wrap-item" v-if="titleItems.getCurrentName === 'trend'||'brand'||'beauty' " :class="{ on : listOne }">
                     <div class="inner">
                       <ul v-for="(subItems, index) in subItems" :key="index">
                         {{subItems.txt}}
@@ -71,7 +74,6 @@
     </div>
   </header>
 </template>
-
 <script>
 export default {
   name: "Header",
@@ -81,7 +83,7 @@ export default {
     return {
       trend: false,
       listOne: false,
-      navSlide: "",
+      navSlide: '',
       isMobile: '',
       currentIndex : '1',
       currentIndex : 0,
@@ -89,34 +91,50 @@ export default {
         {
           txt: "홈",
           getCurrentName: "home",
+          linkType : 'link',
+          link : '/',
         },
         {
           txt: "하루배송",
           getCurrentName: "oneday",
+          linkType : 'link',
+          link : '/todaydelivery',
         },
         {
           txt: "혜택존",
           getCurrentName: "benefit",
+          linkType : 'link',
+          link : '/benefit',
         },
         {
           txt: "베스트",
           getCurrentName: "best",
+          linkType : 'link',
+          link : '/best',
         },
         {
           txt: "신상특가",
           getCurrentName: "special",
+          linkType : 'link',
+          link : '/newpage',
         },
         {
           txt: "트렌드",
           getCurrentName: "trend",
+          linkType : 'link',
+          link : '/timedeal',
         },
         {
           txt: "브랜드",
           getCurrentName: "brand",
+          linkType : 'link',
+          link : '/brand',
         },
         {
           txt: "뷰티스토어",
           getCurrentName: "beauty",
+          linkType : 'link',
+          link : '/todaydelivery',
         },
       ],
       subItems: [
@@ -226,7 +244,7 @@ export default {
       });
     },
     showList(titleItems) {
-      if(titleItems.getCurrentName === 'trend') {
+      if(titleItems.getCurrentName === 'trend' || 'brand' || 'beauty') {
         this.listOne = true
       } else {
         this.listOne = false
@@ -514,10 +532,11 @@ export default {
     z-index: 999;
     overflow: visible;
     .inner {
-      width: 1200px;
+      max-width: 1200px;
       margin: 0 auto;
       .header-nav-container {
         position: static;
+        padding: 0 12px;
         .swiper-wrapper {
           position: static;
           padding: 0 12px 0 12px;
@@ -571,7 +590,8 @@ export default {
 
             .wrap-item {
               display: block;
-              border-top: 1px solid #d3d7df;
+              //border-top: 1px solid #d3d7df;
+              border-bottom: 1px solid #d3d7df;
               width: 100%;
               position: absolute;
               left: 0;
@@ -583,6 +603,7 @@ export default {
               &.on {
                 max-height: 2400px;
                 transition: max-height .5s ease-in-out;
+                border-top: 1px solid #d3d7df;
               }
               .inner{
                 max-width: 1200px;

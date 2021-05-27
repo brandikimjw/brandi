@@ -7,11 +7,12 @@ import TimeDeal from '@/components/TimeDeal'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'PageMain',
-      component: PageMain
+      name: 'home',
+      component: PageMain,
     },
     {
       path: '/newpage',
