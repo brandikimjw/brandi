@@ -199,14 +199,6 @@ export default {
     }
   },
   methods: {
-    setScreenSize() {
-      if (window.innerWidth > 768) {
-        this.isMobile = false;
-      }
-      if (window.innerWidth <= 768) {
-        this.isMobile = true;
-      }
-    },
     navigtationSlide() {
       this.navSlide = new Swiper(".header-nav-container", {
         clickable: true,
@@ -220,25 +212,38 @@ export default {
       });
     },
     showList(titleItems) {
-      if(titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty') {
+      if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' ) {
         this.listOne = true
+        // console.log(true);
       } else {
         this.listOne = false
+        // console.log(false)
       }
     },
     headerSticky(){
-        if(window.innerWidth <= 768){
-        let mobileSticky = document.querySelector('.artc-main');
-        //let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-        //document.querySelector(".pageYOffset").innerText = pageYOffset + screen.height;
-        //console.log(mobileSticky);
-        //console.log(mobileSticky.getBoundingClientRect().top);
-        if ( mobileSticky.getBoundingClientRect().top < 0 ){
-          document.querySelector('.artc-header').style.minHeight = 0
-          mobileSticky.classList.add('fixed')
-        }else {
-          document.querySelector('.artc-header').style.minHeight = '60px'
-          mobileSticky.classList.add('fixed')
+      //카테고리
+      let mobileSticky = document.querySelector('.artc-main');
+      //헤더
+      let webSticky = document.querySelector('.artc-header');
+      //카테고리(49px);
+      let mobileStickyHeight = mobileSticky.offsetHeight;
+      let webStickyHeight = webSticky.offsetHeight;
+      if(this.isMobile) {
+        mobileSticky.style.removeProperty('margin-top')
+        if ( webSticky.getBoundingClientRect().bottom <= 0 ){
+          mobileSticky.classList.add('fixed');
+          webSticky.style.marginBottom = mobileStickyHeight + 'px'
+        } else {
+          mobileSticky.classList.remove('fixed');
+          webSticky.style.removeProperty('margin-bottom')
+        }
+      } else {
+        if ( webSticky.getBoundingClientRect().top <= 0 ){
+          webSticky.classList.add('fixed');
+          mobileSticky.style.marginTop = webStickyHeight + 'px'
+        } else {
+          webSticky.classList.remove('fixed');
+          mobileSticky.style.removeProperty('margin-top')
         }
       }
     }
@@ -252,13 +257,8 @@ export default {
       }
     },
   },
-  created() {
-    this.setScreenSize();
-    this.navigtationSlide();
-    window.addEventListener('resize', this.setScreenSize);
-  },
   mounted() {
-    //this.headerSticky();
+    this.navigtationSlide();
     window.addEventListener('scroll', this.headerSticky);
   }
 };
@@ -392,7 +392,7 @@ export default {
     top:0;
     width:100%;
     transform:translate(-50%, 0);
-    z-index: 99999999;
+    z-index: 9999;
   }
   .inner {
     .header-nav-container {
@@ -424,6 +424,15 @@ export default {
   .header {
     border-bottom: 1px solid #d3d7df;
     .artc-header {
+      background-color: #fff;
+      &.fixed {
+        position:fixed;
+        left:50%;
+        top:0;
+        width:100%;
+        transform:translate(-50%, 0);
+        z-index: 9999;
+      }
       .logo {
           width: 180px;
           height: 42px;
@@ -516,7 +525,7 @@ export default {
             height:40px;
             margin-right: 0px;
 
-            &::after {
+            &:after {
               display: block;
               content: '';
               width: 20px;
@@ -568,8 +577,11 @@ export default {
             &:hover {
               border-bottom: 3px solid #202429;
               padding: 18px 18px 15px 18px;
+              //.artc-main .inner .header-nav-container .swiper-wrapper>a.home[data-v-da66822c]:after
+              &.home:after {
+                display: none;
+              }
             }
-
             &.trend{
              &:hover {
               border-bottom: 3px solid #ff4569;
@@ -588,8 +600,6 @@ export default {
               padding: 18px 18px 15px 18px;
              }
             }
-
-
 
             .wrap-item {
               display: block;

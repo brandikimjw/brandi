@@ -75,6 +75,7 @@ export default {
     a {
       display: block;
       color: #acb3bd;
+      margin: 0 auto;
     }
   }
 

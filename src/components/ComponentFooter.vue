@@ -239,7 +239,7 @@ export default {
       font-style: normal;
       display: flex;
       justify-content: start;
-      margin-top: 4px;
+      margin-bottom: 4px;
       color: #5f6773;
       h3 {
         display: block;
@@ -408,7 +408,7 @@ export default {
       width: 35%;
     }
   }
-    .link-wrap {
+  .link-wrap {
       display: flex;
       justify-content: space-between;
       line-height: 28px;

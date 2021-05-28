@@ -32,14 +32,6 @@ export default {
   },
 
   methods: {
-    setScreenSize() {
-      if (window.innerWidth > 768) {
-        this.isMobile = false;
-      }
-      if (window.innerWidth <= 768) {
-        this.isMobile = true;
-      }
-    },
     BannerSlider() {
       this.subBannerSlider = new Swiper(".sub-swiper-container", {
         slidesPerView: "auto",
@@ -58,14 +50,12 @@ export default {
       if (newVal) {
         this.BannerSlider();
       } else {
-        this.storeSlide.destroy();
+        this.subBannerSlider.destroy();
       }
     },
   },
   mounted() {
-    this.setScreenSize();
     this.BannerSlider();
-    window.addEventListener("resize", this.setScreenSize);
   },
 };
 </script>
