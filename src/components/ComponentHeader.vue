@@ -227,17 +227,19 @@ export default {
       }
     },
     headerSticky(){
-      let mobileSticky = document.querySelector('.artc-main');
-      //let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-      //document.querySelector(".pageYOffset").innerText = pageYOffset + screen.height;
-      //console.log(mobileSticky);
-      //console.log(mobileSticky.getBoundingClientRect().top);
-      if ( mobileSticky.getBoundingClientRect().top < 0 ){
-        document.querySelector('.artc-header').style.minHeight = 0
-        mobileSticky.classList.add('fixed')
-      }else {
-        //mobileSticky.classList.remove('fixed')
-        //document.querySelector('.artc-header').style.minHeight =
+        if(window.innerWidth <= 768){
+        let mobileSticky = document.querySelector('.artc-main');
+        //let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+        //document.querySelector(".pageYOffset").innerText = pageYOffset + screen.height;
+        //console.log(mobileSticky);
+        //console.log(mobileSticky.getBoundingClientRect().top);
+        if ( mobileSticky.getBoundingClientRect().top < 0 ){
+          document.querySelector('.artc-header').style.minHeight = 0
+          mobileSticky.classList.add('fixed')
+        }else {
+          document.querySelector('.artc-header').style.minHeight = '60px'
+          mobileSticky.classList.add('fixed')
+        }
       }
     }
   },

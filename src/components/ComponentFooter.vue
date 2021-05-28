@@ -14,43 +14,58 @@
         <a href="#" target="_blank" class="instagram">인스타그램</a>
       </div>
     </nav>
-    <address class="info-wrap product-list" @click.prevent="$event.target.parentElement.parentElement.parentElement.classList.toggle('active')">
-      <div class="info-company">
-        <div class="tit-h1">
-          <a href="#">(주)브랜디</a>
+    <!-- wraptotal에 전체 보더탑으로 넣기 -->
+    <div class="wrap-total">
+      <address class="info-wrap product-list">
+        <!-- company-wrap추가 -->
+        <div class="company-wrap" @click.prevent="$event.target.parentElement.parentElement.parentElement.classList.toggle('active')">
+          <div class="info-company">
+            <div class="tit-h1">
+              <a href="#">(주)브랜디</a>
+            </div>
+          </div>
+          <div class="brandi-info">
+            <div class="bundle">
+              <span class="part dash">대표이사 : 서정민</span>
+              <span class="part dash">사업자등록번호 : 220-88-93187</span>
+              <span class="part">통신판매업신고 : 2016-서울강남-00359</span>
+            </div>
+            <div class="bundle">
+              <span class="part dash">호스팅사업자 : (주)브랜디</span>
+              <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)<br/></span>
+              <span class="part">개인정보관리책임자 : 윤석호( <a href="#">(privacy@brandi.co.kr)</a> )</span>
+            </div>
+          </div>
+          <p class="alert">
+            브랜디는 통신판매중개자로서 통신판매 당사자가 아니며, 판매자가 등록한 상품정보 및 거래에 브랜디는 책임을 지지 않습니다.
+          </p>
         </div>
-      </div>
-      <div class="brandi-info">
-        <div class="bundle">
-          <span class="part dash">대표이사 : 서정민</span>
-          <span class="part dash">사업자등록번호 : 220-88-93187</span>
-          <span class="part">통신판매업신고 : 2016-서울강남-00359</span>
+        <!-- cs-wrap추가 -->
+        <div class="cs-wrap">
+          <div class="info-cs">
+            <h2 class="tit-h1">고객센터 <a href="#">1566-6575</a> </h2>
+            <div class="info">
+              <h3 class="tit-h2">영업시간</h3>
+              <span>AM 10:00 ~ PM 17:00</span>
+            </div>
+            <div class="info">
+              <h3 class="tit-h2">점심시간</h3>
+              <span>PM 12:30 ~ PM 13:30</span>
+            </div>
+            <div class="info">
+              <h3 class="tit-h2">고객문의</h3>
+              <a href="mailto:brandics@brandi.co.kr"> brandics@brandi.co.kr</a>
+            </div>
+          </div>
         </div>
-        <div class="bundle">
-          <span class="part dash">호스팅사업자 : (주)브랜디</span>
-          <span class="part">주소 : 서울 강남구 테헤란로38길 12 (역삼동) 디앤와이빌딩 (06221)</span>
-          <span class="part">개인정보관리책임자 : 윤석호( <a href="#">(privacy@brandi.co.kr)</a> )</span>
-        </div>
-      </div>
-      <p class="alert">
-        브랜디는 통신판매중개자로서 통신판매 당사자가 아니며, 판매자가 등록한 상품정보 및 거래에 브랜디는 책임을 지지 않습니다.
-      </p>
-      <div class="info-cs">
-        <h2 class="tit-h1">고객센터 <a href="#">1566-6575</a> </h2>
-        <div class="info">
-          <h3 class="tit-h2">영업시간</h3>
-          <span>AM 10:00 ~ PM 17:00</span>
-        </div>
-        <div class="info">
-          <h3 class="tit-h2">점심시간</h3>
-          <span>PM 12:30 ~ PM 13:30</span>
-        </div>
-        <div class="info">
-          <h3 class="tit-h2">고객문의</h3>
-          <a href="mailto:brandics@brandi.co.kr"> brandics@brandi.co.kr</a>
-        </div>
-      </div>
-    </address>
+      </address>
+    </div>
+    <!-- fix버튼 -->
+    <div class="button-wrap">
+      <p class="arrow-top hide-text">위로올라가기</p>
+      <p class="customer hide-text">고객센터</p>
+      <p class="kakao hide-text">카카오톡 채팅 상담하기</p>
+    </div>
   </footer>
 </template>
 
@@ -73,7 +88,6 @@ export default {
   }
   //이용약관 처리방침
   .link-wrap {
-    border-bottom: 1px solid #ebeef2;
     padding: 20px 16px;
     .links-about {
     display: flex;
@@ -133,6 +147,36 @@ export default {
       }
     }
   }
+  .wrap-total {
+    border-top: 1px solid #ebeef2;
+  }
+  .company-wrap {
+    .alert {
+      display: block;
+      font-size: 11px;
+      color: #313842;
+      font-style: normal;
+      margin-top: 8px;
+      line-height: 16px;
+    }
+    &.active {
+      .brandi-info {
+        display: block;
+      }
+      .info-company {
+        .tit-h1 {
+          > a {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .info-wrap {
+    padding: 20px 16px 0;
+  }
   //브랜디 제목
   .info-company {
     font-style: normal;
@@ -168,8 +212,6 @@ export default {
       }
     }
   }
-
-
   //브랜디 정보
   .brandi-info {
     display: none;
@@ -179,33 +221,6 @@ export default {
       font-size: 11px;
       color: #5f6773;
       line-height: 16px;
-    }
-  }
-  .info-wrap {
-    margin-top: 20px;
-    padding: 0 16px 0 16px;
-    .alert {
-      display: block;
-      font-size: 11px;
-      color: #313842;
-      font-style: normal;
-      margin-top: 8px;
-      line-height: 16px;
-    }
-
-    &.active {
-      .brandi-info {
-        display: block;
-      }
-      .info-company {
-        .tit-h1 {
-          > a {
-            &:after {
-              transform: rotate(180deg);
-            }
-          }
-        }
-      }
     }
   }
   .info-cs {
@@ -242,7 +257,34 @@ export default {
       }
     }
   }
+  //버튼
+  .button-wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 78px;
+    bottom: calc(constant(safe-area-inset-bottom) + 78px);
+    bottom: calc(env(safe-area-inset-bottom) + 78px);
+    z-index: 99;
+    width: 42px;
+    //height: 42px;
+    .arrow-top {
+      display: inline-block;
+      width: 40px; height: 40px;
+      background: url(~@/assets/images/ic-top-r@3x.png) no-repeat;
+      background-size: cover;
+    }
+    .customer {
+      display: none;
+    }
+    .kakao {
+      display: none;
+    }
+  }
+
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  .info-wrap {
+    padding: 20px 16px 0;
+  }
   .link-wrap {
     .links-about {
       position: relative;
@@ -337,8 +379,35 @@ export default {
       }
     }
   }
+  //버튼
+  .button-wrap {
+    .customer {
+      display: inline-block;
+      width: 40px; height: 40px;
+      background: url(~@/assets/images/ic-btn-call-r@3x.png) no-repeat;
+      background-size: cover;
+    }
+    .kakao {
+      display: inline-block;
+      width: 40px; height: 40px;
+      background: url(~@/assets/images/ic-btn-kakaocall-r@3x.png) no-repeat;
+      background-size: cover;
+    }
+  }
 }
 @media screen and (min-width: map-get($breakpoints, "large")) {
+  .info-wrap {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    padding: 0 16px;
+    .company-wrap {
+      width: 65%;
+    }
+    .cs-wrap {
+      width: 35%;
+    }
+  }
     .link-wrap {
       display: flex;
       justify-content: space-between;
@@ -440,7 +509,6 @@ export default {
   }
   .brandi-info {
     display: inline-block;
-    width: 70%;
     line-height: 21px;
     box-sizing: content-box;
     .bundle {
@@ -467,10 +535,10 @@ export default {
     }
   }
   .info-wrap {
+    margin-top: 40px;
     position: relative;
     .alert {
       display: inline-block;
-      width: 70%;
       box-sizing: content-box;
       font-size: 14px;
       line-height: 18px;
@@ -500,6 +568,22 @@ export default {
         font-size: 14px;
         line-height: 16px;
       }
+    }
+  }
+
+  //버튼
+  .button-wrap {
+    .customer {
+      display: inline-block;
+      width: 40px; height: 40px;
+      background: url(~@/assets/images/ic-btn-call-r@3x.png) no-repeat;
+      background-size: cover;
+    }
+    .kakao {
+      display: inline-block;
+      width: 40px; height: 40px;
+      background: url(~@/assets/images/ic-btn-kakaocall-r@3x.png) no-repeat;
+      background-size: cover;
     }
   }
 }
