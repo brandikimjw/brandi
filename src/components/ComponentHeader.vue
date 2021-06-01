@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="artc-header">
+    <div ref="artcHeader" class="artc-header">
         <div class="artc-continer product-list">
           <!-- 로고이미지 -->
           <h1 class="logo hide-text"><a href="/" class="link">BRANDI</a></h1>
@@ -26,13 +26,14 @@
           </nav>
         </div>
     </div>
-    <div class="artc-main">
+    <div ref="artcMain" class="artc-main">
       <div class="inner">
         <div class="header-nav-container swiper-container">
             <nav class="swiper-wrapper">
                 <a :href="titleItems.link" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
                   <!-- 트렌드 아이템 -->
-                  <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' " :class="{ on : listOne }">
+                  <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend'" :class="{ on : listOne }">
+                  <!-- <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' " :class="{ on : listOne }"> -->
                     <div class="inner">
                       <ul v-for="(subItems, index) in subItems" :key="index">
                         {{subItems.txt}}
@@ -212,7 +213,8 @@ export default {
       });
     },
     showList(titleItems) {
-      if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' ) {
+      // if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' )
+      if( titleItems.getCurrentName === 'trend') {
         this.listOne = true
         // console.log(true);
       } else {
@@ -221,45 +223,59 @@ export default {
       }
     },
     headerSticky(){
-      //카테고리
-      let mobileSticky = document.querySelector('.artc-main');
-      //헤더
-      let webSticky = document.querySelector('.artc-header');
+      //배너
+      const headerBanner = document.querySelector('.banner_wrap');
       //카테고리(49px);
-      let mobileStickyHeight = mobileSticky.offsetHeight;
-      let webStickyHeight = webSticky.offsetHeight;
+      const mobileStickyHeight = mobileSticky.offsetHeight;
+      const webStickyHeight = webSticky.offsetHeight;
+      const headerBannerHeight = headerBanner ? headerBanner.offsetHeight : 0;
       if(this.isMobile) {
-        mobileSticky.style.removeProperty('margin-top')
         if ( webSticky.getBoundingClientRect().bottom <= 0 ){
-          mobileSticky.classList.add('fixed');
-          webSticky.style.marginBottom = mobileStickyHeight + 'px'
+          $refs.artcMain.classList.add('fixed');
+          $refs.artcHeader.style.marginBottom = mobileStickyHeight + 'px'
         } else {
-          mobileSticky.classList.remove('fixed');
-          webSticky.style.removeProperty('margin-bottom')
+          $refs.artcMain.classList.remove('fixed');
+          $refs.artcHeader.style.removeProperty('margin-bottom')
         }
       } else {
         if ( webSticky.getBoundingClientRect().top <= 0 ){
-          webSticky.classList.add('fixed');
-          mobileSticky.style.marginTop = webStickyHeight + 'px'
+          $refs.artcHeader.classList.add('fixed');
+          $refs.artcMain.style.marginTop = (webStickyHeight - headerBannerHeight) + 'px'
         } else {
-          webSticky.classList.remove('fixed');
-          mobileSticky.style.removeProperty('margin-top')
+          $refs.artcHeader.classList.remove('fixed');
+          $refs.artcMain.style.removeProperty('margin-top')
         }
       }
-    }
+    },
+    // resetMargin() {
+    //   const mobileSticky = document.querySelector('.artc-main');
+    //   const webSticky = document.querySelector('.artc-header');
+    //   if(this.isMobile){
+    //     mobileSticky.style.marginTop = 0;
+    //     webSticky.classList.remove('fixed');
+    //   }else {
+    //     mobileSticky.classList.remove('fixed');
+    //   }
+    // }
   },
   watch: {
     isMobile(newVal) {
       if (newVal) {
         this.navigtationSlide();
+        this.$refs.artcMain.style.marginTop = 0;
+        this.$refs.artcHeader.classList.remove('fixed');
       } else {
         this.navSlide.destroy();
+        this.$refs.artcMain.classList.remove('fixed');
       }
     },
   },
   mounted() {
+    // console.log('refs:::', this.$refs)
+    // console.log('refs.artcMain:::', this.$refs.artcMain)
     this.navigtationSlide();
     window.addEventListener('scroll', this.headerSticky);
+    // window.addEventListener('resize', this.resetMargin)
   }
 };
 </script>
@@ -298,7 +314,7 @@ export default {
           height: 28px;
           background-size: cover;
           position: absolute;
-          right: 60px; top: 14px;
+          right: 60px; top: 43px;
         }
       }
     }
@@ -629,6 +645,7 @@ export default {
                   padding: 32px 20px;
                   box-sizing: border-box;
                   color: #202429;
+                  text-align: left;
                   font-size: 16px;
                   font-weight: bold;
                   width: calc(100%/6);

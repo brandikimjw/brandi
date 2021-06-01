@@ -1,6 +1,6 @@
 <template>
   <div id="wrap">
-    <!-- <SubBanner /> -->
+    <HeaderBanner />
     <div id="header">
       <Header />
     </div>
@@ -20,7 +20,7 @@
 import Header from "./components/ComponentHeader";
 import Footer from "./components/ComponentFooter";
 import TabBar from "./components/TabBar";
-// import SubBanner from './components/SubBanner'
+import HeaderBanner from './components/HeaderBanner'
 import mixin from './common'
 
 export default {
@@ -29,7 +29,7 @@ export default {
     Header,
     Footer,
     TabBar,
-    // SubBanner
+    HeaderBanner,
   },
 };
 </script>
