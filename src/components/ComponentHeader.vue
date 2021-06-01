@@ -5,13 +5,16 @@
           <!-- 로고이미지 -->
           <h1 class="logo hide-text"><a href="/" class="link">BRANDI</a></h1>
           <!-- form 버튼,인풋 -->
-          <form method="get" action="/search" class="form-search">
+          <div action="/search" class="form-search">
             <div class="form-cont">
               <input type="search" aria-label="검색어 입력란" class="input-search" />
-              <button type="submit" name="search" class="button-search hide-text">검색</button>
+              <button type="button" name="search" class="button-search hide-text" @click="firstOpen = true">검색</button>
+                  <FormModal :open="firstOpen" @close="firstOpen = false">
+                    <h1>검색창 나오게 하기</h1>
+                  </FormModal>
               <input type="hidden" name="r" value="/" />
             </div>
-          </form>
+          </div>
           <!-- //form 버튼,인풋 -->
           <!-- 장바구니/짬하기/마이페이지 -->
           <nav class="nav-mine">
@@ -52,9 +55,11 @@
   </header>
 </template>
 <script>
+import FormModal from '@/components/FormModal'
 export default {
   name: "Header",
   components: {
+    FormModal,
   },
   data() {
     return {
@@ -64,6 +69,7 @@ export default {
       isMobile: '',
       currentIndex : '1',
       currentIndex : 0,
+      firstOpen: false,
       titleItems: [
         {
           txt: "홈",
@@ -226,24 +232,27 @@ export default {
       //배너
       const headerBanner = document.querySelector('.banner_wrap');
       //카테고리(49px);
+      const mobileSticky = document.querySelector('.artc-main');
+      const webSticky = document.querySelector('.artc-header');
       const mobileStickyHeight = mobileSticky.offsetHeight;
       const webStickyHeight = webSticky.offsetHeight;
       const headerBannerHeight = headerBanner ? headerBanner.offsetHeight : 0;
       if(this.isMobile) {
         if ( webSticky.getBoundingClientRect().bottom <= 0 ){
-          $refs.artcMain.classList.add('fixed');
-          $refs.artcHeader.style.marginBottom = mobileStickyHeight + 'px'
+          mobileSticky.classList.add('fixed');
+          webSticky.style.marginBottom = mobileStickyHeight + 'px'
         } else {
-          $refs.artcMain.classList.remove('fixed');
-          $refs.artcHeader.style.removeProperty('margin-bottom')
+          mobileSticky.classList.remove('fixed');
+          webSticky.style.removeProperty('margin-bottom')
         }
       } else {
         if ( webSticky.getBoundingClientRect().top <= 0 ){
-          $refs.artcHeader.classList.add('fixed');
-          $refs.artcMain.style.marginTop = (webStickyHeight - headerBannerHeight) + 'px'
+          webSticky.classList.add('fixed');
+          // mobileSticky.style.marginTop = (webStickyHeight - headerBannerHeight) + 'px'
+          mobileSticky.style.marginTop = (webStickyHeight - headerBannerHeight) + 'px'
         } else {
-          $refs.artcHeader.classList.remove('fixed');
-          $refs.artcMain.style.removeProperty('margin-top')
+          webSticky.classList.remove('fixed');
+          mobileSticky.style.removeProperty('margin-top')
         }
       }
     },
@@ -255,6 +264,13 @@ export default {
     //     webSticky.classList.remove('fixed');
     //   }else {
     //     mobileSticky.classList.remove('fixed');
+    //   }
+    // }
+    // clickEvent(){
+    //   if(this.isMobile){
+    //     this.$refs.btnSearch.classList.add('searching');
+    //   } else {
+    //     this.$refs.btnSearch.classList.remove('searching');
     //   }
     // }
   },
@@ -275,6 +291,7 @@ export default {
     // console.log('refs.artcMain:::', this.$refs.artcMain)
     this.navigtationSlide();
     window.addEventListener('scroll', this.headerSticky);
+    // window.addEventListener('click', this.clickEvent);
     // window.addEventListener('resize', this.resetMargin)
   }
 };
@@ -286,6 +303,7 @@ export default {
   border-bottom: 1px solid #d3d7df;
   .artc-header {
     border-bottom: 1px solid #ebeef2;
+    position: relative;
     .artc-continer {
       flex-wrap:nowrap;
       justify-content:space-between;
@@ -304,6 +322,9 @@ export default {
       .form-cont {
         // display: flex;
         // flex: wrap;
+        width: 100px;
+        height: 38px;
+        position: static;
         input {
           display: none;
         }
@@ -314,7 +335,7 @@ export default {
           height: 28px;
           background-size: cover;
           position: absolute;
-          right: 60px; top: 43px;
+          right: 60px; top: 14px;
         }
       }
     }
@@ -469,6 +490,12 @@ export default {
           margin-right: 40px;
           border-bottom: 2px solid #202429;
           position: relative;
+
+          .mobile-search,
+          .searching {
+            display: none;
+          }
+
           .button-search {
             position: absolute;
             right: 0%;

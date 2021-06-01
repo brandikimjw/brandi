@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "CommonTitle",
+  name: "HeaderBanner",
   data() {
     return {
     };
@@ -17,17 +17,17 @@ export default {
   computed: {
     bannerImg(){
       let imgArray = new Array();
-      imgArray[0]= './src/assets/images/bannerImage_m.jpeg'
-      imgArray[1]= '~@/assets/images/bannerImage_w.jpeg';
+      imgArray[0]= require('../assets/images/bannerImage_m.jpeg');
+      imgArray[1]= require('../assets/images/bannerImage_w.jpeg');
       if(this.isMobile){
-        // objImg.url = imgArray[0];
         return imgArray[0];
+
       } else{
-        // objImg.src=imgArray[1];
+        return imgArray[1];
       }
     }
   },
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -35,11 +35,20 @@ export default {
 .banner_wrap {
   > a {
     display: block;
+    line-height: 0;
     img {
       max-width: 100%;
     }
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  .banner_wrap {
+  > a {
+    display: block;
+    img {
+      max-width: 100%;
+    }
+  }
+}
 }
 </style>
