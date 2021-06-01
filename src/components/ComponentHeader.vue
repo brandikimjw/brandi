@@ -33,13 +33,13 @@
       <div class="inner">
         <div class="header-nav-container swiper-container">
             <nav class="swiper-wrapper">
-                <a :href="titleItems.link" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
+                <a ref="itemWrap" :href="titleItems.link" v-for="(titleItems, index) in titleItems" :key="index" :class="titleItems.getCurrentName + (' swiper-slide')" @mouseover="showList(titleItems)" @mouseleave="listOne = false">{{ titleItems.txt }}
                   <!-- 트렌드 아이템 -->
                   <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend'" :class="{ on : listOne }">
                   <!-- <div class="wrap-item" v-if=" titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' " :class="{ on : listOne }"> -->
                     <div class="inner">
                       <ul v-for="(subItems, index) in subItems" :key="index">
-                        {{subItems.txt}}
+                        <a href="#">{{subItems.txt}}</a>
                         <li v-for="(subItems, index) in subItems.subItems" :key="index">
                           <a href="#">{{ subItems.item }}</a>
                         </li>
@@ -222,6 +222,8 @@ export default {
       // if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' )
       if( titleItems.getCurrentName === 'trend') {
         this.listOne = true
+        //this.$refs.itemWrap.contains(document.activeElement)
+        console.log(this.$refs.itemWrap.includes(document.activeElement))
         // console.log(true);
       } else {
         this.listOne = false
