@@ -222,12 +222,10 @@ export default {
       // if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' )
       if( titleItems.getCurrentName === 'trend') {
         this.listOne = true
-        //this.$refs.itemWrap.contains(document.activeElement)
-        console.log(this.$refs.itemWrap.includes(document.activeElement))
-        // console.log(true);
+        //console.log(this.$refs.itemWrap[5].contains(document.activeElement))
+        this.$refs.itemWrap[5].contains(document.activeElement)
       } else {
         this.listOne = false
-        // console.log(false)
       }
     },
     headerSticky(){
@@ -239,6 +237,7 @@ export default {
       const mobileStickyHeight = mobileSticky.offsetHeight;
       const webStickyHeight = webSticky.offsetHeight;
       const headerBannerHeight = headerBanner ? headerBanner.offsetHeight : 0;
+      this.$refs.artcHeader.classList.remove('fixed');
       if(this.isMobile) {
         if ( webSticky.getBoundingClientRect().bottom <= 0 ){
           mobileSticky.classList.add('fixed');
