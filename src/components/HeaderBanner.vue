@@ -21,7 +21,6 @@ export default {
       imgArray[1]= require('../assets/images/bannerImage_w.jpeg');
       if(this.isMobile){
         return imgArray[0];
-
       } else{
         return imgArray[1];
       }
@@ -33,6 +32,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .banner_wrap {
+  position: relative;
+  z-index: 10000;
   > a {
     display: block;
     line-height: 0;
@@ -42,5 +43,6 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+
 }
 </style>

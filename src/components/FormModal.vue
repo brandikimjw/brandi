@@ -1,6 +1,6 @@
 <template>
     <transition name="fade-shrink-in">
-      <div v-show="open">
+      <div class="btn-modal-wrap" v-show="open">
         <!-- <div v-show="open" class="dim"> -->
         <div class="inner">
           <div class="btn-modal">
@@ -19,8 +19,12 @@ export default {
   props: ["open"],
   methods: {
     close() {
-      this.$emit("close")
-    }
+      if(this.isMobile){
+        this.$emit("close")
+      }else{
+
+      }
+    },
   }
 }
 </script>
@@ -65,7 +69,7 @@ export default {
   &:after{
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     background-color: rgba(0,0,0,0.7);
     width: 100%;
     height: 100vh;
@@ -85,6 +89,6 @@ export default {
 // }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
  .fade-shrink-in {display: none;}
- .dim {display: none;}
+ .btn-modal-wrap {display: none;}
 }
 </style>

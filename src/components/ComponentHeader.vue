@@ -10,7 +10,7 @@
               <input type="search" aria-label="검색어 입력란" class="input-search" />
               <button type="button" name="search" class="button-search hide-text" @click="firstOpen = true">검색</button>
                   <FormModal :open="firstOpen" @close="firstOpen = false">
-                    <h1>검색창 나오게 하기</h1>
+                    <h2>검색창</h2>
                   </FormModal>
               <input type="hidden" name="r" value="/" />
             </div>
@@ -288,12 +288,8 @@ export default {
     },
   },
   mounted() {
-    // console.log('refs:::', this.$refs)
-    // console.log('refs.artcMain:::', this.$refs.artcMain)
     this.navigtationSlide();
     window.addEventListener('scroll', this.headerSticky);
-    // window.addEventListener('click', this.clickEvent);
-    // window.addEventListener('resize', this.resetMargin)
   }
 };
 </script>
@@ -430,7 +426,7 @@ export default {
     top:0;
     width:100%;
     transform:translate(-50%, 0);
-    z-index: 9999;
+    z-index: 99;
   }
   .inner {
     .header-nav-container {
@@ -469,7 +465,20 @@ export default {
         top:0;
         width:100%;
         transform:translate(-50%, 0);
-        z-index: 9999;
+        z-index: 99;
+        .artc-continer {
+          padding: 16px 20px;
+        }
+        .logo {
+          width: 136px;
+          height: 22px;
+          .link {
+            background: url(~@/assets/images/14-ic-01-logo-sign-ic-logo-branditxt@3x.png) no-repeat;
+            width: 136px;
+            height: 22px;
+            background-size: 100% 100%;
+          }
+        }
       }
       .logo {
           width: 180px;
@@ -585,7 +594,7 @@ export default {
   //GNB메뉴
   .artc-main {
     position: relative;
-    z-index: 999;
+    z-index: 99;
     overflow: visible;
     .inner {
       max-width: 1200px;
