@@ -2,8 +2,9 @@
   <div id="adaptive" class="main-banner">
     <div ref="mainBanner" class="swiper-container">
       <ul class="swiper-wrapper">
-        <li class="swiper-slide" v-for="(item, index) in mainBannerList" :key="index">
-          <img :src="item.image_url" :alt="`배너 슬라이드 ${index+1}`">
+        <li class="swiper-slide" v-for="(item, index) in mainBannerList" :key="item.id">
+          <img :src="item.image_url" :key="index" alt="이미지슬라이드">
+          <!-- <img src="~@/assets/images/bannerImage03.jpeg" alt=""> -->
         </li>
       </ul>
       <!-- 배너 버튼 영역 -->
@@ -19,12 +20,29 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "MainBanner",
   data() {
     return {
       cnt : 0,
       slideDisplay : 0,
+      mainBannerList : [
+        {
+          tit : '이미지 슬라이드1',
+          txt : '',
+          item : '',
+          // image_url : '../../assets/images/imagesbannerImage03.jpeg'
+          image_url : ('../../assets/images/imagesbannerImage03.jpeg')
+          // image_url : '/static/img/bannerImage03.5b7068b.jpeg'
+        },
+        {
+          tit : '이미지 슬라이드2',
+          txt : '',
+          item : '',
+          // image_url : '@/assets/images/bannerImage03.jpeg'
+        },
+      ]
     };
   },
   methods : {
@@ -50,10 +68,10 @@ export default {
         centeredSlides : true,
         allowTouchMove : false,
         speed : 600,
-        autoplay : {
-          delay : 3000,
-          disableOnInteraction : false,
-        },
+        // autoplay : {
+        //   delay : 3000,
+        //   disableOnInteraction : false,
+        // },
         navigation : {
           prevEl : '#adaptive .swiper-button-prev',
           nextEl : '#adaptive .swiper-button-next',
@@ -104,6 +122,11 @@ export default {
   mounted() {
     const vm = this
     this.initSlider()
+  },
+  computed : {
+    // mainBannerList() {
+
+    // }
   }
 };
 </script>
@@ -233,10 +256,11 @@ export default {
             line-height: 0;
           }
           &.btn-banner-start{
-            //background: url('#{$imgUrl}/ic-play-m@3x.png') no-repeat center rgba(32, 36, 41, 0.8);
+            background: url(~@/assets/images/ic-play-r@3x.png) no-repeat;
             background-size: 50%;
           }
           &.btn-banner-stop{
+            background: url(~@/assets/images/ic-stop-r@3x.png) no-repeat;
             //background: url('#{$imgUrl}/ic-stop-m@3x.png') no-repeat center rgba(32, 36, 41, 0.8);
             background-size: 50%;
           }
