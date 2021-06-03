@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ButtonCommon from "./ButtonCommon";
+import ButtonCommon from '../common/ButtonCommon';
 export default {
   name: "FavorStoreLink",
   components: {

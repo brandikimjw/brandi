@@ -99,13 +99,13 @@
 </template>
 
 <script>
-import CommonTitle from "./CommonTitle";
-import MarketList from "./MarketList";
-import SubBanner from "./SubBanner";
-import ProductNormal from "./ProductNormal";
-import ButtonCommon from "./ButtonCommon";
-import TabTitle from "./TabTitle";
-import FavorStoreLink from "./FavorStoreLink";
+import CommonTitle from '../common/CommonTitle';
+import MarketList from './MarketList';
+import SubBanner from '../SubBanner';
+import ProductNormal from '../main/ProductNormal';
+import ButtonCommon from '../common/ButtonCommon';
+import TabTitle from '../common/TabTitle';
+import FavorStoreLink from '../new/FavorStoreLink';
 
 export default {
   name: "newpage",

@@ -14,6 +14,16 @@
   }
 }
 
+/// clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
 /// Make a context based selector a little more friendly
 /// @author Kitty Giraudel
 /// @param {String} $context

@@ -55,7 +55,7 @@
   </header>
 </template>
 <script>
-import FormModal from '@/components/FormModal'
+import FormModal from './FormModal'
 export default {
   name: "Header",
   components: {

@@ -297,15 +297,15 @@
 </template>
 
 <script>
-import MainSwiper from "./MainSwiper";
-import NavTitle from "./NavTitle";
-import ProductNormal from "./ProductNormal";
-import ButtonCommon from "./ButtonCommon";
-import SpecialItem from "./SpecialItem";
-import ButtonTitle from "./ButtonTitle";
-import OnedayTitle from "./OnedayTitle";
-import RisePop from "./RisePop";
-import SubBannerSwiper from "./SubBannerSwiper";
+import MainSwiper from '../main/MainSwiper';
+import NavTitle from '../common/NavTitle';
+import ProductNormal from '../main/ProductNormal';
+import ButtonCommon from '../common/ButtonCommon';
+import SpecialItem from '../main/SpecialItem';
+import ButtonTitle from '../common/ButtonTitle';
+import OnedayTitle from '../common/OnedayTitle';
+import RisePop from '../main/RisePop';
+import SubBannerSwiper from '../SubBannerSwiper';
 
 export default {
   name: "PageMain",

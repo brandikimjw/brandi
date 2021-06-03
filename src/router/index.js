@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PageMain from '@/components/PageMain'
-import PageNewTab from '@/components/PageNewTab'
-import TimeDeal from '@/components/TimeDeal'
+import PageMain from '@/components/main/PageMain'
+import PageNewTab from '@/components/new/PageNewTab'
+import TimeDeal from '@/components/main/TimeDeal'
 
 Vue.use(Router)
 

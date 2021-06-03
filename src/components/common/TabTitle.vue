@@ -97,8 +97,8 @@
 </template>
 
 <script>
-import ProductNormal from "./ProductNormal";
-import ButtonCommon from "./ButtonCommon";
+import ProductNormal from '../main/ProductNormal';
+import ButtonCommon from './ButtonCommon';
 export default {
   name: "TabTitle",
   components: {

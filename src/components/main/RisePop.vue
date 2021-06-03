@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import ProductNormal from "./ProductNormal";
+import ProductNormal from '../main/ProductNormal';
 export default {
   name: "RisePop",
   components: {
