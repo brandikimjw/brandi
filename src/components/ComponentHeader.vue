@@ -5,7 +5,7 @@
           <!-- 로고이미지 -->
           <h1 class="logo hide-text"><a href="/" class="link">BRANDI</a></h1>
           <!-- form 버튼,인풋 -->
-          <div action="/search" class="form-search">
+          <form action="/search" class="form-search">
             <div class="form-cont">
               <input type="search" aria-label="검색어 입력란" class="input-search" />
               <button type="button" name="search" class="button-search hide-text" @click="firstOpen = true">검색</button>
@@ -14,7 +14,7 @@
                   </FormModal>
               <input type="hidden" name="r" value="/" />
             </div>
-          </div>
+          </form>
           <!-- //form 버튼,인풋 -->
           <!-- 장바구니/짬하기/마이페이지 -->
           <nav class="nav-mine">
@@ -220,6 +220,7 @@ export default {
     },
     showList(titleItems) {
       // if( titleItems.getCurrentName === 'trend' || titleItems.getCurrentName === 'brand' || titleItems.getCurrentName === 'beauty' )
+      console.log(titleItems);
       if( titleItems.getCurrentName === 'trend') {
         this.listOne = true
         //console.log(this.$refs.itemWrap[5].contains(document.activeElement))
@@ -594,7 +595,7 @@ export default {
   //GNB메뉴
   .artc-main {
     position: relative;
-    z-index: 99;
+    //z-index: 99;
     overflow: visible;
     .inner {
       max-width: 1200px;
@@ -657,7 +658,7 @@ export default {
             .wrap-item {
               display: block;
               //border-top: 1px solid #d3d7df;
-              border-bottom: 1px solid #d3d7df;
+
               width: 100%;
               position: absolute;
               left: 0;
@@ -670,6 +671,7 @@ export default {
                 max-height: 2400px;
                 transition: max-height .5s ease-in-out;
                 border-top: 1px solid #d3d7df;
+                border-bottom: 1px solid #d3d7df;
               }
               .inner{
                 max-width: 1200px;

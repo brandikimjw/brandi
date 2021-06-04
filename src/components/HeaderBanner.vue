@@ -43,6 +43,18 @@ export default {
   }
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-
+  .banner_wrap {
+  position: relative;
+  z-index: 10000;
+  > a {
+    display: block;
+    line-height: 0;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
 }
 </style>

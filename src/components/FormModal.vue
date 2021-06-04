@@ -3,11 +3,11 @@
       <div class="btn-modal-wrap" v-show="open">
         <!-- <div v-show="open" class="dim"> -->
         <div class="inner">
-          <div class="btn-modal">
+          <form class="btn-modal">
             <input type="search" aria-label="검색어 입력란" class="input-search" />
             <button class="mobile-btn hide-text" @click="close">Close</button>
             <input type="hidden" name="r" value="/" />
-          </div>
+          </form>
         </div>
         <div class="dim" @click="close"></div>
       </div>
@@ -80,7 +80,7 @@ export default {
 }
 .fade-shrink-in-enter-active,
 .fade-shrink-in-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 // .fade-shrink-in-enter,
 // .fade-shrink-in-leave-to {
