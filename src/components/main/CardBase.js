@@ -27,11 +27,15 @@ export default {
     className: {
       type: String,
       default: ''
+    },
+    imageUrl: {
+      type: String,
+      default: ''
     }
   },
-  methods: {
-    numberToReadableString(number) {
-      return `${number} 변환값`
-    }
-  }
+  // methods: {
+  //   numberToReadableString(number) {
+  //     return `${number} 변환값`
+  //   }
+  // }
 }
