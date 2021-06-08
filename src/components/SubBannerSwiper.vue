@@ -4,15 +4,13 @@
     <div class="swiper-container sub-swiper-container">
       <ul class="swiper-wrapper sub-swiper-wrap">
         <li class="swiper-slide">
-          <a href="#"
-            ><img
+          <a href="#"><img
               src="../assets/images/mainbanner02.jpeg"
               alt="서브배너 슬라이드 이미지1"
           /></a>
         </li>
         <li class="swiper-slide">
-          <a href="#"
-            ><img
+          <a href="#"><img
               src="~@/assets/images/mainbanner02.jpeg"
               alt="서브배너 슬라이드 이미지2"
           /></a>

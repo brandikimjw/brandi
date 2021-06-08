@@ -2,21 +2,21 @@
   <div class="product-item">
     <div class="thumb">
       <a href="#">
-        <div class="thumb-img hide-text">{{ imageUrl }}</div>
-        <div class="badge-idx">{{ orderBadge }}</div>
+        <div class="thumb-img hide-text">{{ productItem.imageUrl }}</div>
+        <div class="badge-idx">{{ productItem.orderBadge }}</div>
       </a>
     </div>
     <div class="wrap-info">
       <div class="product-info">
         <div class="sellor">
-          <a href="#">{{ sellorName }}</a>
+          <a href="#">{{ productItem.sellorName }}</a>
         </div>
         <div v-show="isOneDayShipping" class="oneday-svg"></div>
       </div>
-      <em class="product-title"><a class="proudct-name" href="#">{{ productName }}</a></em>
+      <em class="product-title"><a class="proudct-name" href="#">{{ productItem.productName }}</a></em>
       <div class="info-price">
-        <strong v-if="discountRate" class="dc">{{ discountRate }}%</strong>
-        <em class="dc-price">{{ price }}</em>
+        <strong v-if="discountRate" class="dc">{{ productItem.discountRate }}%</strong>
+        <em class="dc-price">{{ productItem.price }}</em>
       </div>
     </div>
   </div>
@@ -24,11 +24,14 @@
 
 <script>
 import CardMixin from "./CardBase";
+import Item from "./Item.json"
 export default {
   name: "CardItemSmall",
   mixins: [CardMixin],
   data() {
-    return {};
+    return {
+      Item: Item
+    };
   },
 };
 </script>

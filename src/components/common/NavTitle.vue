@@ -1,6 +1,6 @@
 <template>
   <div class="title-nav">
-    <h2 class="title-nav-tit">TODAY 베스트</h2>
+    <h2 class="title-nav-tit">{{nav.title}}</h2>
     <ul class="title-nav-box">
       <li class="title-nav-txt" v-for="(item, index) in testList" :key="index">
         <a href="#" @click.prevent="clickMenu2(index)" :class="{ on : index === currentIndex2 }">{{ item.txt }}</a>
@@ -16,6 +16,12 @@ export default {
     return {
       currentIndex : '1',
       currentIndex2 : 0,
+      nav : [
+        {
+          id : '1',
+          title : '전체',
+        }
+      ],
       testList : [
         {
           txt : '전체',

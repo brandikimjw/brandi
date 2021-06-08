@@ -1,8 +1,8 @@
 <template>
   <div class="button-common">
-    <a href="#">
+    <a class="more" href="#">
       <!-- <span class="btn-tit">베스트</span> -->
-      <span class="btn-more">TodayBest 더보기 &gt;</span>
+      <span class="btn-more">{{ name }} 더보기 &gt;</span>
       <slot></slot>
     </a>
   </div>
@@ -11,6 +11,12 @@
 <script>
 export default {
   name: "ButtonCommon",
+  props : {
+    name: {
+      type: String,
+      default:"",
+    },
+  },
   data() {
     return {};
   },

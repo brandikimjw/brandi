@@ -80,7 +80,7 @@
           :price="80000"
         />
       </div>
-      <ButtonCommon />
+      <ButtonCommon name='신상' />
     </article>
     <article class="main-new product-list">
       <!-- <h5>신상모아보기</h5> -->
@@ -141,7 +141,7 @@
           :price="50000"
         />
       </div>
-      <ButtonCommon />
+      <ButtonCommon name='하루 배송 상품' />
     </article>
     <aside class="main-sub-banner product-list">
       <!-- <h5>배너</h5> -->
@@ -188,7 +188,7 @@
           :price="50000"
         />
       </div>
-      <ButtonCommon />
+      <ButtonCommon name='투데이 베스트' />
     </article>
     <article class="main-special product-list">
       <!-- <h5>놓칠 수 없는 브랜디 특가</h5> -->
@@ -282,7 +282,7 @@
           :price="50000"
         />
       </div>
-      <ButtonCommon />
+      <ButtonCommon name='신상품' />
     </article>
     <article class="main-rise-pop product-list">
       <!-- <h5>지금 뜨고있는 기획전</h5> -->
@@ -291,7 +291,7 @@
         <RisePop />
         <RisePop />
       </div>
-      <ButtonCommon />
+      <ButtonCommon name='기획전' />
     </article>
   </div>
 </template>

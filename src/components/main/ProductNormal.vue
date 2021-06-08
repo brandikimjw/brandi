@@ -1,6 +1,5 @@
 <template>
   <div class="product-item-wrap">
-
   </div>
 </template>
 

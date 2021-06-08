@@ -1,21 +1,11 @@
 <template>
   <div class="title-nav">
-    <h2 class="today-tit">TODAY 베스트</h2>
+    <h2 class="today-tit">지금 뜨고 있는 브랜디 혜택</h2>
     <ul class="arrow-wrap">
       <div class="arrow-num"><span>1</span>/<span>2</span></div>
       <div class="arrow-box">
-        <button
-          type="button"
-          aria-label="이전 리스트 이동"
-          class="button-prev"
-          disabled="disabled"
-        ></button>
-        <button
-          type="button"
-          aria-label="다음 리스트 이동"
-          class="button-next"
-          disabled="disabled"
-        ></button>
+        <button type="button" aria-label="이전 리스트 이동" class="button-prev" disabled="disabled"></button>
+        <button type="button" aria-label="다음 리스트 이동" class="button-next" disabled="disabled"></button>
       </div>
     </ul>
   </div>
