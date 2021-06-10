@@ -2,19 +2,22 @@ export default {
   props: {
     sellorName: {
       type: String,
-      required: true
+      // required: true
+      default: ''
     },
     productName: {
       type: String,
-      required: true
+      // required: true
+      default: ''
     },
     price: {
       type: Number,
-      required: true
+      // required: true
+      default: 0
     },
     isOneDayShipping: {
       type: Boolean,
-      default: false
+      default: true
     },
     discountRate: {
       type: Number,

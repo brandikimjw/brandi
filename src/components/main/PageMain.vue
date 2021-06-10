@@ -6,140 +6,14 @@
     <article class="main-today product-list">
       <!-- <h5>투데이베스트</h5> -->
       <NavTitle />
-      <div class="today-list">
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="하이버"
-          orderBadge="2"
-          :isOneDayShipping="false"
-          storeName="브랜디"
-          productName="[원조/빅사이즈] 큰달과 레터링 오버핏"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="트렌디"
-          orderBadge="3"
-          :isOneDayShipping="true"
-          storeName="브랜디"
-          productName="데디 퍼프 루즈핏 반팔"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="하이버"
-          orderBadge="4"
-          :isOneDayShipping="true"
-          storeName="브랜디"
-          productName="봄 니트_프렌치오브"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="5"
-          :isOneDayShipping="true"
-          storeName="브랜디"
-          productName="[세탁후그대로!] 퀄리티 좋은 라운드 반팔"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="트렌디"
-          orderBadge="6"
-          :isOneDayShipping="true"
-          storeName="브랜디"
-          productName="조커팬츠"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="트렌디"
-          orderBadge="7"
-          :isOneDayShipping="false"
-          storeName="브랜디"
-          productName="끈나시 브이넥 블라우스 _브링잇"
-          :discountRate="15"
-          :price="80000"
-        />
-        <ProductNormal
-          sellorName="트렌디"
-          orderBadge="8"
-          :isOneDayShipping="true"
-          storeName="브랜디"
-          productName="둥근코 캔버스 스니커즈 뮬 블로퍼 2cm"
-          :discountRate="15"
-          :price="80000"
-        />
-      </div>
+      <ProductWrap />
       <ButtonCommon name='신상' />
     </article>
     <article class="main-new product-list">
       <!-- <h5>신상모아보기</h5> -->
       <NavTitle />
-      <div class="new-list">
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
+      <div class="new-list product-list">
+        <ProductWrap />
       </div>
       <ButtonCommon name='하루 배송 상품' />
     </article>
@@ -306,9 +180,13 @@ import ButtonTitle from '../common/ButtonTitle';
 import OnedayTitle from '../common/OnedayTitle';
 import RisePop from '../main/RisePop';
 import SubBannerSwiper from '../SubBannerSwiper';
+import ProductWrap from './ProductWrap'
 
 export default {
   name: "PageMain",
+  // props: {
+  //   // productList : Array,
+  // },
   components: {
     MainSwiper,
     ProductNormal,
@@ -319,6 +197,7 @@ export default {
     OnedayTitle,
     RisePop,
     SubBannerSwiper,
+    ProductWrap
   },
   data() {
     return {};
