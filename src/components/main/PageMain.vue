@@ -6,7 +6,7 @@
     <!-- TodayBest 카테고리 -->
     <MainList class="main-product-list" :zoningType="'best'" :isTab="true"/>
     <!-- 신상 모아보기 카테고리 -->
-    <MainList class="main-product-list" :zoningType="'new'" :isTab="true"/>
+    <MainList class="main-product-list" :zoningType="'new'" :isTab="true" :isOneDayShipping="false" />
     <!-- 서브배너 -->
     <aside class="main-sub-banner product-list"><SubBannerSwiper /></aside>
     <!-- 신상 모아보기 카테고리 -->
@@ -26,8 +26,7 @@
       </div>
     </article>
     <article class="main-oneday product-list">
-      <!-- <h5>하루배송 상품은 내일 도착</h5> -->
-      <OnedayTitle />
+      <MainList class="main-product-list" :zoningType="'todayDelivery'" :isPager="true" />
       <div class="today-list">
         <ProductNormal
           sellorName="브랜디"
@@ -102,7 +101,6 @@
           :price="50000"
         />
       </div>
-      <ButtonCommon name='신상품' />
     </article>
     <article class="main-rise-pop product-list">
       <!-- <h5>지금 뜨고있는 기획전</h5> -->
@@ -120,7 +118,6 @@
 import MainSwiper from '../main/MainSwiper';
 import MainList from '../main/MainList'
 import SpecialItem from '../main/SpecialItem';
-// import OnedayTitle from '../common/OnedayTitle';
 import RisePop from '../main/RisePop';
 import SubBannerSwiper from '../SubBannerSwiper';
 import ProductWrap from './ProductWrap'
@@ -134,7 +131,6 @@ export default {
     MainSwiper,
     MainList,
     SpecialItem,
-    // OnedayTitle,
     RisePop,
     SubBannerSwiper,
     ProductWrap
@@ -147,5 +143,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+.main-product-list {
+  margin: 0 0 40px 0;
+  padding: 0 16px;
+}
 @import "~@/assets/scss/pages/main";
 </style>

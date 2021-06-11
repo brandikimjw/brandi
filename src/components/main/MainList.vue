@@ -1,7 +1,7 @@
 <template>
-   <article class="main-today product-list">
-      <NavTitle :zoningType="zoningType" :isTab="isTab" :isPager="isPager"/>
-      <ProductWrap />
+   <article class="product-list">
+    <NavTitle :zoningType="zoningType" :isTab="isTab" :isPager="isPager"/>
+      <ProductWrap :isOneDayShipping="isOneDayShipping"/>
       <ButtonCommon :zoningType="zoningType" />
     </article>
 </template>
@@ -17,6 +17,7 @@ export default {
     zoningType : String,
     isTab : Boolean,
     isPager : Boolean,
+    isOneDayShipping: Boolean
   },
   components : {
     NavTitle,
@@ -29,3 +30,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.product-list {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+
+}
+</style>

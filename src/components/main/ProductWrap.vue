@@ -1,6 +1,6 @@
 <template>
     <article>
-      <div class="today-list">
+      <div class="product-wrap">
         <NavTitle />
         <ProductItem v-for="(item, index) in productList" :key="index" :productItem='item' />
       </div>
@@ -9,11 +9,13 @@
 
 <script>
 import ProductItem from './ProductItem'
+import NavTitle from '../common/NavTitle'
 import axios from 'axios';
 export default {
   name: "PageMain",
   components: {
     ProductItem,
+    NavTitle
   },
   created() {
     this.getProductList();
@@ -33,7 +35,6 @@ export default {
 
         // });
     }
-
   },
   data() {
     return {
@@ -52,26 +53,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-//@import "~@/assets/scss/pages/main";
-// .today-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: 0 -4px;
-//   .product-item {
-//     height: 100%;
-//     width: 100%;
-//   }
-// }
-
+.product-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+}
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  //   .today-list {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin: 0 -8px;
-  //   .product-normal {
-  //     height: 100%;
-  //     width: calc(100% / 4);
-  //   }
-  // }
+  .product-wrap {
+  margin: 0 -8px;
+  }
 }
 </style>

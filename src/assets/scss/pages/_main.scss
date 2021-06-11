@@ -1,61 +1,10 @@
-.main-wrapper{
-  overflow: hidden;
-  margin-bottom: 160px;
-}
-//메인스와이퍼
-.main-swiper {
-  margin-bottom: 50px;
-}
-// today베스트
-.main-today {
-  padding: 0 16px 0 16px;
-  .title-nav {
-    overflow: hidden;
-  }
-}
-.today-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -4px;
-  .product-normal {
-    height: 100%;
-    width: calc(100%/2);
-    .thumb {
-      .badge-idx {
-        display: block;
-      }
-    }
-  }
-}
 
-// 신상 모아보기
-.main-new {
+.main-product-list {
   margin-top: 80px;
-  padding: 0 16px 0 16px;
-  .title-nav {
-    overflow: hidden;
-  }
-  .new-list {
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: block;
-    width: calc(100% + 40px);
-    height: 100%;
-    margin: 0 -20px;
-    padding: 0 0 0 16px;
-    white-space: nowrap;
-    .product-normal {
-      display: inline-block;
-      width: calc(100% / 2);
-      padding: 0 4px 20px;
-      vertical-align: top;
-      &:last-child {
-        margin-right: 16px;
-      }
-    }
-  }
 }
-
+.main-rise-pop {
+  margin-top: 80px;
+}
 //서브 배너
 .main-sub-banner {
   margin-top: 60px;
@@ -72,15 +21,6 @@
     margin: 0 -20px;
     padding: 0 0 0 16px;
     white-space: nowrap;
-    .product-normal {
-      display: inline-block;
-      width: calc(100% / 2);
-      padding: 0 4px 20px;
-      vertical-align: top;
-      &:last-child {
-        margin-right: 16px;
-      }
-    }
   }
 }
 
@@ -100,105 +40,108 @@
   }
 }
 
-//하루배송 상품은 내일 도착
-.main-oneday {
-  margin-top: 60px;
-  padding: 0 16px 0 16px;
-  .badge-idx {
-    display: none;
-  }
-}
+// //하루배송 상품은 내일 도착
+// .main-oneday {
+//   margin-top: 60px;
+//   padding: 0 16px 0 16px;
+//   .badge-idx {
+//     display: none;
+//   }
+// }
 
-//지금 뜨고있는 기획전
-.main-rise-pop {
-  margin-top: 60px;
-  padding: 0 16px 0 16px;
-}
+// //지금 뜨고있는 기획전
+// .main-rise-pop {
+//   margin-top: 60px;
+//   padding: 0 16px 0 16px;
+// }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
+  .main-product-list {
+    margin: 0 auto ;
+  }
   //today베스트
   .main-today {
     padding: 0 20px 0 20px;
   }
 
-  // 신상 모아보기
-  .main-new {
-    padding: 0 20px 0 20px;
-    .new-list {
-      overflow: visible;
-      display: flex;
-      flex-wrap: wrap;
-      width: calc(100% + 16px);
-      height: 100%;
-      margin: 0 -8px;
-      padding: 0;
+//   // 신상 모아보기
+//   .main-new {
+//     padding: 0 20px 0 20px;
+//     .new-list {
+//       overflow: visible;
+//       display: flex;
+//       flex-wrap: wrap;
+//       width: calc(100% + 16px);
+//       height: 100%;
+//       margin: 0 -8px;
+//       padding: 0;
 
-      .product-normal {
-        height: 100%;
-        width: calc(100% / 4);
-        padding: 0 8px 30px;
-        .wrap-info {
-          .sellor {
-            font-size: 13px;
-          }
-          .product-title {
-            font-size: 15px;
-          }
-          .info-price{
-            .dc {
-              font-size: 18px;
-            }
-            .dc-price {
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-  }
+//       .product-normal {
+//         height: 100%;
+//         width: calc(100% / 4);
+//         padding: 0 8px 30px;
+//         .wrap-info {
+//           .sellor {
+//             font-size: 13px;
+//           }
+//           .product-title {
+//             font-size: 15px;
+//           }
+//           .info-price{
+//             .dc {
+//               font-size: 18px;
+//             }
+//             .dc-price {
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
   //서브배너
   .main-sub-banner {
     padding: 0 20px 0 20px;
   }
 
-  //당신을 위한 추천
-  .main-recommend {
-    margin-top: 60px;
-    padding: 0 20px 0 20px;
-    .recommend-list {
-      overflow: visible;
-      display: flex;
-      flex-wrap: wrap;
-      width: calc(100% + 16px);
-      height: 100%;
-      margin: 0 -8px;
-      padding: 0;
-      .product-normal {
-        display: block;
-        width: calc(100% / 4);
-        padding: 0 8px 30px;
-        .wrap-info {
-          .sellor {
-            font-size: 13px;
-          }
-          .product-title {
-            font-size: 15px;
-          }
-          .info-price{
-            .dc {
-              font-size: 18px;
-            }
-            .dc-price {
-              font-size: 18px;
-            }
-          }
-        }
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-    }
-  }
+//   //당신을 위한 추천
+//   .main-recommend {
+//     margin-top: 60px;
+//     padding: 0 20px 0 20px;
+//     .recommend-list {
+//       overflow: visible;
+//       display: flex;
+//       flex-wrap: wrap;
+//       width: calc(100% + 16px);
+//       height: 100%;
+//       margin: 0 -8px;
+//       padding: 0;
+//       .product-normal {
+//         display: block;
+//         width: calc(100% / 4);
+//         padding: 0 8px 30px;
+//         .wrap-info {
+//           .sellor {
+//             font-size: 13px;
+//           }
+//           .product-title {
+//             font-size: 15px;
+//           }
+//           .info-price{
+//             .dc {
+//               font-size: 18px;
+//             }
+//             .dc-price {
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//         &:last-child {
+//           margin-right: 0px;
+//         }
+//       }
+//     }
+//   }
 
   //놓칠 수 없는 브랜디 특가
   .main-special {
@@ -236,9 +179,9 @@
       }
 
   }
-  .main-oneday {
-    padding: 0 20px 0 20px;
-  }
+//   .main-oneday {
+//     padding: 0 20px 0 20px;
+//   }
 
   //지금 뜨고있는 기획전
   .main-rise-pop {

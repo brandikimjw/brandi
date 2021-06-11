@@ -12,7 +12,7 @@
         <div class="sellor">
           <a href="#">{{ productItem.sellorName }}</a>
         </div>
-        <div class="oneday-svg" :isOneDayShipping="true" :style='{ backgroundImage: `url(${productItem.onedaySvg})` }'></div>
+        <div class="oneday-svg" v-if="isOneDayShipping" :style='{ backgroundImage: `url(${productItem.onedaySvg})` }'></div>
       </div>
       <em class="product-title"><a class="proudct-name" href="#">{{ productItem.productName }}</a></em>
       <div class="info-price">
@@ -38,8 +38,8 @@ export default {
     };
   },
   mounted(){
-  console.log('product:::', this.productItem)
-  console.log('product::', this.isOneDayShipping)
+  // console.log('product:::', this.productItem)
+  // console.log('product::', this.isOneDayShipping)
   }
 };
 </script>
@@ -48,7 +48,7 @@ export default {
 // 컴포넌트 노말
 .product-item {
   width: calc(100%/2);
-  padding: 0 4px 16px;
+  padding: 0 4px 20px;
   .thumb {
     overflow: hidden;
     position: relative;
@@ -153,8 +153,8 @@ export default {
 }
 @media screen and (min-width: map-get($breakpoints, "medium")) {
   .product-item  {
-    padding: 0 8px 20px;
     width: calc(100%/4);
+    padding: 0 8px 20px;
     .wrap-info {
       .sellor {
         font-size: 13px;

@@ -34,12 +34,12 @@ export default{
     return {
       currentIndex : '1',
       currentIndex2 : 0,
-      // props : {
-      //   name: {
-      //     type: String,
-      //     default: '',
-      //   },
-      // },
+      props : {
+        // name: {
+        //   type: String,
+        //   default: '',
+        // },
+      },
       nav : [
         {
           id : '1',
@@ -104,95 +104,137 @@ export default{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-// 타이틀 네브
+// navTitle
 .nav-wrap {
-  h2 {
-    font-size: 30px;
-  }
-}
-.title-nav {
   margin-bottom: 12px;
-  .title-nav-tit {
+  h2 {
+    width:100%;
+    text-align: center;
     font-size: 20px;
-    word-break: break-word;
-    text-align: center;
   }
-  .title-nav-box {
-    text-align: center;
-    .title-nav-txt {
-      display: inline-block;
-      font-size: 14px;
-      color: #808893;
-      margin-left: 5px;
-      &:nth-child(1) {
-        margin-left: 0;
-      }
-      a {
-        display: block;
-        padding: 0 4px 4px;
-        &.on{
-          border-bottom: 2px solid #ff204b;
-          font-weight: 700;
-          color: #ff204b;
+  .title-nav {
+    width: 100%;
+    ul {
+      display: flex;
+      flex: wrap;
+      justify-content: center;
+      margin-top: 18px;
+      li {
+        font-size: 14px;
+        margin-right: 16px;
+        color: #808893;
+        >a {
+          display: block;
+          &.on {
+            padding-bottom: 2px;
+            color: #ff365e;
+            border-bottom: 2px solid #ff365e;
+          }
         }
       }
     }
   }
 }
-// 페이저 네브
+// ButtonTitle
 .pager-nav {
-  width: 100%;
-  display: block;
-  .today-tit {
-    margin: 0 0 16px 0;
-    font-size: 20px;
     text-align: center;
-    word-break: break-word;
+    margin-bottom: 18px;
+  h2 {
+    font-size: 20px;
   }
-  .arrow-wrap {
-    display: none;
-    float: right;
-  }
+}
+.arrow-wrap {
+  display: none;
 }
 
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .title-nav {
-    margin-bottom: 24px;
-    .title-nav-tit {
-      float: left;
-      text-align: left;
+  .nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    h2 {
+      width: 50%;
       font-size: 32px;
-      width: auto;
+      text-align: left;
     }
-    .title-nav-box {
-      display: flex;
-      flex: wrap;
-      float: right;
-      margin: 9px 0 0 0;
-      .title-nav-txt {
-        font-size: 17px;
-        line-height: 17px;
-        margin-left: 19px;
-        > a {
-          padding: 0 4px 4px;
+    .title-nav {
+      width: 50%;
+      ul {
+        display: flex;
+        flex: wrap;
+        justify-content: flex-end;
+        li {
+          text-align: right;
           font-size: 17px;
-        }
-        &:nth-last-child() {
-          margin: 0;
+          margin-right: 32px;
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
   }
-  .title-nav-list {
+  // ButtonTitle
+  .pager-nav {
+    text-align: center;
+    margin-bottom: 18px;
     display: flex;
-    flex-wrap: wrap;
-    .product-normal {
-      height: 100%;
-      width: calc(100% / 4);
+    flex: wrap;
+    justify-content: space-between;
+    h2 {
+      font-size: 32px;
     }
   }
-}
-//large
-@media screen and (min-width: map-get($breakpoints, "large")) {
+  .arrow-wrap {
+    display: block;
+  }
+
+  .arrow-wrap {
+    display: block;
+    float: right;
+    height: 48px;
+    .arrow-num {
+      line-height: 47px;
+      display: inline-block;
+      width: auto;
+      margin-right: 12px;
+      font-size: 16px;
+      line-height: 48px;
+      color: #888;
+      vertical-align: text-bottom;
+    }
+    .arrow-box {
+      cursor: pointer;
+      display: inline-block;
+      cursor: pointer;
+      .button-prev {
+        width: 40px;
+        height: 40px;
+        margin-right: -6px;
+        padding: 0;
+        background: url(~@/assets/images/ic-square-arrow-l-n@3x.png) no-repeat
+          center/cover;
+        background-size: 25px 25px;
+        transform: rotateX(180deg);
+        border: 1px solid #f2f4f7;
+
+        &[disabled] {
+          background: url(~@/assets/images/ic-square-arrow-l-n.png) no-repeat
+            center/cover;
+        }
+      }
+      .button-next {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        background: url(~@/assets/images/ic-square-arrow-r-s.png) no-repeat
+          center/cover;
+        border: 1px solid #f2f4f7;
+        background-size: 40px 40px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 </style>
