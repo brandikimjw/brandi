@@ -1,21 +1,45 @@
 <template>
-  <div class="title-nav">
-    <h2 class="title-nav-tit">{{nav.title}}</h2>
-    <ul class="title-nav-box">
-      <li class="title-nav-txt" v-for="(item, index) in testList" :key="index">
-        <a href="#" @click.prevent="clickMenu2(index)" :class="{ on : index === currentIndex2 }">{{ item.txt }}</a>
-      </li>
+<div class="title-wrap">
+  <!-- navTitle -->
+  <div v-if="isTab" class="nav-wrap">
+    <h2><IconHaru v-if="zoningType === 'todayDelivery'" />{{title}}</h2>
+    <div class="title-nav">
+      <ul class="title-nav-box">
+        <li class="title-nav-txt" v-for="(item, index) in testList" :key="index">
+          <a href="#" @click.prevent="clickMenu2(index)" :class="{ on : index === currentIndex2 }">{{ item.txt }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- ButtonTitle -->
+  <div v-if="isPager" class="pager-nav">
+    <h2><IconHaru v-if="zoningType === 'todayDelivery'" />{{title}}</h2>
+    <ul class="arrow-wrap">
+      <div class="arrow-num"><span>1</span>/<span>2</span></div>
+      <div class="arrow-box">
+        <button type="button" aria-label="이전 리스트 이동" class="button-prev" disabled="disabled"></button>
+        <button type="button" aria-label="다음 리스트 이동" class="button-next" disabled="disabled"></button>
+      </div>
     </ul>
   </div>
+</div>
 </template>
 
 <script>
-export default {
+import Iconharu from "../common/IconHaru"
+
+export default{
   name: "NavTitle",
   data() {
     return {
       currentIndex : '1',
       currentIndex2 : 0,
+      // props : {
+      //   name: {
+      //     type: String,
+      //     default: '',
+      //   },
+      // },
       nav : [
         {
           id : '1',
@@ -38,20 +62,54 @@ export default {
       ],
 		}
 	},
+  props: {
+    zoningType : String,
+    isTab : Boolean,
+    isPager : Boolean,
+  },
   methods: {
-    clickMenu (event) {
-      this.currentIndex = event.target.dataset.index
-    },
     clickMenu2 (index) {
       this.currentIndex2 = index
     },
   },
+  computed: {
+    title : function () {
+      let returnTitle = ''
+
+      switch (this.zoningType) {
+        case 'best':
+          returnTitle = 'TODAY 베스트'
+          break
+        case 'new':
+          returnTitle = '신상 모아보기'
+          break
+        case 'ai':
+          returnTitle = '오늘은 이 상품 어때요?'
+          break
+        case 'todayDelivery':
+          returnTitle = '상품은 내일 도착!'
+          break
+        default:
+          break
+      }
+
+      return returnTitle
+    },
+  },
+  components: {
+    Iconharu,
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 // 타이틀 네브
+.nav-wrap {
+  h2 {
+    font-size: 30px;
+  }
+}
 .title-nav {
   margin-bottom: 12px;
   .title-nav-tit {
@@ -79,6 +137,21 @@ export default {
         }
       }
     }
+  }
+}
+// 페이저 네브
+.pager-nav {
+  width: 100%;
+  display: block;
+  .today-tit {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    text-align: center;
+    word-break: break-word;
+  }
+  .arrow-wrap {
+    display: none;
+    float: right;
   }
 }
 

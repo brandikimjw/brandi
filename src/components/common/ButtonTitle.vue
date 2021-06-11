@@ -23,7 +23,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 // 타이틀 네브
-.title-nav {
+.pager-nav {
   width: 100%;
   display: block;
   .today-tit {

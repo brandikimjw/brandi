@@ -3,70 +3,16 @@
     <div class="main-swiper">
       <MainSwiper />
     </div>
-    <article class="main-today product-list">
-      <!-- <h5>투데이베스트</h5> -->
-      <NavTitle />
-      <ProductWrap />
-      <ButtonCommon name='신상' />
-    </article>
-    <article class="main-new product-list">
-      <!-- <h5>신상모아보기</h5> -->
-      <NavTitle />
-      <div class="new-list product-list">
-        <ProductWrap />
-      </div>
-      <ButtonCommon name='하루 배송 상품' />
-    </article>
-    <aside class="main-sub-banner product-list">
-      <!-- <h5>배너</h5> -->
-      <SubBannerSwiper />
-    </aside>
-    <article class="main-recommend product-list">
-      <!-- <h5>당신을위한추천</h5> -->
-      <ButtonTitle />
-      <div class="recommend-list">
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-      </div>
-      <ButtonCommon name='투데이 베스트' />
-    </article>
+    <!-- TodayBest 카테고리 -->
+    <MainList class="main-product-list" :zoningType="'best'" :isTab="true"/>
+    <!-- 신상 모아보기 카테고리 -->
+    <MainList class="main-product-list" :zoningType="'new'" :isTab="true"/>
+    <!-- 서브배너 -->
+    <aside class="main-sub-banner product-list"><SubBannerSwiper /></aside>
+    <!-- 신상 모아보기 카테고리 -->
+    <MainList class="main-product-list" :zoningType="'ai'" :isPager="true" />
+    <!-- 오늘 이상품 어때요 -->
     <article class="main-special product-list">
-      <!-- <h5>놓칠 수 없는 브랜디 특가</h5> -->
-      <ButtonTitle />
       <div class="special-list">
         <div class="special-image">
           <h3 class="hide-text">BRANDI TIME PRICE</h3>
@@ -172,12 +118,9 @@
 
 <script>
 import MainSwiper from '../main/MainSwiper';
-import NavTitle from '../common/NavTitle';
-import ProductNormal from '../main/ProductNormal';
-import ButtonCommon from '../common/ButtonCommon';
+import MainList from '../main/MainList'
 import SpecialItem from '../main/SpecialItem';
-import ButtonTitle from '../common/ButtonTitle';
-import OnedayTitle from '../common/OnedayTitle';
+// import OnedayTitle from '../common/OnedayTitle';
 import RisePop from '../main/RisePop';
 import SubBannerSwiper from '../SubBannerSwiper';
 import ProductWrap from './ProductWrap'
@@ -189,12 +132,9 @@ export default {
   // },
   components: {
     MainSwiper,
-    ProductNormal,
-    ButtonCommon,
-    NavTitle,
+    MainList,
     SpecialItem,
-    ButtonTitle,
-    OnedayTitle,
+    // OnedayTitle,
     RisePop,
     SubBannerSwiper,
     ProductWrap

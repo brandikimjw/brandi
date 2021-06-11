@@ -2,7 +2,7 @@
   <div class="button-common">
     <a class="more" href="#">
       <!-- <span class="btn-tit">베스트</span> -->
-      <span class="btn-more">{{ name }} 더보기 &gt;</span>
+      <span class="btn-more">{{ moreButtonTitle }} 더보기 &gt;</span>
       <slot></slot>
     </a>
   </div>
@@ -12,14 +12,35 @@
 export default {
   name: "ButtonCommon",
   props : {
-    name: {
-      type: String,
-      default:"",
-    },
+    moreButtonTitle : String,
+    zoningType : String,
   },
   data() {
     return {};
   },
+  computed: {
+    moreButtonTitle : function () {
+      let returnButtonTitle = ''
+
+     switch (this.zoningType) {
+        case 'best':
+          returnButtonTitle = '하루배송 상품'
+          break
+        case 'new':
+          returnButtonTitle = '신상품'
+          break
+        case 'ai':
+          returnButtonTitle = '추천'
+          break
+        case 'todayDelivery':
+          returnButtonTitle = '오늘배송 상품'
+          break
+        default:
+          break
+      }
+      return returnButtonTitle
+    },
+  }
 };
 </script>
 

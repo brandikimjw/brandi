@@ -1,6 +1,7 @@
 <template>
     <article>
       <div class="today-list">
+        <NavTitle />
         <ProductItem v-for="(item, index) in productList" :key="index" :productItem='item' />
       </div>
     </article>
