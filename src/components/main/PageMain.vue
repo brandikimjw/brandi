@@ -27,80 +27,6 @@
     </article>
     <article class="main-oneday product-list">
       <MainList class="main-product-list" :zoningType="'todayDelivery'" :isPager="true" />
-      <div class="today-list">
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-        <ProductNormal
-          sellorName="브랜디"
-          orderBadge="1"
-          :isOneDayShipping="true"
-          storeName="스토어네임"
-          productName="플리츠 스커트"
-          :discountRate="10"
-          :price="50000"
-        />
-      </div>
     </article>
     <article class="main-rise-pop product-list">
       <!-- <h5>지금 뜨고있는 기획전</h5> -->
@@ -124,9 +50,6 @@ import ProductWrap from './ProductWrap'
 
 export default {
   name: "PageMain",
-  // props: {
-  //   // productList : Array,
-  // },
   components: {
     MainSwiper,
     MainList,

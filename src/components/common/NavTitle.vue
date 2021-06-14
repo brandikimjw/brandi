@@ -40,26 +40,6 @@ export default{
         //   default: '',
         // },
       },
-      nav : [
-        {
-          id : '1',
-          title : '전체',
-        }
-      ],
-      testList : [
-        {
-          txt : '전체',
-        },
-        {
-          txt : '트렌드',
-        },
-        {
-          txt : '브랜드',
-        },
-        {
-          txt : '뷰티',
-        },
-      ],
 		}
 	},
   props: {

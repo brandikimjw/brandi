@@ -3,7 +3,7 @@
     <a class="more" href="#">
       <!-- <span class="btn-tit">베스트</span> -->
       <span class="btn-more">{{ moreButtonTitle }} 더보기 &gt;</span>
-      <slot></slot>
+      <!-- <slot></slot> -->
     </a>
   </div>
 </template>

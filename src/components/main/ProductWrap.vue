@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import ProductItem from './ProductItem'
-import NavTitle from '../common/NavTitle'
+import ProductItem from './ProductItem.vue'
+import NavTitle from '../common/NavTitle.vue'
 import axios from 'axios';
 export default {
   name: "PageMain",
@@ -24,16 +24,15 @@ export default {
     getProductList(){
        axios({
           method: 'get',
-          url: ('https://8d1c891b-6b65-42e8-af4e-06e033fd90de.mock.pstmn.io/item'),
-          responseType: 'json'
+          url:'https://8d1c891b-6b65-42e8-af4e-06e033fd90de.mock.pstmn.io/item',
+          responseType: 'string'
         }).then(result => {
             //console.log('result2:::',result.data);
+            //console.log('result1:::',result);
             this.productList = result.data.productItem
-        })
-        //   .then(function (result) {
-        //     // response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-
-        // });
+        }).catch((Error)=>{
+          console.log(Error);
+        });
     }
   },
   data() {
