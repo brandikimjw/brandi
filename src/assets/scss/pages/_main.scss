@@ -1,0 +1,202 @@
+
+.main-product-list {
+  margin-top: 80px;
+}
+.main-rise-pop {
+  margin-top: 80px;
+}
+//서브 배너
+.main-sub-banner {
+  margin-top: 60px;
+}
+//당신을 위한 추천
+.main-recommend {
+  margin-top: 60px;
+  padding: 0 16px 0 16px;
+  .recommend-list {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100% + 40px);
+    height: 100%;
+    margin: 0 -20px;
+    padding: 0 0 0 16px;
+    white-space: nowrap;
+  }
+}
+
+//놓칠 수 없는 브랜디 특가
+.main-special {
+  padding: 0 0px 0 16px;
+  padding-top: 60px;
+  .special-list {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    .product-special {
+      display: inline-block;
+      width: 66%;
+    }
+  }
+}
+
+// //하루배송 상품은 내일 도착
+// .main-oneday {
+//   margin-top: 60px;
+//   padding: 0 16px 0 16px;
+//   .badge-idx {
+//     display: none;
+//   }
+// }
+
+// //지금 뜨고있는 기획전
+// .main-rise-pop {
+//   margin-top: 60px;
+//   padding: 0 16px 0 16px;
+// }
+
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .main-product-list {
+    margin: 0 auto ;
+  }
+  //today베스트
+  .main-today {
+    padding: 0 20px 0 20px;
+  }
+
+//   // 신상 모아보기
+//   .main-new {
+//     padding: 0 20px 0 20px;
+//     .new-list {
+//       overflow: visible;
+//       display: flex;
+//       flex-wrap: wrap;
+//       width: calc(100% + 16px);
+//       height: 100%;
+//       margin: 0 -8px;
+//       padding: 0;
+
+//       .product-normal {
+//         height: 100%;
+//         width: calc(100% / 4);
+//         padding: 0 8px 30px;
+//         .wrap-info {
+//           .sellor {
+//             font-size: 13px;
+//           }
+//           .product-title {
+//             font-size: 15px;
+//           }
+//           .info-price{
+//             .dc {
+//               font-size: 18px;
+//             }
+//             .dc-price {
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+  //서브배너
+  .main-sub-banner {
+    padding: 0 20px 0 20px;
+  }
+
+//   //당신을 위한 추천
+//   .main-recommend {
+//     margin-top: 60px;
+//     padding: 0 20px 0 20px;
+//     .recommend-list {
+//       overflow: visible;
+//       display: flex;
+//       flex-wrap: wrap;
+//       width: calc(100% + 16px);
+//       height: 100%;
+//       margin: 0 -8px;
+//       padding: 0;
+//       .product-normal {
+//         display: block;
+//         width: calc(100% / 4);
+//         padding: 0 8px 30px;
+//         .wrap-info {
+//           .sellor {
+//             font-size: 13px;
+//           }
+//           .product-title {
+//             font-size: 15px;
+//           }
+//           .info-price{
+//             .dc {
+//               font-size: 18px;
+//             }
+//             .dc-price {
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//         &:last-child {
+//           margin-right: 0px;
+//         }
+//       }
+//     }
+//   }
+
+  //놓칠 수 없는 브랜디 특가
+  .main-special {
+    padding: 60px 20px 0 20px;
+    margin: 0 auto;
+    .special-list {
+      .special-image {
+        display: inline-block;
+        background: url(~@/assets/images/img-specialprice@3x.png) no-repeat center top;
+        background-size: cover;
+        width: calc(29% - 30px);
+        padding-top: 32%;
+        vertical-align: top;
+      }
+      .product-special {
+        width: calc(71% / 3);
+        margin: 0 !important;
+        padding: 0 20px;
+        .product-info {
+          box-sizing: border-box;
+          width: 100%;
+          .time {
+            font-size: 15px;
+          }
+        }
+        .product-title {
+          font-size: 15px;
+        }
+        .info-price {
+          .price {
+            font-size: 18px;
+          }
+        }
+      }
+      }
+
+  }
+//   .main-oneday {
+//     padding: 0 20px 0 20px;
+//   }
+
+  //지금 뜨고있는 기획전
+  .main-rise-pop {
+    padding: 0 20px 0 20px;
+    .rise-list {
+      display: flex;
+      border: none;
+      .event-item {
+        width: calc(100% / 2);
+        margin-right: 32px;
+        border: none;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
